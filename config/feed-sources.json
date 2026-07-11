@@ -1,0 +1,23 @@
+{
+  "_comment": "自動収集の取得元リスト。いつでも自由に編集してよい。追加・削除・URL差し替え後は次回の日次実行（または手動 workflow_dispatch）から反映される。個人資産データはここに書かない。",
+  "sources": [
+    {
+      "id": "bloomberg-markets",
+      "label": "Bloomberg Markets",
+      "url": "https://feeds.bloomberg.com/markets/news.rss",
+      "note": "Bloomberg 公式 RSS"
+    },
+    {
+      "id": "nikkei-google-news",
+      "label": "日本経済新聞（Google ニュース経由）",
+      "url": "https://news.google.com/rss/search?q=site:nikkei.com+when:7d&hl=ja&gl=JP&ceid=JP:ja",
+      "note": "日経は汎用の公式RSS配信が無いため、Google ニュースの site: 検索フィードで代替（個人の非商用フィードリーダー用途として利用可）"
+    },
+    {
+      "id": "reuters-google-news",
+      "label": "Reuters（Google ニュース経由）",
+      "url": "https://news.google.com/rss/search?q=site:reuters.com+when:7d&hl=en-US&gl=US&ceid=US:en",
+      "note": "Reuters も汎用の公式RSS配信が終了しているため、Google ニュースの site: 検索フィードで代替"
+    }
+  ]
+}

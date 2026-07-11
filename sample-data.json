@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 4,
+  "settings": {
+    "baseCurrency": "JPY",
+    "targets": { "idleCashRatioMax": 0.25, "emergencyMonths": 6 },
+    "api": { "finnhubKey": null, "twelveDataKey": null },
+    "ai": {
+      "includeAbsoluteAmounts": false,
+      "profile": "素材メーカー事業開発。専門: フィルム/多孔質材料/テープ、DC市場、半導体スタートアップM&A、グリーン水素電解、AI駆動素材探索。\n投資スタイル: テーマ投資。判断は自分で行うため断定推奨は不要。"
+    },
+    "lastExportAt": null,
+    "lastAutoBackupAt": null,
+    "lastAutoBackupMethod": null
+  },
+  "fx": {
+    "USDJPY": { "value": 157.4, "asOf": "2026-07-10", "source": "frankfurter" }
+  },
+  "accounts": [
+    { "id": "01K0SAMPLEACC0000000BANK01", "createdAt": "2026-07-01T00:00:00.000Z", "updatedAt": "2026-07-01T00:00:00.000Z", "name": "三菱UFJ銀行", "type": "bank" },
+    { "id": "01K0SAMPLEACC0000000SBI001", "createdAt": "2026-07-01T00:00:00.000Z", "updatedAt": "2026-07-01T00:00:00.000Z", "name": "SBI証券", "type": "securities" }
+  ],
+  "holdings": [
+    {
+      "id": "01K0SAMPLEHLD0000000CASH01",
+      "createdAt": "2026-07-01T00:00:00.000Z",
+      "updatedAt": "2026-07-01T00:00:00.000Z",
+      "accountId": "01K0SAMPLEACC0000000BANK01",
+      "assetClass": "cash",
+      "ticker": null,
+      "name": "円普通預金",
+      "quantity": 3500000,
+      "avgCostLocal": 0,
+      "currency": "JPY",
+      "price": { "value": 1, "currency": "JPY", "asOf": "2026-07-01", "source": "manual" },
+      "themeIds": [],
+      "recurring": null,
+      "note": ""
+    },
+    {
+      "id": "01K0SAMPLEHLD0000000MMF001",
+      "createdAt": "2026-07-01T00:00:00.000Z",
+      "updatedAt": "2026-07-01T00:00:00.000Z",
+      "accountId": "01K0SAMPLEACC0000000SBI001",
+      "assetClass": "mmf_usd",
+      "ticker": null,
+      "name": "米ドル建てMMF",
+      "quantity": 20000,
+      "avgCostLocal": 0,
+      "currency": "USD",
+      "price": { "value": 1, "currency": "USD", "asOf": "2026-07-01", "source": "manual" },
+      "themeIds": [],
+      "recurring": null,
+      "note": "待機資金。円換算は為替レートで変動"
+    },
+    {
+      "id": "01K0SAMPLEHLD0000000NVDA01",
+      "createdAt": "2026-07-01T00:00:00.000Z",
+      "updatedAt": "2026-07-10T00:00:00.000Z",
+      "accountId": "01K0SAMPLEACC0000000SBI001",
+      "assetClass": "us_equity",
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "quantity": 20,
+      "avgCostLocal": 148.2,
+      "currency": "USD",
+      "price": { "value": 172.3, "currency": "USD", "asOf": "2026-07-10", "source": "manual" },
+      "themeIds": ["01K0SAMPLETHM0000000DC0001"],
+      "recurring": null,
+      "note": ""
+    },
+    {
+      "id": "01K0SAMPLEHLD0000000FUND01",
+      "createdAt": "2026-07-01T00:00:00.000Z",
+      "updatedAt": "2026-07-01T00:00:00.000Z",
+      "accountId": "01K0SAMPLEACC0000000SBI001",
+      "assetClass": "fund_nisa",
+      "ticker": null,
+      "name": "eMAXIS Slim 全世界株式（新NISA積立）",
+      "quantity": 45.2,
+      "avgCostLocal": 24800,
+      "currency": "JPY",
+      "price": { "value": 27350, "currency": "JPY", "asOf": "2026-07-01", "source": "manual" },
+      "themeIds": [],
+      "recurring": { "amountJpy": 100000, "day": 1 },
+      "note": "数量は万口単位、価格は1万口あたり基準価額"
+    },
+    {
+      "id": "01K0SAMPLEHLD0000000GOLD01",
+      "createdAt": "2026-07-01T00:00:00.000Z",
+      "updatedAt": "2026-06-28T00:00:00.000Z",
+      "accountId": "01K0SAMPLEACC0000000SBI001",
+      "assetClass": "gold",
+      "ticker": null,
+      "name": "純金積立",
+      "quantity": 25,
+      "avgCostLocal": 14200,
+      "currency": "JPY",
+      "price": { "value": 16800, "currency": "JPY", "asOf": "2026-06-28", "source": "manual" },
+      "themeIds": [],
+      "recurring": { "amountJpy": 10000, "day": 15 },
+      "note": "数量はグラム、価格は円/g"
+    }
+  ],
+  "snapshots": [
+    {
+      "id": "01K0SAMPLESNP00000002606A1",
+      "createdAt": "2026-06-01T00:00:00.000Z",
+      "updatedAt": "2026-06-01T00:00:00.000Z",
+      "date": "2026-06-01",
+      "totalJpy": 8721000,
+      "byClass": {
+        "cash": 3600000,
+        "jp_equity": 0,
+        "us_equity": 498000,
+        "fund_nisa": 1128000,
+        "gold": 415000,
+        "silver": 0,
+        "mmf_usd": 3080000,
+        "other": 0
+      },
+      "byTheme": { "01K0SAMPLETHM0000000DC0001": 498000, "_none": 8223000 },
+      "fxUsdJpy": 154.8,
+      "auto": true
+    }
+  ],
+  "cashflowProfile": {
+    "monthlyIncome": 900000,
+    "monthlyLiving": 420000,
+    "monthlyMortgage": 150000,
+    "emergencyFundTargetJpy": 3000000
+  },
+  "themes": [
+    {
+      "id": "01K0SAMPLETHM0000000DC0001",
+      "createdAt": "2026-07-01T00:00:00.000Z",
+      "updatedAt": "2026-07-01T00:00:00.000Z",
+      "name": "データセンター（電力・冷却・素材）",
+      "thesis": "AI需要でDC投資が構造的に拡大。ボトルネックは電力と熱管理に移行しつつあり、素材・部材レイヤーに波及する",
+      "myEdge": "業務でDC市場・熱対策素材を調査中。一次情報への接点が多い",
+      "conviction": 4,
+      "horizon": "3-5y",
+      "status": "active",
+      "kpis": ["hyperscaler capex", "電力PPA価格", "液冷採用率"],
+      "reviewNote": "",
+      "closedReason": null
+    },
+    {
+      "id": "01K0SAMPLETHM0000000H20001",
+      "createdAt": "2026-07-01T00:00:00.000Z",
+      "updatedAt": "2026-07-01T00:00:00.000Z",
+      "name": "グリーン水素（電解装置・材料）",
+      "thesis": "電解装置コストの低下と政策支援で2030年に向け導入が加速。膜・電極材料に技術的参入障壁がある",
+      "myEdge": "業務で水電解向け材料を調査。装置メーカーとの接点あり",
+      "conviction": 3,
+      "horizon": "5-10y",
+      "status": "active",
+      "kpis": ["電解装置の受注残", "グリーン水素の製造コスト($/kg)", "政策補助金の執行率"],
+      "reviewNote": "",
+      "closedReason": null
+    }
+  ],
+  "watchlist": [
+    {
+      "id": "01K0SAMPLEWCH0000000VRT001",
+      "createdAt": "2026-07-01T00:00:00.000Z",
+      "updatedAt": "2026-07-01T00:00:00.000Z",
+      "ticker": "VRT",
+      "name": "Vertiv",
+      "market": "NYSE",
+      "themeIds": ["01K0SAMPLETHM0000000DC0001"],
+      "whyWatch": "DC熱管理の中核。液冷移行の直接受益",
+      "triggers": [
+        { "type": "price_below", "value": 80, "note": "押し目なら検討", "firedAt": null, "ackAt": null },
+        { "type": "event", "value": "次回決算で液冷受注比率の開示", "note": "", "firedAt": null, "ackAt": null }
+      ],
+      "status": "watching",
+      "passedReason": null,
+      "lastPrice": { "value": 92.5, "asOf": "2026-07-10", "source": "manual" }
+    }
+  ],
+  "intel": [
+    {
+      "id": "01K0SAMPLEINT0000000URL001",
+      "createdAt": "2026-07-09T00:00:00.000Z",
+      "updatedAt": "2026-07-09T00:00:00.000Z",
+      "date": "2026-07-09",
+      "sourceType": "url",
+      "sourceUrl": "https://example.com/dc-liquid-cooling-report",
+      "title": "（例）液冷市場レポート",
+      "rawNote": "",
+      "aiSummary": "",
+      "implication": "",
+      "sentiment": "neutral",
+      "themeIds": [],
+      "watchIds": [],
+      "holdingIds": [],
+      "actionNeeded": false,
+      "actionNote": "",
+      "archived": false
+    },
+    {
+      "id": "01K0SAMPLEINT0000000WRK001",
+      "createdAt": "2026-07-05T00:00:00.000Z",
+      "updatedAt": "2026-07-05T00:00:00.000Z",
+      "date": "2026-07-05",
+      "sourceType": "work_insight",
+      "sourceUrl": "",
+      "title": "",
+      "rawNote": "（例）展示会でDC向け液冷部材の引き合いが急増していると複数社から聞いた",
+      "aiSummary": "",
+      "implication": "液冷採用率KPIの先行シグナルの可能性。公開情報（各社決算・受注開示）で裏取りしたい",
+      "sentiment": "positive",
+      "themeIds": ["01K0SAMPLETHM0000000DC0001"],
+      "watchIds": ["01K0SAMPLEWCH0000000VRT001"],
+      "holdingIds": [],
+      "actionNeeded": false,
+      "actionNote": "",
+      "archived": false
+    }
+  ],
+  "decisions": [
+    {
+      "id": "01K0SAMPLEDCS0000000NVDA01",
+      "createdAt": "2026-01-08T00:00:00.000Z",
+      "updatedAt": "2026-01-08T00:00:00.000Z",
+      "date": "2026-01-08",
+      "action": "buy",
+      "ticker": "NVDA",
+      "amountJpy": 450000,
+      "rationale": "DCテーマの中核。電力・熱がボトルネック化しても GPU 需要自体は落ちないという仮説で 20 株",
+      "intelIds": [],
+      "themeId": "01K0SAMPLETHM0000000DC0001",
+      "review": { "dueDate": "2026-07-08", "judgmentQuality": null, "outcome": null, "lesson": null }
+    }
+  ],
+  "restricted": [
+    {
+      "id": "01K0SAMPLERST0000000MYCO01",
+      "createdAt": "2026-07-01T00:00:00.000Z",
+      "updatedAt": "2026-07-01T00:00:00.000Z",
+      "ticker": "MYCO",
+      "name": "（例）自社",
+      "reason": "業務関連/NDA — 個人取引自粛",
+      "until": null
+    }
+  ],
+  "models": [
+    {
+      "id": "m_momentum",
+      "createdAt": "2026-07-01T00:00:00.000Z",
+      "updatedAt": "2026-07-01T00:00:00.000Z",
+      "name": "テーマ・モメンタム型",
+      "origin": "設計書 §5.2 初期モデル案①（KPI とニュースフローの加速度に着目）",
+      "logicPrompt": "あなたはテーマ・モメンタム型の選定モデルです。\n私のテーマ一覧・KPI・直近のインテルから、KPI とニュースフローの改善が「加速」しているテーマ上位2つを特定し、それぞれの代表銘柄を最大2つずつピックしてください。\n各ピックには weight（全ピック合計で 1.0）と、加速を示す公開情報の根拠を付けること。\n制約: 公開情報で裏取り可能な根拠のみを使う。未公開情報・非公開の業務情報は使わない。\n断定的推奨はしない — これは複数ある仮説視点の一つであり、最終判断は私が行う。",
+      "cadence": "monthly",
+      "status": "active",
+      "retiredAt": null,
+      "retiredReason": null
+    },
+    {
+      "id": "m_contrarian",
+      "createdAt": "2026-07-01T00:00:00.000Z",
+      "updatedAt": "2026-07-01T00:00:00.000Z",
+      "name": "コントラリアン型",
+      "origin": "設計書 §5.2 初期モデル案②（良テーマ内の悲観された銘柄）",
+      "logicPrompt": "あなたはコントラリアン型の選定モデルです。\n私の active テーマのうち、テーマ自体の長期仮説は維持されているのに、直近3〜6か月で市場の悲観（株価下落・ネガティブなニュースフロー）が強い銘柄を最大3つピックしてください。\n各ピックには weight（合計 1.0）を付け、悲観が過剰だと考える根拠と、悲観が正しかった場合のリスクを併記すること。\n制約: 公開情報で裏取り可能な根拠のみを使う。未公開情報・非公開の業務情報は使わない。\n断定的推奨はしない — これは複数ある仮説視点の一つであり、最終判断は私が行う。",
+      "cadence": "monthly",
+      "status": "active",
+      "retiredAt": null,
+      "retiredReason": null
+    },
+    {
+      "id": "m_quality",
+      "createdAt": "2026-07-01T00:00:00.000Z",
+      "updatedAt": "2026-07-01T00:00:00.000Z",
+      "name": "クオリティ・バリュエーション型",
+      "origin": "設計書 §5.2 初期モデル案③（テーマ内の財務健全 × 相対割安）",
+      "logicPrompt": "あなたはクオリティ・バリュエーション型の選定モデルです。\n私のテーマに関連する銘柄のうち、財務健全性（利益率・負債水準・キャッシュフロー）が高く、同業・同テーマ内で相対的に割安なものを最大3つピックしてください。\n各ピックには weight（合計 1.0）を付け、使用した指標と比較対象を明記すること。\n制約: 公開情報で裏取り可能な根拠のみを使う。未公開情報・非公開の業務情報は使わない。\n断定的推奨はしない — これは複数ある仮説視点の一つであり、最終判断は私が行う。",
+      "cadence": "monthly",
+      "status": "active",
+      "retiredAt": null,
+      "retiredReason": null
+    }
+  ],
+  "modelPicks": [
+    {
+      "id": "01K0SAMPLEPCK0000000VRT001",
+      "createdAt": "2026-07-01T00:00:00.000Z",
+      "updatedAt": "2026-07-01T00:00:00.000Z",
+      "modelId": "m_momentum",
+      "date": "2026-07-01",
+      "ticker": "VRT",
+      "entryPrice": 88.0,
+      "weight": 0.6,
+      "rationale": "（例）液冷受注の伸びが加速。ハイパースケーラー capex 上方修正の直接受益",
+      "exitDate": null,
+      "exitPrice": null,
+      "lastPrice": null
+    },
+    {
+      "id": "01K0SAMPLEPCK0000000NVDA01",
+      "createdAt": "2026-07-01T00:00:00.000Z",
+      "updatedAt": "2026-07-01T00:00:00.000Z",
+      "modelId": "m_momentum",
+      "date": "2026-07-01",
+      "ticker": "NVDA",
+      "entryPrice": 165.0,
+      "weight": 0.4,
+      "rationale": "（例）DC テーマの中核。需要 KPI の改善が継続",
+      "exitDate": null,
+      "exitPrice": null,
+      "lastPrice": null
+    }
+  ],
+  "benchmarks": {
+    "SPY": [
+      { "date": "2026-06-30", "value": 641.2 },
+      { "date": "2026-07-10", "value": 652.8 }
+    ],
+    "1306": [
+      { "date": "2026-06-30", "value": 2841 },
+      { "date": "2026-07-04", "value": 2865 }
+    ]
+  }
+}

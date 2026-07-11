@@ -1,0 +1,41 @@
+name: Update feed.json
+
+on:
+  schedule:
+    # 21:00 UTC = 翌 06:00 JST（朝の週次/日次ブリーフィング前に新着が揃うタイミング）
+    - cron: "0 21 * * *"
+  workflow_dispatch: {} # 手動実行（動作確認用）。Actions タブから "Run workflow" で即時テスト可能
+
+permissions:
+  contents: write
+
+concurrency:
+  group: feed-update
+  cancel-in-progress: false
+
+jobs:
+  build-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - run: npm ci
+
+      - run: npm run build-feed
+
+      - name: Commit updated feed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/feed.json data/feed-seen.json
+          if git diff --cached --quiet; then
+            echo "No feed changes."
+          else
+            git commit -m "chore: update feed.json"
+            git push
+          fi

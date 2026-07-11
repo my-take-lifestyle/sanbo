@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f1420">
+  <meta name="description" content="参謀 — 個人資産運用の意思決定支援（売買判断はあなた自身が行います）">
+  <title>参謀 | 資産運用 意思決定支援</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Chart.js（CDN）。読めない環境でもバー表示にフォールバックする -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="app-head">
+    <h1>参謀</h1>
+    <span class="muted small">意思決定支援 — 判断はあなた自身で</span>
+    <div class="head-actions">
+      <button id="btn-models" class="head-btn" aria-label="モデル選定">📈</button>
+      <button id="btn-settings" class="head-btn" aria-label="設定">⚙️</button>
+    </div>
+  </header>
+  <main id="view"></main>
+  <nav id="tabbar" aria-label="メインナビゲーション"></nav>
+  <div id="modal-root"></div>
+  <div id="toast-root" role="status" aria-live="polite"></div>
+  <noscript>このアプリの動作には JavaScript が必要です。</noscript>
+</body>
+</html>

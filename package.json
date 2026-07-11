@@ -1,0 +1,12 @@
+{
+  "name": "sanbo-feed-builder",
+  "private": true,
+  "type": "module",
+  "description": "GitHub Actions 用: 公開RSSを取得しテーマ/tickerキーワードでフィルタして data/feed.json を生成する（設計書 §4.5）",
+  "scripts": {
+    "build-feed": "node scripts/build-feed.mjs"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.5.0"
+  }
+}
