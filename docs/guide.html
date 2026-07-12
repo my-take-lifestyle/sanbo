@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<title>参謀 取扱説明書・ビジュアルガイド</title>
+<style>
+  :root {
+    --paper: #f2f4f9;
+    --ink: #1a2331;
+    --ink-2: #5a6578;
+    --card: #ffffff;
+    --line: #d9dfe9;
+    --accent: #3567c9;
+    --accent-soft: #e5edfb;
+    --pos: #1d9e69;
+    --warn: #b97a1e;
+    --neg: #c2504f;
+    --code-bg: #eaeef6;
+    /* アプリ実機の固定トークン（モックアップ専用・テーマ非連動） */
+    --app-bg: #0f1420;
+    --app-card: #1a2230;
+    --app-card2: #212b3d;
+    --app-text: #e8ecf4;
+    --app-muted: #8a94a8;
+    --app-accent: #4f8cff;
+    --app-pos: #3ecf8e;
+    --app-warn: #ffb454;
+    --app-neg: #ff6b6b;
+    --app-border: #2a3446;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0f1420;
+      --ink: #e8ecf4;
+      --ink-2: #8a94a8;
+      --card: #1a2230;
+      --line: #2a3446;
+      --accent: #6ea0ff;
+      --accent-soft: #1d2c47;
+      --pos: #3ecf8e;
+      --warn: #ffb454;
+      --neg: #ff7d7d;
+      --code-bg: #141c2b;
+    }
+  }
+  :root[data-theme="light"] {
+    --paper: #f2f4f9; --ink: #1a2331; --ink-2: #5a6578; --card: #ffffff;
+    --line: #d9dfe9; --accent: #3567c9; --accent-soft: #e5edfb;
+    --pos: #1d9e69; --warn: #b97a1e; --neg: #c2504f; --code-bg: #eaeef6;
+  }
+  :root[data-theme="dark"] {
+    --paper: #0f1420; --ink: #e8ecf4; --ink-2: #8a94a8; --card: #1a2230;
+    --line: #2a3446; --accent: #6ea0ff; --accent-soft: #1d2c47;
+    --pos: #3ecf8e; --warn: #ffb454; --neg: #ff7d7d; --code-bg: #141c2b;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Noto Sans JP", sans-serif;
+    font-size: 15.5px;
+    line-height: 1.85;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 24px 18px 96px; }
+
+  /* ---- 表紙 ---- */
+  .cover {
+    background: var(--app-bg);
+    color: var(--app-text);
+    border-radius: 18px;
+    padding: 34px 26px 28px;
+    margin-bottom: 28px;
+    border: 1px solid var(--app-border);
+  }
+  .cover .mark {
+    width: 54px; height: 54px; border-radius: 13px;
+    background: var(--app-card);
+    border: 1px solid var(--app-border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 27px; font-weight: 700; color: var(--app-accent);
+    margin-bottom: 16px;
+  }
+  .cover h1 { margin: 0 0 6px; font-size: 26px; letter-spacing: 0.14em; text-wrap: balance; }
+  .cover .sub { color: var(--app-muted); font-size: 13.5px; margin: 0 0 14px; }
+  .cover .url {
+    display: inline-block;
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    font-size: 12.5px;
+    background: var(--app-card);
+    border: 1px solid var(--app-border);
+    color: var(--app-accent);
+    border-radius: 8px; padding: 5px 10px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+  .cover .stance {
+    margin-top: 16px; padding-top: 14px;
+    border-top: 1px solid var(--app-border);
+    font-size: 13px; color: var(--app-muted);
+  }
+  .cover .stance b { color: var(--app-text); }
+
+  /* ---- 目次 ---- */
+  nav.toc { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 34px; }
+  nav.toc a {
+    text-decoration: none;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  /* ---- 見出し ---- */
+  .part { margin-top: 54px; }
+  .eyebrow {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.22em;
+    color: var(--accent); margin-bottom: 4px;
+  }
+  h2 { font-size: 22px; margin: 0 0 14px; letter-spacing: 0.02em; text-wrap: balance; }
+  h3 {
+    font-size: 16.5px; margin: 34px 0 10px;
+    padding-left: 11px; border-left: 3px solid var(--accent);
+    letter-spacing: 0.01em;
+  }
+  h4 { font-size: 14.5px; margin: 22px 0 6px; }
+  p { margin: 10px 0; }
+  .lead { color: var(--ink-2); }
+  ul, ol { padding-left: 1.5em; margin: 8px 0; }
+  li { margin: 5px 0; }
+  b { font-weight: 700; }
+  a { color: var(--accent); }
+
+  /* UI 上の文言を指す語 */
+  .ui {
+    font-weight: 600;
+    background: var(--accent-soft);
+    border-radius: 5px;
+    padding: 1px 6px;
+    font-size: 0.93em;
+    white-space: nowrap;
+  }
+  code {
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    font-size: 0.88em;
+    background: var(--code-bg);
+    border-radius: 5px;
+    padding: 1px 6px;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+  .note {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--warn);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  .note.blue { border-left-color: var(--accent); }
+
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14px; }
+  th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--card); font-size: 13px; }
+  .table-wrap { overflow-x: auto; }
+
+  /* ---- モックアップ（アプリ実機と同じ配色・テーマ非連動） ---- */
+  .screen { margin: 26px 0 8px; }
+  .phone {
+    margin: 0 auto;
+    max-width: 375px;
+    background: var(--app-bg);
+    color: var(--app-text);
+    border: 1px solid var(--app-border);
+    border-radius: 22px;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 1.55;
+    box-shadow: 0 10px 34px rgba(10, 16, 28, 0.28);
+  }
+  .p-head {
+    display: flex; align-items: baseline; gap: 8px;
+    padding: 12px 14px 4px;
+  }
+  .p-head b { font-size: 15px; letter-spacing: 0.15em; }
+  .p-head .p-sub { color: var(--app-muted); font-size: 10px; }
+  .p-head .p-btns { margin-left: auto; font-size: 14px; letter-spacing: 3px; }
+  .p-body { padding: 6px 10px 10px; display: flex; flex-direction: column; gap: 9px; }
+  .p-card {
+    background: var(--app-card);
+    border: 1px solid var(--app-border);
+    border-radius: 11px;
+    padding: 11px 12px;
+  }
+  .p-card h5 { margin: 0 0 6px; font-size: 12.5px; font-weight: 700; }
+  .p-label { color: var(--app-muted); font-size: 10.5px; }
+  .p-big { font-size: 23px; font-weight: 700; }
+  .p-muted { color: var(--app-muted); }
+  .p-small { font-size: 10.5px; }
+  .p-pos { color: var(--app-pos); }
+  .p-warn { color: var(--app-warn); }
+  .p-row { display: flex; justify-content: space-between; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .p-item {
+    background: var(--app-card2);
+    border: 1px solid var(--app-border);
+    border-radius: 9px;
+    padding: 8px 10px;
+    margin-top: 6px;
+    display: flex; gap: 8px; align-items: center;
+  }
+  .p-item .grow { flex: 1; min-width: 0; }
+  .p-val { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .p-btn {
+    display: inline-block;
+    background: var(--app-card2);
+    border: 1px solid var(--app-border);
+    border-radius: 8px;
+    padding: 6px 11px;
+    font-size: 11.5px;
+    color: var(--app-text);
+  }
+  .p-btn.primary { background: var(--app-accent); border-color: var(--app-accent); color: #fff; font-weight: 600; }
+  .p-btn.block { display: block; text-align: center; margin-top: 8px; }
+  .p-btn.ack { color: var(--app-pos); border-color: rgba(62, 207, 142, 0.4); font-size: 10px; line-height: 1.25; }
+  .p-chip {
+    display: inline-block;
+    background: rgba(138, 148, 168, 0.14);
+    border-radius: 999px;
+    padding: 1px 8px;
+    font-size: 10px;
+    color: var(--app-muted);
+    white-space: nowrap;
+  }
+  .p-chip.warn { background: rgba(255, 180, 84, 0.16); color: var(--app-warn); }
+  .p-tag {
+    background: rgba(79, 140, 255, 0.16); color: var(--app-accent);
+    border-radius: 4px; padding: 0 5px; font-size: 10px; font-weight: 600;
+  }
+  .p-seg { display: inline-flex; background: var(--app-card2); border-radius: 8px; padding: 2px; gap: 2px; }
+  .p-seg span { padding: 3px 10px; border-radius: 6px; font-size: 10.5px; color: var(--app-muted); }
+  .p-seg .on { background: var(--app-accent); color: #fff; }
+  .p-meter { position: relative; height: 14px; background: var(--app-card2); border-radius: 999px; margin: 8px 0 6px; overflow: hidden; }
+  .p-meter .fill { height: 100%; border-radius: 999px; background: var(--app-warn); }
+  .p-meter .target { position: absolute; top: -2px; bottom: -2px; width: 2px; background: var(--app-text); }
+  .p-alloc { display: flex; align-items: center; gap: 7px; margin-top: 6px; font-size: 11px; }
+  .p-alloc .sw { width: 9px; height: 9px; border-radius: 3px; flex: none; }
+  .p-alloc .nm { flex: 0 0 6.5em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .p-alloc .bar { flex: 1; height: 6px; background: var(--app-card2); border-radius: 999px; overflow: hidden; }
+  .p-alloc .bar i { display: block; height: 100%; background: var(--app-accent); border-radius: 999px; }
+  .p-alloc .pc { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .p-tabs {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    border-top: 1px solid var(--app-border);
+    background: rgba(20, 27, 40, 0.96);
+    padding: 7px 0 9px;
+    text-align: center;
+    font-size: 9px;
+    color: var(--app-muted);
+  }
+  .p-tabs .ico { font-size: 15px; display: block; }
+  .p-tabs .on { color: var(--app-accent); }
+  .p-input {
+    background: var(--app-bg); border: 1px solid var(--app-border);
+    border-radius: 7px; padding: 7px 9px; color: var(--app-muted);
+    font-size: 11px; margin-top: 6px;
+  }
+  .p-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; vertical-align: middle; }
+  .p-dot.pos { background: var(--app-pos); }
+  .p-dot.neu { background: var(--app-muted); }
+
+  /* 注釈バッジ */
+  .co {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 17px; height: 17px; border-radius: 50%;
+    background: var(--app-warn); color: #1a1408;
+    font-size: 11px; font-weight: 700; font-style: normal;
+    flex: none; vertical-align: middle;
+    margin-left: 5px;
+  }
+  .legend { list-style: none; padding: 0; margin: 14px auto 0; max-width: 560px; font-size: 14px; }
+  .legend li { display: flex; gap: 10px; margin: 8px 0; align-items: baseline; }
+  .legend .co { margin: 0; position: relative; top: 2px; }
+
+  /* ---- ルーチンカード ---- */
+  .cadence { display: grid; gap: 14px; margin: 18px 0; }
+  .cad {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .cad .freq {
+    display: inline-block;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 999px; padding: 2px 12px;
+    margin-bottom: 6px;
+  }
+  .cad .t { font-size: 15.5px; font-weight: 700; margin: 2px 0 6px; }
+  .cad ol { margin: 6px 0 0; }
+  .cad .why { color: var(--ink-2); font-size: 13px; margin-top: 8px; }
+
+  /* ---- 手順ステップ ---- */
+  .steps { counter-reset: st; list-style: none; padding: 0; margin: 12px 0; }
+  .steps > li {
+    counter-increment: st;
+    position: relative;
+    padding: 0 0 4px 40px;
+    margin: 12px 0;
+  }
+  .steps > li::before {
+    content: counter(st);
+    position: absolute; left: 0; top: 2px;
+    width: 26px; height: 26px; border-radius: 8px;
+    background: var(--accent); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700;
+  }
+
+  /* ---- FAQ ---- */
+  details {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 0 16px;
+    margin: 10px 0;
+  }
+  summary {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14.5px;
+    padding: 13px 0;
+    list-style-position: outside;
+  }
+  details[open] summary { border-bottom: 1px solid var(--line); }
+  details .a { padding: 10px 0 14px; font-size: 14px; }
+
+  .footer {
+    margin-top: 64px; padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--ink-2); font-size: 12.5px;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<!-- ============ 表紙 ============ -->
+<div class="cover">
+  <div class="mark">参</div>
+  <h1>参謀 取扱説明書</h1>
+  <p class="sub">資産運用 意思決定支援 — 判断はあなた自身で</p>
+  <a class="url" href="https://my-take-lifestyle.github.io/sanbo/" target="_blank" rel="noopener">my-take-lifestyle.github.io/sanbo/</a>
+  <p class="stance"><b>このアプリは売買の推奨をしません。</b>参謀（Chief of Staff）の仕事は、情報を整理し、選択肢と根拠を提示すること。決断するのはあなたです。アプリ内のすべての表示・AI 連携もこの立場で作られています。</p>
+</div>
+
+<nav class="toc">
+  <a href="#part1">1. はじめに</a>
+  <a href="#part2">2. 画面ガイド</a>
+  <a href="#part3">3. 取扱説明書</a>
+  <a href="#part4">4. おすすめの使い方</a>
+  <a href="#part5">5. 困ったとき</a>
+</nav>
+
+<!-- ============ 1. はじめに ============ -->
+<section class="part" id="part1">
+  <div class="eyebrow">PART 1</div>
+  <h2>はじめに — このアプリは何をする道具か</h2>
+  <p class="lead">「参謀」は、テーマ投資をする個人のための<b>意思決定支援アプリ</b>です。証券口座には接続せず、売買もしません。代わりに「資産の現状を見える化する」「情報を自分のテーマに紐付けて蓄積する」「見直すべき条件（トリガー）を管理する」「判断を記録して振り返る」の4つを引き受けます。</p>
+
+  <div class="table-wrap"><table>
+    <tr><th>やること</th><th>やらないこと</th></tr>
+    <tr><td>資産の現状を常に見える化する</td><td>証券口座接続・自動売買・自動発注</td></tr>
+    <tr><td>あなたの専門知識を投資仮説に変換する導線を作る</td><td>銘柄の断定的な売買推奨</td></tr>
+    <tr><td>「いつ・何を見直すか」の条件（トリガー）を管理する</td><td>網羅的な家計簿（明細管理）</td></tr>
+    <tr><td>判断の記録と振り返り（ジャーナル）</td><td>完全な取引履歴の複製（証券会社に既にある）</td></tr>
+  </table></div>
+
+  <h3>3つの設計思想</h3>
+  <ul>
+    <li><b>週15分で回る。</b>入力コストが週15分を超える機能は載せていません。毎日開く必要はありません。</li>
+    <li><b>手動入力がプライマリ、API は加速装置。</b>為替・米国株価は自動取得できますが、取得に失敗しても前回値のまま全機能が動き続けます。API キーがなくても困りません。</li>
+    <li><b>データは端末の中だけ。</b>資産データはブラウザの localStorage にのみ保存され、外部送信されません（API へ送るのはティッカー記号だけ）。裏返すと<b>ブラウザのサイトデータを消すと全部消える</b>ので、バックアップが生命線です（→ <a href="#sec-backup">3-7</a>）。</li>
+  </ul>
+
+  <h3>画面の全体像</h3>
+  <p>下部のタブ5つ + ヘッダー右上のボタン2つ、計7画面です。</p>
+  <div class="table-wrap"><table>
+    <tr><th>入口</th><th>画面</th><th>役割</th></tr>
+    <tr><td>🏠 <span class="ui">司令部</span></td><td>ダッシュボード</td><td><b>読む場。</b>総資産・待機資金・要アクション。起動時は常にここ</td></tr>
+    <tr><td>📊 <span class="ui">資産</span></td><td>ポートフォリオ</td><td>口座・保有の登録、価格更新</td></tr>
+    <tr><td>🧭 <span class="ui">テーマ</span></td><td>テーマ &amp; ウォッチ</td><td>投資仮説（テーマ）と気になる銘柄の管理</td></tr>
+    <tr><td>📥 <span class="ui">インテル</span></td><td>インテル受信箱</td><td>情報の投入・AI 連携・トリアージ</td></tr>
+    <tr><td>📓 <span class="ui">ジャーナル</span></td><td>意思決定ジャーナル</td><td>判断の記録と6か月後レビュー</td></tr>
+    <tr><td>ヘッダー 📈</td><td>モデル・スコアボード</td><td>複数の選定モデルを仮想成績で選別する実験場</td></tr>
+    <tr><td>ヘッダー ⚙️</td><td>設定/データ</td><td>目標・API・制限リスト・バックアップ</td></tr>
+  </table></div>
+</section>
+
+<!-- ============ 2. 画面ガイド ============ -->
+<section class="part" id="part2">
+  <div class="eyebrow">PART 2</div>
+  <h2>画面ガイド（ビジュアル）</h2>
+  <p class="lead">各画面のどこに何があるかを、実際の表示そのままの言葉で示します。図はサンプルデータ読み込み時の表示例です。</p>
+
+  <!-- 司令部 -->
+  <h3 id="sc-dashboard">🏠 司令部（ダッシュボード）</h3>
+  <div class="screen">
+  <figure class="phone">
+    <div class="p-head"><b>参謀</b><span class="p-sub">意思決定支援 — 判断はあなた自身で</span><span class="p-btns">📈⚙️<i class="co">7</i></span></div>
+    <div class="p-body">
+      <div class="p-card">
+        <div class="p-label">総資産（円換算）<i class="co">1</i></div>
+        <div class="p-big">¥8,951,424</div>
+        <div class="p-pos" style="font-weight:600">+¥230,424（+2.6%） <span class="p-muted p-small">vs 2026-06-01</span></div>
+        <div class="p-muted p-small">内訳（概算）: 為替影響 +¥165,763 ／ 評価・入出金等 +¥64,661</div>
+        <div class="p-muted p-small">USD/JPY 161.87（2026-07-10 · frankfurter） ／ 月次投資可能余力（概算）: ¥220,000 <i class="co">2</i></div>
+      </div>
+      <div class="p-card">
+        <div class="p-row"><h5 style="margin:0">待機資金メーター<i class="co">3</i></h5><span class="p-muted p-small">現金 + MMF</span></div>
+        <div class="p-meter"><div class="fill" style="width:75%"></div><div class="target" style="left:25%"></div></div>
+        <div class="p-row p-small"><span>現在 <b class="p-warn">75.3%</b>（¥6,737,400）</span><span class="p-muted">目標上限 25%</span></div>
+        <div class="p-warn p-small">約 ¥4,499,544 が目標超過で待機中。テーマ別の投入候補（判断はご自身で）: データセンター…</div>
+      </div>
+      <div class="p-card">
+        <div class="p-row"><h5 style="margin:0">配分<i class="co">4</i></h5><span class="p-seg"><span class="on">クラス別</span><span>テーマ別</span></span></div>
+        <div class="p-alloc"><span class="sw" style="background:#4f8cff"></span><span class="nm">現金</span><span class="bar"><i style="width:39%"></i></span><span class="pc">39.1%</span></div>
+        <div class="p-alloc"><span class="sw" style="background:#3ecf8e"></span><span class="nm">MMF（USD）</span><span class="bar"><i style="width:36%"></i></span><span class="pc">36.2%</span></div>
+        <div class="p-alloc"><span class="sw" style="background:#ffb454"></span><span class="nm">投信（NISA）</span><span class="bar"><i style="width:14%"></i></span><span class="pc">13.8%</span></div>
+      </div>
+      <div class="p-card">
+        <h5>要アクション<i class="co">5</i></h5>
+        <div class="p-item"><span>⏰</span><span class="grow p-small">トリガー成立: VRT が 80 を下回りました（現在 75） — 押し目なら検討</span><span class="p-btn ack">確認<br>済み</span><i class="co">6</i></div>
+        <div class="p-item"><span>⚠️</span><span class="grow p-small">バックアップ未実施 — JSON エクスポートを推奨（サイトデータ削除で全消失します）</span></div>
+        <div class="p-item"><span>ℹ️</span><span class="grow p-small">未トリアージのインテルが 1 件</span></div>
+      </div>
+      <div class="p-card">
+        <div class="p-row"><h5 style="margin:0">最近のインテル</h5><span class="p-btn" style="font-size:10px">受信箱へ</span></div>
+        <div class="p-item"><span class="grow p-small"><span class="p-muted">2026-07-05</span> <span class="p-dot pos"></span> 液冷採用率KPIの先行シグナルの可能性。公開情報で裏取りしたい</span></div>
+      </div>
+    </div>
+    <div class="p-tabs"><span class="on"><span class="ico">🏠</span>司令部</span><span><span class="ico">📊</span>資産</span><span><span class="ico">🧭</span>テーマ</span><span><span class="ico">📥</span>インテル</span><span><span class="ico">📓</span>ジャーナル</span></div>
+  </figure>
+  <ol class="legend">
+    <li><i class="co">1</i><span><b>総資産と前月比。</b>前月スナップショットとの差を、為替影響とそれ以外にざっくり分けて表示します。</span></li>
+    <li><i class="co">2</i><span><b>為替と投資余力。</b>USD/JPY はいつ・どこから取得した値かを常に明示。<span class="ui">月次投資可能余力（概算）</span> = 収入 − 生活費 − ローン − 積立（設定のキャッシュフローから計算）。</span></li>
+    <li><i class="co">3</i><span><b>待機資金メーター。</b>現金 + MMF の比率。白い縦線が<span class="ui">目標上限</span>（初期値 25%、設定で変更可）。超過すると金額と投入候補テーマが示されます。</span></li>
+    <li><i class="co">4</i><span><b>配分。</b><span class="ui">クラス別</span> / <span class="ui">テーマ別</span>を切替。テーマ別では「仮説あり・エクスポージャーゼロ」のテーマも気づきとして出ます。</span></li>
+    <li><i class="co">5</i><span><b>要アクション。</b>トリガー成立・判断レビュー期限・バックアップ警告・未トリアージ件数・放置検知などが自動で集まります。タップで該当画面へ。</span></li>
+    <li><i class="co">6</i><span><b>確認済みボタン。</b>成立したトリガーはこれで消し込み。条件が一度外れて再び成立すると再表示されます。</span></li>
+    <li><i class="co">7</i><span><b>📈 モデル / ⚙️ 設定</b>への入口。</span></li>
+  </ol>
+  </div>
+
+  <!-- 資産 -->
+  <h3 id="sc-portfolio">📊 資産（ポートフォリオ）</h3>
+  <div class="screen">
+  <figure class="phone">
+    <div class="p-head"><b>参謀</b><span class="p-sub">意思決定支援 — 判断はあなた自身で</span><span class="p-btns">📈⚙️</span></div>
+    <div class="p-body">
+      <div class="p-card">
+        <div class="p-row">
+          <div><div class="p-label">評価総額</div><div class="p-big">¥8,951,424</div></div>
+          <div style="text-align:right" class="p-small">USD/JPY <b>161.87</b><br><span class="p-muted">2026-07-10 · frankfurter</span></div>
+        </div>
+        <div class="p-row" style="margin-top:8px">
+          <span class="p-btn">為替を更新<i class="co">1</i></span>
+          <span class="p-btn">米国株価を一括更新<i class="co">2</i></span>
+        </div>
+      </div>
+      <div class="p-card">
+        <div class="p-row"><h5 style="margin:0">保有資産</h5><span class="p-btn" style="font-size:10px">口座管理<i class="co">3</i></span></div>
+        <div class="p-item"><span class="grow"><b>NVIDIA</b> <span class="p-tag">NVDA</span><br><span class="p-muted p-small">米国株 · SBI証券 · 20 × $172.3 <span class="p-warn">（2026-07-10 · manual）</span><i class="co">4</i></span></span><span class="p-val p-small">¥557,804<br><span class="p-pos">+16.3%</span></span></div>
+        <div class="p-item"><span class="grow"><b>円普通預金</b><br><span class="p-muted p-small">現金 · 三菱UFJ銀行</span></span><span class="p-val p-small">¥3,500,000</span></div>
+        <span class="p-btn primary block">＋ 保有を追加<i class="co">5</i></span>
+        <div class="p-muted p-small" style="margin-top:6px">価格の asOf が90日を超えた保有は 黄色 で表示されます（鮮度の見える化）。</div>
+      </div>
+    </div>
+    <div class="p-tabs"><span><span class="ico">🏠</span>司令部</span><span class="on"><span class="ico">📊</span>資産</span><span><span class="ico">🧭</span>テーマ</span><span><span class="ico">📥</span>インテル</span><span><span class="ico">📓</span>ジャーナル</span></div>
+  </figure>
+  <ol class="legend">
+    <li><i class="co">1</i><span><span class="ui">為替を更新</span> — Frankfurter（無料・キー不要）から USD/JPY を取得。失敗しても前回値のまま動きます。</span></li>
+    <li><i class="co">2</i><span><span class="ui">米国株価を一括更新</span> — Finnhub キー設定時のみ有効。保有・ウォッチ銘柄・モデルのピックの価格と SPY をまとめて更新し、価格トリガーも自動判定します。</span></li>
+    <li><i class="co">3</i><span><span class="ui">口座管理</span> — 銀行・証券などの口座の追加・編集。保有は必ずどれかの口座に紐付きます。</span></li>
+    <li><i class="co">4</i><span><b>価格の鮮度表示。</b>各行に「いつ・どの経路の価格か」（manual / finnhub）を表示。90日超は黄色で警告。行タップで編集画面が開きます。</span></li>
+    <li><i class="co">5</i><span><span class="ui">＋ 保有を追加</span> — 現金は「数量 = 金額、価格 = 1」で登録。投信は「数量 = 万口、価格 = 1万口あたり基準価額」のような単位でも OK（評価額 = 数量 × 価格 × 為替、で計算されるため）。</span></li>
+  </ol>
+  </div>
+
+  <!-- テーマ -->
+  <h3 id="sc-themes">🧭 テーマ &amp; ウォッチ</h3>
+  <div class="screen">
+  <figure class="phone">
+    <div class="p-head"><b>参謀</b><span class="p-sub">意思決定支援 — 判断はあなた自身で</span><span class="p-btns">📈⚙️</span></div>
+    <div class="p-body">
+      <div class="p-card">
+        <div class="p-row"><h5 style="margin:0">テーマ</h5><span class="p-btn primary" style="font-size:10px">＋ 追加</span></div>
+        <div class="p-item" style="display:block">
+          <div class="p-row"><b class="p-small">データセンター（電力・冷却・素材）</b><span class="p-chip">進行中</span></div>
+          <div class="p-small">確信度 ★★★★<span class="p-muted">★</span> <span class="p-muted">／ 3-5y</span></div>
+          <div class="p-small">エクスポージャー <b>¥557,804</b> ・ インテル 3 件<i class="co">1</i></div>
+          <div class="p-small"><span class="p-chip">hyperscaler capex</span> <span class="p-chip">液冷採用率</span></div>
+        </div>
+        <div class="p-item" style="display:block">
+          <div class="p-row"><b class="p-small">グリーン水素（電解装置・材料）</b><span class="p-chip">進行中</span></div>
+          <div class="p-small p-warn">⚠ myEdge（情報優位の源泉）が未記入です。書けないテーマは要注意。<i class="co">2</i></div>
+        </div>
+      </div>
+      <div class="p-card">
+        <div class="p-row"><h5 style="margin:0">ウォッチリスト</h5><span class="p-btn primary" style="font-size:10px">＋ 追加</span></div>
+        <span class="p-seg"><span class="on">ウォッチ/保有</span><span>見送り</span><span>すべて</span></span>
+        <div class="p-item"><span class="grow p-small">
+          <b>VRT</b> <span class="p-muted">Vertiv</span> <span class="p-chip">ウォッチ中</span> <span class="p-chip warn">⏰ トリガー成立</span><i class="co">3</i><br>
+          <span class="p-muted">DC熱管理の中核。液冷移行の直接受益</span><br>
+          現在値 75 <span class="p-muted">（2026-07-12 · manual）</span><br>
+          ⏱ 株価が下回ったら 80 ／ イベント 次回決算で液冷受注比率の開示<i class="co">4</i><br>
+          <span class="p-chip">📈 テーマ・モメンタム型</span><i class="co">5</i>
+        </span><span class="p-muted">›</span></div>
+        <div class="p-muted p-small" style="margin-top:6px">価格トリガーは価格更新のたびに自動判定され、成立すると司令部の「要アクション」に出ます。イベント型は週次レビューで手動確認してください。</div>
+      </div>
+    </div>
+    <div class="p-tabs"><span><span class="ico">🏠</span>司令部</span><span><span class="ico">📊</span>資産</span><span class="on"><span class="ico">🧭</span>テーマ</span><span><span class="ico">📥</span>インテル</span><span><span class="ico">📓</span>ジャーナル</span></div>
+  </figure>
+  <ol class="legend">
+    <li><i class="co">1</i><span><b>テーマカード。</b>確信度（1〜5）・円換算エクスポージャー・紐付いたインテル数・KPI を一望。タップで詳細（<span class="ui">仮説（thesis）</span>・<span class="ui">自分の情報優位（myEdge）</span>・保有・ウォッチ・インテル・タイムライン）が開き、<span class="ui">編集</span> / <span class="ui">📋 テーマレビュー</span>ボタンがあります。</span></li>
+    <li><i class="co">2</i><span><b>myEdge 警告。</b>「なぜ自分が市場平均より良い判断ができるか」を書けないテーマには警告が出ます。このアプリの一番の思想です。</span></li>
+    <li><i class="co">3</i><span><span class="ui">⏰ トリガー成立</span> — 価格条件が成立中の銘柄に付くバッジ。</span></li>
+    <li><i class="co">4</i><span><b>トリガー（見直し条件）。</b>種類は<span class="ui">株価が下回ったら</span> / <span class="ui">株価が上回ったら</span> / <span class="ui">イベント</span>の3つ。価格系は自動判定、イベント系は手動確認です。</span></li>
+    <li><i class="co">5</i><span><b>参考シグナル。</b>この銘柄を現行ピックに含むモデル名。タップでスコアボードへ。<b>一視点であり推奨ではありません。</b></span></li>
+  </ol>
+  </div>
+
+  <!-- インテル -->
+  <h3 id="sc-intel">📥 インテル受信箱</h3>
+  <div class="screen">
+  <figure class="phone">
+    <div class="p-head"><b>参謀</b><span class="p-sub">意思決定支援 — 判断はあなた自身で</span><span class="p-btns">📈⚙️</span></div>
+    <div class="p-body">
+      <div class="p-card">
+        <h5>AI 連携（週次ブリーフィング）<i class="co">1</i></h5>
+        <span class="p-btn primary block">📋 コンテキストパックを生成してコピー</span>
+        <div class="p-input">AI の回答（付録C の JSON ブロックを含む全文）をここに貼り付け</div>
+        <span class="p-btn block">回答を取り込む</span>
+      </div>
+      <div class="p-card">
+        <h5>クイック投入<i class="co">2</i></h5>
+        <div class="p-row"><div class="p-input" style="flex:1;margin:0">https://…（記事・レポートの URL）</div><span class="p-btn">URL 追加</span></div>
+        <div class="p-input">メモ（例: 展示会で液冷の引き合いが急増していると聞いた）</div>
+        <div class="p-row p-small" style="margin-top:6px"><span class="p-muted">☐ 業務知見（work_insight）</span><span class="p-btn">メモ追加</span></div>
+      </div>
+      <div class="p-card">
+        <div class="p-row"><h5 style="margin:0">自動収集<i class="co">3</i></h5><span class="p-btn" style="font-size:10px">🔄</span></div>
+        <div class="p-item"><span class="grow p-small"><span class="p-muted">Bloomberg Markets ・ 2026/7/11</span><br>Nuclear Energy Services Firm Holtec Joins Sector's IPO Rush</span><span class="p-btn primary" style="font-size:10px">取り込む</span></div>
+      </div>
+      <div class="p-card">
+        <h5>未トリアージ <span class="p-tag">1</span><i class="co">4</i></h5>
+        <div class="p-item"><span class="grow p-small"><span class="p-dot neu"></span> <span class="p-muted">2026-07-09</span> <span class="p-chip">URL</span><br>（例）液冷市場レポート</span><span class="p-muted">›</span></div>
+      </div>
+      <div class="p-card">
+        <h5>トリアージ済み</h5>
+        <div class="p-item"><span class="grow p-small"><span class="p-dot pos"></span> <span class="p-muted">2026-07-05</span> <span class="p-chip">業務知見</span><br>💡 液冷採用率KPIの先行シグナルの可能性…<br><span class="p-muted">🧭 データセンター（電力・冷却・素材）</span></span></div>
+      </div>
+    </div>
+    <div class="p-tabs"><span><span class="ico">🏠</span>司令部</span><span><span class="ico">📊</span>資産</span><span><span class="ico">🧭</span>テーマ</span><span class="on"><span class="ico">📥</span>インテル</span><span><span class="ico">📓</span>ジャーナル</span></div>
+  </figure>
+  <ol class="legend">
+    <li><i class="co">1</i><span><b>AI 連携の中枢。</b><span class="ui">📋 コンテキストパックを生成してコピー</span>→ AI チャットに貼る → 回答全文を貼り戻し欄へ →<span class="ui">回答を取り込む</span>。週次ブリーフィング・テーマレビュー・モデル実行、どの回答もここで受けられます。</span></li>
+    <li><i class="co">2</i><span><b>クイック投入。</b>URL は「しおり」として投げ込むだけ（本文の要約は AI 連携で）。展示会で聞いた話などの一次情報は<span class="ui">業務知見（work_insight）</span>にチェックしてメモ。</span></li>
+    <li><i class="co">3</i><span><b>自動収集。</b>GitHub Actions が毎朝拾った公開ニュース。<span class="ui">取り込む</span>を押すまでアプリのデータには入りません。</span></li>
+    <li><i class="co">4</i><span><b>未トリアージ = 受信箱。</b>テーマ未紐付けのものが上に積まれます。カードをタップ →<span class="ui">テーマ（紐付けるとトリアージ完了）</span>にチェックして<span class="ui">保存</span>。空にすると「受信箱は空です（Inbox Zero 🎉）」。</span></li>
+  </ol>
+  </div>
+
+  <!-- ジャーナル -->
+  <h3 id="sc-journal">📓 ジャーナル</h3>
+  <div class="screen">
+  <figure class="phone">
+    <div class="p-head"><b>参謀</b><span class="p-sub">意思決定支援 — 判断はあなた自身で</span><span class="p-btns">📈⚙️</span></div>
+    <div class="p-body">
+      <div class="p-card">
+        <div class="p-row"><h5 style="margin:0">意思決定ジャーナル</h5><span class="p-btn primary" style="font-size:10px">＋ 起票<i class="co">1</i></span></div>
+        <div class="p-muted p-small">約定記録ではなく判断記録です。良い判断が悪い結果になることはあります — 6か月後に「判断の質」と「結果」を分けて振り返ります。見送り（pass）も学習価値が高いので記録を。</div>
+        <span class="p-seg" style="margin-top:6px"><span class="on">すべて</span><span>レビュー待ち (1)</span><span>レビュー済み</span></span>
+        <div class="p-item"><span class="grow p-small">
+          <span class="p-muted">2026-01-08</span> <span class="p-chip">買い</span> <span class="p-tag">NVDA</span> ¥450,000<i class="co">2</i><br>
+          <span class="p-muted">DCテーマの中核。電力・熱がボトルネック化しても GPU 需要自体は落ちないという仮説で 20 株</span><br>
+          <span class="p-warn">⚠ レビュー期限到来（2026-07-08）</span><i class="co">3</i>
+        </span><span class="p-muted">›</span></div>
+        <div class="p-item"><span class="grow p-small">
+          <span class="p-muted">2026-07-12</span> <span class="p-chip">見送り</span> <span class="p-tag">SMCI</span><br>
+          <span class="p-pos">✓ レビュー済み — 判断: 良い判断 ／ 結果: 中立</span>
+        </span><span class="p-muted">›</span></div>
+      </div>
+    </div>
+    <div class="p-tabs"><span><span class="ico">🏠</span>司令部</span><span><span class="ico">📊</span>資産</span><span><span class="ico">🧭</span>テーマ</span><span><span class="ico">📥</span>インテル</span><span class="on"><span class="ico">📓</span>ジャーナル</span></div>
+  </figure>
+  <ol class="legend">
+    <li><i class="co">1</i><span><span class="ui">＋ 起票</span> — 種別は<span class="ui">買い</span> / <span class="ui">売り</span> / <span class="ui">一部売却</span> / <span class="ui">買い増し</span> / <span class="ui">見送り</span> / <span class="ui">リバランス</span>。金額は概算で OK。<span class="ui">判断理由（当時の仮説を残す）</span>が本体で、根拠にしたインテルも紐付けられます。</span></li>
+    <li><i class="co">2</i><span><b>レビュー期限は起票時に +6か月で自動設定</b>（編集可）。</span></li>
+    <li><i class="co">3</i><span><b>期限が来ると</b>司令部の要アクションに「判断レビュー期限」が出ます。開いて<span class="ui">判断の質</span>（良い判断/妥当/悪い判断）と<span class="ui">結果</span>（良い結果/中立/悪い結果）を<b>別々に</b>記録し、<span class="ui">学び（lesson）</span>を残すと完了です。</span></li>
+  </ol>
+  </div>
+
+  <!-- モデル -->
+  <h3 id="sc-models">📈 モデル・スコアボード</h3>
+  <div class="screen">
+  <figure class="phone">
+    <div class="p-head"><b>参謀</b><span class="p-sub">意思決定支援 — 判断はあなた自身で</span><span class="p-btns">📈⚙️</span></div>
+    <div class="p-body">
+      <div class="p-card">
+        <div class="p-row"><h5 style="margin:0">モデル・スコアボード<i class="co">1</i></h5><span class="p-btn primary" style="font-size:10px">＋ モデル追加</span></div>
+        <span class="p-seg"><span class="on">稼働中</span><span>retire済み</span><span>すべて</span></span>
+        <div class="p-item" style="display:block">
+          <div class="p-row"><b class="p-small">テーマ・モメンタム型</b><span class="p-chip">稼働中</span></div>
+          <div class="p-small">累積相対リターン <b class="p-pos">+3.0%</b> ・ ヒット率 100% ・ ピック 2 件<i class="co">2</i></div>
+          <div class="p-muted p-small">2026-07-01 〜 2026-07-12 ／ 設計書 §5.2 初期モデル案①…</div>
+        </div>
+        <div class="p-item" style="display:block">
+          <div class="p-row"><b class="p-small">コントラリアン型</b><span class="p-chip">稼働中</span></div>
+          <div class="p-small">累積相対リターン — ・ ヒット率 — ・ ピック 0 件</div>
+        </div>
+      </div>
+      <div class="p-card">
+        <h5>月次モデル実行（コピペ）<i class="co">3</i></h5>
+        <div class="p-row"><span class="p-btn">📋 テーマ・モメンタム型</span><span class="p-chip">今月 ✓</span></div>
+        <div class="p-row" style="margin-top:5px"><span class="p-btn">📋 コントラリアン型</span><span class="p-chip warn">今月 未実行</span></div>
+        <div class="p-input">AI の回答（modelPicks の JSON ブロックを含む全文）をここに貼り付け</div>
+        <span class="p-btn block">ピックを取り込む</span>
+      </div>
+      <div class="p-card">
+        <h5>ベンチマーク価格<i class="co">4</i></h5>
+        <div class="p-small">S&amp;P500（SPY）: <b>652.8</b> <span class="p-muted">（2026-07-10）</span> ／ TOPIX（1306）: <b>2865</b> <span class="p-muted">（2026-07-04）</span></div>
+        <div class="p-row" style="margin-top:6px"><div class="p-input" style="flex:1;margin:0">価格</div><span class="p-btn">今日の値として記録</span></div>
+      </div>
+    </div>
+    <div class="p-tabs"><span><span class="ico">🏠</span>司令部</span><span><span class="ico">📊</span>資産</span><span><span class="ico">🧭</span>テーマ</span><span><span class="ico">📥</span>インテル</span><span><span class="ico">📓</span>ジャーナル</span></div>
+  </figure>
+  <ol class="legend">
+    <li><i class="co">1</i><span><b>モデルとは</b>「選定ロジックの言語化（logicPrompt）+ 仮想ポートフォリオ + 成績記録」。実際の売買は一切しません。初期3本（テーマ・モメンタム型 / コントラリアン型 / クオリティ・バリュエーション型）が入っています。カードをタップすると詳細（<span class="ui">出典・由来（origin）</span>・<span class="ui">選定ロジック（logicPrompt）</span>・ピック履歴・<span class="ui">retire</span>）。</span></li>
+    <li><i class="co">2</i><span><b>成績。</b>累積相対リターン = ベンチマーク（米国株→S&amp;P500（SPY）、日本株→TOPIX（1306））に対する超過分の weight 加重平均。ヒット率 = ベンチマークに勝ったピックの割合。</span></li>
+    <li><i class="co">3</i><span><b>月次実行。</b>各モデルの 📋 ボタンで実行プロンプトをコピー → AI の回答を貼り戻し →<span class="ui">ピックを取り込む</span>。仮想エントリー価格は自動設定されます。</span></li>
+    <li><i class="co">4</i><span><b>ベンチマーク。</b>SPY は<span class="ui">米国株価を一括更新</span>で自動記録。1306 は<span class="ui">今日の値として記録</span>で手動入力。記録が無い期間は「欠損」として計算からスキップされます（壊れません）。</span></li>
+  </ol>
+  </div>
+
+  <!-- 設定 -->
+  <h3 id="sc-settings">⚙️ 設定/データ</h3>
+  <p>上から順に、次のセクションが並びます。</p>
+  <div class="table-wrap"><table>
+    <tr><th>セクション</th><th>できること</th></tr>
+    <tr><td><span class="ui">目標</span></td><td><span class="ui">待機資金の目標上限（%）</span>と<span class="ui">生活防衛資金（月数）</span></td></tr>
+    <tr><td><span class="ui">キャッシュフロー（月次の代表値）</span></td><td>手取り収入・生活費・住宅ローン・生活防衛資金の目標額。ここから月次投資可能余力が計算されます。見直しは年2回で十分</td></tr>
+    <tr><td><span class="ui">API・為替</span></td><td><span class="ui">Finnhub API キー</span>の保存（任意）、為替の<span class="ui">手動設定</span> / <span class="ui">今すぐ取得（Frankfurter）</span></td></tr>
+    <tr><td><span class="ui">AI 連携</span></td><td><span class="ui">コンテキストパックに資産の絶対額を含める（オフ = 比率のみ）</span>のスイッチと、プロンプト冒頭に入る<span class="ui">固定プロフィール</span></td></tr>
+    <tr><td><span class="ui">制限リスト（取引自粛銘柄）</span></td><td>自社・協業先・NDA 対象などを登録。保有・ウォッチ・モデルピック追加時に照合して警告（インサイダー取引規制への防波堤）</td></tr>
+    <tr><td><span class="ui">自動収集フィード</span></td><td>配信状況の確認。取得元・キーワードはリポジトリの <code>config/feed-sources.json</code> / <code>config/feed-keywords.json</code> を編集</td></tr>
+    <tr><td><span class="ui">データ</span></td><td><span class="ui">JSON エクスポート</span> / <span class="ui">JSON インポート</span> / <span class="ui">サンプルデータを読み込む</span> / <span class="ui">当月スナップショットを再記録</span> / <span class="ui">自動バックアップ（ワンタップ上書き）</span> / <span class="ui">全データ消去</span></td></tr>
+  </table></div>
+</section>
+
+<!-- ============ 3. 取扱説明書 ============ -->
+<section class="part" id="part3">
+  <div class="eyebrow">PART 3</div>
+  <h2>取扱説明書（操作手順）</h2>
+
+  <h3>3-1. 最初の30分（セットアップ）</h3>
+  <ol class="steps">
+    <li><b>まずサンプルで触る。</b>⚙️ 設定 →<span class="ui">データ</span>→<span class="ui">サンプルデータを読み込む</span>。全画面がどう見えるか一巡してから、<span class="ui">全データ消去</span>で白紙に戻します。</li>
+    <li><b>スマホにインストール。</b>Android Chrome でアプリの URL を開き「ホーム画面に追加」。これで共有メニューからのインテル投入（Share Target）が使えるようになります。</li>
+    <li><b>設定を埋める。</b>⚙️ 設定で<span class="ui">目標</span>・<span class="ui">キャッシュフロー（月次の代表値）</span>・<span class="ui">固定プロフィール</span>を入力。<span class="ui">制限リスト（取引自粛銘柄）</span>には自社・協業先などを必ず登録してください。</li>
+    <li><b>（任意）Finnhub キー。</b>finnhub.io で無料登録し、キーを<span class="ui">API・為替</span>に保存すると米国株価の一括更新が使えます。<b>無くても全機能は手動で動きます。</b></li>
+    <li><b>口座と保有を登録。</b>📊 資産 →<span class="ui">口座管理</span>で口座を作り、<span class="ui">＋ 保有を追加</span>で保有を登録。細かい正確さより「全体が見える」ことを優先してください。</li>
+    <li><b>テーマを1つ書く。</b>🧭 テーマ →<span class="ui">＋ 追加</span>。<span class="ui">仮説（thesis）</span>と<span class="ui">自分の情報優位（myEdge）</span>は必ず言葉にします。</li>
+    <li><b>最初のバックアップ。</b>⚙️ 設定 →<span class="ui">JSON エクスポート</span>。ここが30日警告の起点になります。</li>
+  </ol>
+
+  <h3>3-2. 資産の登録と価格更新</h3>
+  <ul>
+    <li><b>評価額は入力しない。</b>常に「数量 × 価格 × 為替」で自動計算されます。買い増したら数量と<span class="ui">取得単価（現地通貨）</span>を書き換えるだけ。取引履歴は持ちません（証券会社にあるので）。</li>
+    <li><b>手動価格の更新</b>は行をタップ →<span class="ui">価格（1単位）</span>を書き換えて<span class="ui">保存</span>。source が manual、基準日が今日になります。</li>
+    <li><b>定額積立</b>（新NISA・金銀積立など）は保有の<span class="ui">定額積立（円/月）</span>に金額を入れると、投資可能余力の計算に反映されます。</li>
+    <li><b>月次スナップショット</b>は、月が変わって最初にアプリを開いたとき自動記録されます。手動でやり直すなら ⚙️ 設定 →<span class="ui">当月スナップショットを再記録</span>。</li>
+  </ul>
+
+  <h3>3-3. インテルの投入とトリアージ</h3>
+  <ul>
+    <li><b>入口は3つ。</b>①スマホの共有メニューから「参謀」を選ぶ（最速） ②📥 インテルの<span class="ui">URL 追加</span> / <span class="ui">メモ追加</span> ③<span class="ui">自動収集</span>から<span class="ui">取り込む</span>。</li>
+    <li><b>トリアージ = テーマに紐付けること。</b><span class="ui">未トリアージ</span>のカードをタップし、テーマにチェック・<span class="ui">センチメント</span>（好材料/懸念/中立）・<span class="ui">so-what（自分の PF・テーマへの示唆）</span>を書いて<span class="ui">保存</span>。対応が必要なら<span class="ui">要対応（ダッシュボードに表示）</span>にチェック。</li>
+    <li><b>読み終わったら</b><span class="ui">アーカイブ</span>。削除せず残すことでテーマのタイムラインに蓄積されます。</li>
+  </ul>
+
+  <h3 id="sec-ai">3-4. AI 連携（コピペ方式）— このアプリの核</h3>
+  <p>アプリはあなたのテーマ・配分（比率）・ウォッチ・未処理インテルを1つのプロンプト（コンテキストパック）に自動合成します。毎回ゼロからプロンプトを書く必要はありません。</p>
+  <ol class="steps">
+    <li>📥 インテル →<span class="ui">📋 コンテキストパックを生成してコピー</span></li>
+    <li>Claude などの AI チャットに貼り付けて送信</li>
+    <li>回答の<b>全文</b>をコピーし、貼り戻し欄にペースト →<span class="ui">回答を取り込む</span></li>
+    <li>回答末尾の JSON が自動で展開されます — 要約インテル（テーマ・銘柄に自動紐付け）、テーマごとの評価（レビューノートに追記）、見落とし指摘（要対応インテルとして登録）</li>
+  </ol>
+  <div class="note blue"><b>失敗しても壊れません。</b>JSON が読めない回答は「全文を1枚のインテルとして保存します」。また、AI に渡す資産情報は初期設定では<b>比率のみ</b>です（⚙️ 設定 →<span class="ui">AI 連携</span>で変更可）。</div>
+  <p>同じ貼り戻し欄で受けられる回答は3種類あります: <b>週次ブリーフィング</b>（上記）、<b>テーマレビュー</b>（テーマ詳細の<span class="ui">📋 テーマレビュー</span>から生成）、<b>モデル実行</b>（📈 の<span class="ui">月次モデル実行（コピペ）</span>から生成。こちらは 📈 画面の貼り戻し欄でも可）。</p>
+
+  <h3>3-5. トリガーとジャーナル</h3>
+  <ul>
+    <li><b>トリガーは「事前に決めた見直し条件」。</b>ウォッチ銘柄の編集画面で<span class="ui">＋ 条件を追加</span>。価格系は価格更新のたびに自動判定され、成立すると司令部に「トリガー成立」が出ます。<span class="ui">確認済み</span>で消し、条件が再成立すれば再表示。</li>
+    <li><b>動いたら（見送っても）起票。</b>📓 ジャーナル →<span class="ui">＋ 起票</span>。売買した時だけでなく<span class="ui">見送り</span>も記録します — 見送り判断の振り返りは買い判断と同じくらい学習価値が高いからです。</li>
+    <li><b>6か月後、</b>司令部に「判断レビュー期限」が出たら開いて、<span class="ui">判断の質</span>と<span class="ui">結果</span>を分けて記録。「良い判断だったが結果は悪かった」を区別できることが、学習の質を決めます。</li>
+  </ul>
+
+  <h3>3-6. モデル選定エンジン（月次）</h3>
+  <ol class="steps">
+    <li>月初、司令部に「モデル実行（月次）: 今月のピック未記録」が出ます → 📈 を開く</li>
+    <li>各モデルの 📋 ボタンで実行プロンプトをコピー → AI に貼る</li>
+    <li>回答を貼り戻して<span class="ui">ピックを取り込む</span>。エントリー価格は保有/ウォッチの既知価格や Finnhub から自動設定（日本株は手動）</li>
+    <li>あとは<span class="ui">米国株価を一括更新</span>のたびに仮想成績が自動追跡されます</li>
+    <li>四半期ごとにスコアボードを見て、成績下位モデルを<span class="ui">retire</span>（履歴は消えません）、新しい視点のモデルを<span class="ui">＋ モデル追加</span></li>
+  </ol>
+  <div class="note"><b>ピックは参考シグナルであり推奨ではありません。</b>目的は「複数の直交する視点に仮説を出させ、実績で選別する」実験です。上位モデルのピックはウォッチリストに 📈 バッジで表示されますが、あくまで一視点です。</div>
+
+  <h3 id="sec-backup">3-7. データ保全（最重要）</h3>
+  <div class="note"><b>データはこの端末のブラウザ内にのみ保存されます。</b>ブラウザの「サイトデータを削除」で全消失します。30日以上バックアップが無いと司令部に警告が出ます。</div>
+  <ul>
+    <li><b>基本:</b> ⚙️ 設定 →<span class="ui">JSON エクスポート</span>。<code>sanbo-backup-日付.json</code> がダウンロードされます。</li>
+    <li><b>PC の Chrome/Edge なら:</b> <span class="ui">自動バックアップ（ワンタップ上書き）</span>で一度<span class="ui">保存先を指定</span>すれば、以後は<span class="ui">今すぐ上書きバックアップ</span>の1タップで同じファイルに上書きできます。</li>
+    <li><b>復元・機種変更:</b> 新しい端末でアプリを開き、⚙️ 設定 →<span class="ui">JSON インポート</span>でバックアップファイルを選ぶだけ。完全復元されます（インポート前の状態も自動退避されます）。</li>
+  </ul>
+</section>
+
+<!-- ============ 4. おすすめの使い方 ============ -->
+<section class="part" id="part4">
+  <div class="eyebrow">PART 4</div>
+  <h2>おすすめの使い方（運用リズム）</h2>
+  <p class="lead">このアプリは「毎日開くアプリ」ではなく<b>「週1の儀式 + 随時インテル投入」</b>に最適化されています。本業が多忙でも破綻しないリズムがこれです。</p>
+
+  <div class="cadence">
+    <div class="cad">
+      <span class="freq">随時 — 数秒</span>
+      <div class="t">出会った情報は、その場で投げ込むだけ</div>
+      <ol>
+        <li>記事を見つけたら共有メニュー →「参謀」（または URL をコピーして<span class="ui">URL 追加</span>）</li>
+        <li>仕事で聞いた一次情報は<span class="ui">メモ追加</span> +<span class="ui">業務知見（work_insight）</span>にチェック</li>
+      </ol>
+      <div class="why">ここで読み込まない・整理しないのがコツ。判断は週末にまとめて。あなたの情報優位は「仕事で得た高品質な情報」にあり、それを漏らさず溜める導線がこの数秒です。</div>
+    </div>
+
+    <div class="cad">
+      <span class="freq">週次 — 15分（週末推奨）</span>
+      <div class="t">週次ブリーフィング — このアプリの心臓部</div>
+      <ol>
+        <li><b>3分:</b> 📊 資産 →<span class="ui">為替を更新</span>→<span class="ui">米国株価を一括更新</span>。気になる手動銘柄だけ価格を書き換え</li>
+        <li><b>5分:</b> 📥 インテルの<span class="ui">未トリアージ</span>を捌く（テーマ紐付け + so-what 一言）。<span class="ui">自動収集</span>も一瞥して気になるものだけ<span class="ui">取り込む</span></li>
+        <li><b>5分:</b> <span class="ui">📋 コンテキストパックを生成してコピー</span>→ AI →<span class="ui">回答を取り込む</span></li>
+        <li><b>2分:</b> 🏠 司令部で<span class="ui">要アクション</span>を確認。トリガー成立を<span class="ui">確認済み</span>にし、動く/見送るを決めたら 📓 で<span class="ui">＋ 起票</span></li>
+      </ol>
+      <div class="why">イベント型トリガー（決算開示待ちなど）はこのタイミングで目視確認します。15分で終わらない週は、入力を増やしすぎのサイン。</div>
+    </div>
+
+    <div class="cad">
+      <span class="freq">月次 — 10分（月初）</span>
+      <div class="t">月替わりの儀式</div>
+      <ol>
+        <li>月が変わって最初に開いた時、当月スナップショットが自動記録されます（操作不要）</li>
+        <li>日本株・投信・金銀など手動銘柄の価格を月1で更新（このあと<span class="ui">当月スナップショットを再記録</span>を押すと反映済みの値で取り直せます）</li>
+        <li>📈 でモデル実行: 📋 でプロンプトコピー → AI →<span class="ui">ピックを取り込む</span>。TOPIX（1306）の値も<span class="ui">今日の値として記録</span></li>
+      </ol>
+      <div class="why">スナップショットが貯まると、待機資金比率と配分の推移が時系列で追えるようになります。「寝かせている資金」の改善が数字で見える仕組みです。</div>
+    </div>
+
+    <div class="cad">
+      <span class="freq">四半期 — 30分</span>
+      <div class="t">仮説とモデルの棚卸し</div>
+      <ol>
+        <li>各テーマの詳細を開き<span class="ui">📋 テーマレビュー</span>→ AI →貼り戻し。<b>反証材料</b>・KPI 状況・エクスポージャー過不足が<span class="ui">レビューノート</span>に蓄積されます</li>
+        <li>司令部の<span class="ui">放置検知</span>（インテルが3か月途絶えたテーマ）を確認 — テーマ投資の失敗は「買った後の追跡停止」で起きます。追う気が失せたテーマは状態を<span class="ui">終了</span>に</li>
+        <li>📈 スコアボードで成績比較 → 下位モデルを<span class="ui">retire</span>、新モデル投入（<span class="ui">出典・由来（origin）</span>に着想元をメモ）</li>
+        <li>📓 の<span class="ui">レビュー待ち</span>を消化</li>
+      </ol>
+      <div class="why">仮説に都合の良い情報だけ集めるのを防ぐため、テーマレビューのプロンプトは反証材料を最優先で聞く作りになっています。</div>
+    </div>
+
+    <div class="cad">
+      <span class="freq">年2回</span>
+      <div class="t">土台の見直し</div>
+      <ol>
+        <li>⚙️ 設定の<span class="ui">キャッシュフロー（月次の代表値）</span>と<span class="ui">目標</span>を実態に合わせて更新</li>
+        <li><span class="ui">制限リスト（取引自粛銘柄）</span>を業務の変化（新規協業・NDA 案件）に合わせて棚卸し</li>
+        <li><span class="ui">固定プロフィール</span>（AI に渡す自己紹介）も専門領域の変化に合わせて更新</li>
+      </ol>
+    </div>
+  </div>
+
+  <h3>守りの習慣（すべてに優先）</h3>
+  <ul>
+    <li><b>バックアップ警告は即対応。</b>司令部に「最終バックアップから n 日経過」が出たら、その場で<span class="ui">JSON エクスポート</span>。数か月分の判断記録は取り戻せません。</li>
+    <li><b>制限リストの警告を軽視しない。</b>保有・ウォッチ・モデルピックの追加時に「⚠ ○○ は制限リストに登録されています」と出たら、登録より先に社内の売買規程を確認してください。仮想ピックであっても取引自粛対象である点に注意、です。</li>
+    <li><b>AI の出力は材料であって答えではない。</b>週次ブリーフィングも、モデルのピックも、「判断はあなた自身で」。</li>
+  </ul>
+</section>
+
+<!-- ============ 5. 困ったとき ============ -->
+<section class="part" id="part5">
+  <div class="eyebrow">PART 5</div>
+  <h2>困ったとき（FAQ）</h2>
+
+  <details>
+    <summary>為替や株価が取得できない / オフラインで開いた</summary>
+    <div class="a">そのまま使えます。アプリは常に「前回値 + いつの値か（asOf）」で動き続ける設計です。為替は ⚙️ 設定 →<span class="ui">API・為替</span>の<span class="ui">手動設定</span>でいつでも上書きできます。オフラインでも全画面が開きます（PWA キャッシュ）。</div>
+  </details>
+  <details>
+    <summary>保有の価格が黄色く表示される</summary>
+    <div class="a">その価格の基準日（asOf）が90日を超えています。鮮度の見える化であって異常ではありません。行をタップして<span class="ui">価格（1単位）</span>と<span class="ui">価格の基準日</span>を更新してください。</div>
+  </details>
+  <details>
+    <summary>AI の回答を貼り戻したら「JSON を解釈できなかったため、全文を1枚のインテルとして保存しました」と出た</summary>
+    <div class="a">回答末尾に規定の JSON ブロックが無かったケースです。データは失われていません（全文が受信箱に入っています）。AI チャット側で「先ほど指定した JSON フォーマットで出力し直して」と頼み、その回答を貼り直せば通常どおり展開されます。コンテキストパックを使わず自由に質問した回答は、この生テキスト保存になるのが正常動作です。</div>
+  </details>
+  <details>
+    <summary>モデルの回答を貼り戻したら「モデル名を解決できませんでした」と出た</summary>
+    <div class="a">回答 JSON 内の model 名がスコアボードのモデル名と一致していません。実行プロンプトには「model 名は変えずにそのまま返す」指示が入っていますが、AI が変えてしまうことがあります。回答の JSON 内のモデル名をスコアボードの表記に手で直して貼り直してください。</div>
+  </details>
+  <details>
+    <summary>スコアボードの相対リターンが「—」や「欠損」になる</summary>
+    <div class="a">ピック日周辺のベンチマーク価格（S&amp;P500（SPY）または TOPIX（1306））が記録されていないためです。SPY は<span class="ui">米国株価を一括更新</span>で自動記録されます。1306 は 📈 画面で<span class="ui">今日の値として記録</span>から手動入力してください。欠損期間のピックは計算から除外されるだけで、他は正常に集計されます。</div>
+  </details>
+  <details>
+    <summary>スマホの共有メニューに「参謀」が出てこない</summary>
+    <div class="a">共有ターゲットは PWA としてインストールした場合のみ有効です。Android Chrome でアプリを開き「ホーム画面に追加」してください。なお iOS の Safari はこの機能（Share Target）に対応していないため、iPhone では URL コピー →<span class="ui">URL 追加</span>を使ってください。</div>
+  </details>
+  <details>
+    <summary>司令部から「トリガー成立」を消したのにまた出てきた</summary>
+    <div class="a">仕様です。<span class="ui">確認済み</span>は「今回の成立を確認した」印で、価格が一度条件圏外に出て再び条件を満たすと、新しい成立として再表示されます。恒久的に止めたい場合はウォッチ銘柄の編集画面でそのトリガー行を × で削除してください。</div>
+  </details>
+  <details>
+    <summary>自動収集に「新着はありません」と出続ける</summary>
+    <div class="a">2つの可能性があります。① GitHub Actions がまだ動いていない — リポジトリの Actions タブで「Update feed.json」を Run workflow して確認。② キーワードに合う記事が無かった — <code>config/feed-keywords.json</code> のキーワードを実際のテーマ・銘柄に合わせて増やしてください（空配列にすると全件通過）。</div>
+  </details>
+  <details>
+    <summary>機種変更・別端末への引っ越し</summary>
+    <div class="a">旧端末: ⚙️ 設定 →<span class="ui">JSON エクスポート</span>。ファイルを新端末に渡し、新端末でアプリを開いて<span class="ui">JSON インポート</span>。これで完全復元です。端末間の自動同期機能はありません（データを外部に出さない設計のため）。</div>
+  </details>
+  <details>
+    <summary>間違えてインポート/サンプル読み込みをしてしまった</summary>
+    <div class="a">直前の状態はブラウザ内に自動退避されています（キー: <code>sanbo.appState.preImportBackup</code>）。開発者ツールの localStorage からこの値を <code>sanbo.appState</code> に書き戻せば復旧できます。不安な場合は、操作前に必ず<span class="ui">JSON エクスポート</span>を。</div>
+  </details>
+  <details>
+    <summary>全部やり直したい</summary>
+    <div class="a">⚙️ 設定 → 一番下の<span class="ui">全データ消去</span>（確認が2回出ます）。初期モデル3本だけが入った白紙状態に戻ります。消去前のエクスポートを忘れずに。</div>
+  </details>
+
+  <div class="footer">
+    <p><b>参謀</b> Phase 1-4 ／ 本書の文言はアプリ実画面（schemaVersion 4 時点）の表記と一致させています。アプリ更新時は本書も併せて改訂してください。</p>
+    <p>データはお使いの端末のブラウザ内にのみ保存されます。本アプリおよび本書は投資助言ではありません — 判断はあなた自身で。</p>
+  </div>
+</section>
+
+</main>
+</body>
+</html>

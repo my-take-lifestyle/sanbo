@@ -1,6 +1,6 @@
 // Service Worker — オフラインキャッシュ（cache-first）
 // バージョンを上げると旧キャッシュは activate 時に削除される
-const CACHE = 'sanbo-v4';
+const CACHE = 'sanbo-v5';
 
 const ASSETS = [
   './',
@@ -9,6 +9,7 @@ const ASSETS = [
   './icon.svg',
   './sample-data.json',
   './css/style.css',
+  './docs/guide.html',
   './js/app.js',
   './js/state.js',
   './js/ulid.js',

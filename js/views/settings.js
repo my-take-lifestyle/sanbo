@@ -157,7 +157,10 @@ export function render(root) {
       <button class="btn danger block" id="btn-wipe">全データ消去</button>
     </section>
 
-    <div class="muted small center">参謀 Phase 1-4 ・ schemaVersion ${SCHEMA_VERSION} ・ データはこの端末のブラウザ内にのみ保存されます</div>
+    <div class="muted small center">
+      <a href="./docs/guide.html" target="_blank" rel="noopener">📖 取扱説明書・ビジュアルガイド</a><br>
+      参謀 Phase 1-4 ・ schemaVersion ${SCHEMA_VERSION} ・ データはこの端末のブラウザ内にのみ保存されます
+    </div>
   `;
 
   // 目標
