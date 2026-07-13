@@ -1,20 +1,27 @@
 {
-  "generatedAt": "2026-07-12T21:52:14.766Z",
+  "generatedAt": "2026-07-13T21:56:40.732Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
   "items": [
     {
-      "title": "【今朝の5本】仕事を始める前に読んでおきたい厳選ニュース",
-      "url": "https://www.bloomberg.com/jp/news/newsletters/2026-07-12/TI2YJ2RKV2TH00",
-      "summary": "​米イラン応酬激化、AI開発競争、グラム上院議員死去、アップルが提訴、半導体株に慎重",
-      "source": "Bloomberg Markets",
-      "publishedAt": "2026-07-12T21:04:14.000Z"
+      "title": "DRAMとは データを一時保存する半導体、3社寡占で価格上昇続く - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBidVYtMkpfMXEzbThaZUpSSWstNXJIaEE5OEkyYXNWNHdGWlB1QllGZFk0enFHRWE3cEFwMGtVNjlzMU15dkx5Rko2bFJVNzR2eENLT0pSZG1QNDBxTWF6N09NUDRzdU5UbjZQNg?oc=5",
+      "summary": "DRAMとは データを一時保存する半導体、3社寡占で価格上昇続く 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-07-13T08:20:00.000Z"
     },
     {
-      "title": "｢半導体インフレ｣消費冷やす メモリー6倍高騰、スマホ･PC年2億台減 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1hYW9RaDgzamQySG1ROTFqdmVHckFabEYtR1dMTXl1UzN4T2JpUmJvdERBdzlOU0hfNHdYUlo0RnJOYW1Td2RRYTM1VmUxdVFxS0dNMTRGc2wwcjNsVVFPRy03S0dnXzhIQnBFcg?oc=5",
-      "summary": "｢半導体インフレ｣消費冷やす メモリー6倍高騰、スマホ･PC年2億台減 日本経済新聞",
+      "title": "キオクシア株価が大幅安、韓国株安で半導体に売り（13日の株式市場） - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBDbHJXWV9aa2REYk1uRjZESUV5MVYwTldhaDAyNy1OUjRvb0Q3Qk5SeGFGVDdMQTJYZXRVRHZwNlVGV0JnSlA3UGxTVXc1dTFRczJYaWxPZFBKNl9HYmstYUhQTkFhRERkR19tcg?oc=5",
+      "summary": "キオクシア株価が大幅安、韓国株安で半導体に売り（13日の株式市場） 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-07-13T07:34:57.000Z"
+    },
+    {
+      "title": "TSMCという夢が金を呼ぶには 九州半導体パークが聖地になる未来 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE41RWlaZHhmdVY4Q3ZVZDllU0twcjZhZ0RMc3dLSWZpZ0M3RHRFajFYQ19uVm11NFJGSzhwVVY3SDdBQXVIU2oxUTJLeV9NZlpyb2lpWGZfc01rOVJXOUd4NWRtSEJRa3AteDlvTw?oc=5",
+      "summary": "TSMCという夢が金を呼ぶには 九州半導体パークが聖地になる未来 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
       "publishedAt": "2026-07-12T20:00:00.000Z"
     }
