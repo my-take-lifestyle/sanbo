@@ -1,29 +1,27 @@
 {
-  "generatedAt": "2026-07-13T21:56:40.732Z",
+  "generatedAt": "2026-07-14T21:57:45.185Z",
   "sourceCount": 3,
   "keywordCount": 11,
-  "errors": [],
+  "errors": [
+    {
+      "source": "Bloomberg Markets",
+      "message": "HTTP 404"
+    }
+  ],
   "items": [
     {
-      "title": "DRAMとは データを一時保存する半導体、3社寡占で価格上昇続く - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBidVYtMkpfMXEzbThaZUpSSWstNXJIaEE5OEkyYXNWNHdGWlB1QllGZFk0enFHRWE3cEFwMGtVNjlzMU15dkx5Rko2bFJVNzR2eENLT0pSZG1QNDBxTWF6N09NUDRzdU5UbjZQNg?oc=5",
-      "summary": "DRAMとは データを一時保存する半導体、3社寡占で価格上昇続く 日本経済新聞",
+      "title": "九州電力、バニラビーンズの生産に成功 国内需要の9割輸入 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE82cHVSXzNoR3JOWEdRN2w3amdVYms4a2hvR3ZIYUc5Yy1KbGpnekgydnNmWFhlN1NneFdYS1E4TDdOMFp2NDFrRHRJUUtWcU1KTlpYQVVxOFR0ZlRJVEJsWVNtR2w4VjkxUXEzZQ?oc=5",
+      "summary": "九州電力、バニラビーンズの生産に成功 国内需要の9割輸入 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-07-13T08:20:00.000Z"
+      "publishedAt": "2026-07-14T09:46:46.000Z"
     },
     {
-      "title": "キオクシア株価が大幅安、韓国株安で半導体に売り（13日の株式市場） - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBDbHJXWV9aa2REYk1uRjZESUV5MVYwTldhaDAyNy1OUjRvb0Q3Qk5SeGFGVDdMQTJYZXRVRHZwNlVGV0JnSlA3UGxTVXc1dTFRczJYaWxPZFBKNl9HYmstYUhQTkFhRERkR19tcg?oc=5",
-      "summary": "キオクシア株価が大幅安、韓国株安で半導体に売り（13日の株式市場） 日本経済新聞",
+      "title": "NVIDIAと三菱重工、AIデータセンターで提携 次世代冷却技術で - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8tYk1fMHVMRnZhNXR1V3pIRlFmN1hJdEZsRmN1Zm5hdWtUVGsySVREWWd5dlhHN1c3Vm5TX2UtRjNSNXlCVzI4eHFXaTE4cEV0aVJkMUpfNFlkUjZsdmZnc1QydVc4bk5HVWtMSg?oc=5",
+      "summary": "NVIDIAと三菱重工、AIデータセンターで提携 次世代冷却技術で 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-07-13T07:34:57.000Z"
-    },
-    {
-      "title": "TSMCという夢が金を呼ぶには 九州半導体パークが聖地になる未来 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE41RWlaZHhmdVY4Q3ZVZDllU0twcjZhZ0RMc3dLSWZpZ0M3RHRFajFYQ19uVm11NFJGSzhwVVY3SDdBQXVIU2oxUTJLeV9NZlpyb2lpWGZfc01rOVJXOUd4NWRtSEJRa3AteDlvTw?oc=5",
-      "summary": "TSMCという夢が金を呼ぶには 九州半導体パークが聖地になる未来 日本経済新聞",
-      "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-07-12T20:00:00.000Z"
+      "publishedAt": "2026-07-14T07:00:00.000Z"
     }
   ]
 }
