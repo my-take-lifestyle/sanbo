@@ -1,27 +1,36 @@
 {
-  "generatedAt": "2026-07-14T21:57:45.185Z",
+  "generatedAt": "2026-07-15T22:00:38.626Z",
   "sourceCount": 3,
   "keywordCount": 11,
-  "errors": [
-    {
-      "source": "Bloomberg Markets",
-      "message": "HTTP 404"
-    }
-  ],
+  "errors": [],
   "items": [
     {
-      "title": "九州電力、バニラビーンズの生産に成功 国内需要の9割輸入 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE82cHVSXzNoR3JOWEdRN2w3amdVYms4a2hvR3ZIYUc5Yy1KbGpnekgydnNmWFhlN1NneFdYS1E4TDdOMFp2NDFrRHRJUUtWcU1KTlpYQVVxOFR0ZlRJVEJsWVNtR2w4VjkxUXEzZQ?oc=5",
-      "summary": "九州電力、バニラビーンズの生産に成功 国内需要の9割輸入 日本経済新聞",
-      "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-07-14T09:46:46.000Z"
+      "title": "The Optimistic Case for the Hochul Data Center Pause",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-07-15/the-optimistic-case-for-the-hochul-data-center-pause",
+      "summary": "All politicians are being forced to navigate this issue.",
+      "source": "Bloomberg Markets",
+      "publishedAt": "2026-07-15T20:52:38.000Z"
     },
     {
-      "title": "NVIDIAと三菱重工、AIデータセンターで提携 次世代冷却技術で - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8tYk1fMHVMRnZhNXR1V3pIRlFmN1hJdEZsRmN1Zm5hdWtUVGsySVREWWd5dlhHN1c3Vm5TX2UtRjNSNXlCVzI4eHFXaTE4cEV0aVJkMUpfNFlkUjZsdmZnc1QydVc4bk5HVWtMSg?oc=5",
-      "summary": "NVIDIAと三菱重工、AIデータセンターで提携 次世代冷却技術で 日本経済新聞",
+      "title": "半導体装置市場、26年は23%成長 先端品向けの投資拡大続く - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBlUE1uQ3MwQmFHalFkakhFY2F2RlQ5VXIyb05pQ2xQUjZ5Z2tnZjNVX0RYVHdIMmFrY1lzcGl2WHgtMm5XV0N5aDk4RmdfaHZVdF9WbDZNckFrOHBlSzZrblNvcDNOOF9rRjlLdQ?oc=5",
+      "summary": "半導体装置市場、26年は23%成長 先端品向けの投資拡大続く 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-07-14T07:00:00.000Z"
+      "publishedAt": "2026-07-15T10:22:13.000Z"
+    },
+    {
+      "title": "電力8社がデータセンター送電網増強 全国30カ所、AI需要見据え先手 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9qR0Y2ZmxteTBZS1pNd2FRM3MzdU9sTjIyRHNOR0poZVNQSk80R19UNDdqcV9zcklTUTFEQ1Z3dTZ0eUhHNm5iLXljcDFSWnY0a3lBRVhFSHRFNmQyNm5pU0VXUzNfMGliTW1haw?oc=5",
+      "summary": "電力8社がデータセンター送電網増強 全国30カ所、AI需要見据え先手 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-07-15T09:00:00.000Z"
+    },
+    {
+      "title": "NY州、知事が大規模データセンター新設1年停止命令 全米で初 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1Pc3p3NU9HYmd2RXpXRmRna19obHRXMU1HUUp2MUV4ejEyTkF4emJzT0s2dU9DLW1GZTBmWWNjMXpZMnVvYThaUkUtUlRwdEw3NkdKMXJnSk1uTU05REVyLTZyS3pwTjZSYi1mUg?oc=5",
+      "summary": "NY州、知事が大規模データセンター新設1年停止命令 全米で初 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-07-14T20:42:41.000Z"
     }
   ]
 }
