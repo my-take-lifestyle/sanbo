@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-07-19T21:52:47.839Z",
+  "generatedAt": "2026-07-20T21:59:47.331Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
-  "items": []
+  "items": [
+    {
+      "title": "BlackRock Eyes More Than $12 Billion Debt for Data Center",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-20/blackrock-eyes-more-than-12-billion-debt-for-data-center",
+      "summary": "BlackRock Inc. is looking to sell more than $12 billion of bonds to help finance a Meta Platforms Inc. data center campus in El Paso, Texas, according to people with knowledge of the transaction, the latest in a string of debt deals fueling tech companies’ massive investments in artificial intelligence.",
+      "source": "Bloomberg Markets",
+      "publishedAt": "2026-07-20T14:33:53.000Z"
+    }
+  ]
 }
