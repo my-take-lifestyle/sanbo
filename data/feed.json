@@ -1,15 +1,50 @@
 {
-  "generatedAt": "2026-07-21T22:03:27.233Z",
+  "generatedAt": "2026-07-22T22:03:14.754Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
   "items": [
     {
-      "title": "パナソニックHD、半導体工場向け排水処理の新規事業 30年度50億円 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9JbTdWUkdrTmlScUltSm91QklhdGV3MnVIVFRRZWd0c1VMRm9uUDN5YWFiY1Y3OFdRRVZ3SVlzc0x1Wmo4QjJ5MUZHU3JmVVp0YW10THVROTA1OWpUY0oyMGYtbGFuTGNaRmJMQQ?oc=5",
-      "summary": "パナソニックHD、半導体工場向け排水処理の新規事業 30年度50億円 日本経済新聞",
+      "title": "Trump set to expand power cost pledge on data centers - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMmFFRVRfWl95ZVFWRzB0cWw1NnpPYzh2ZTlpTzRRSlhtMzZGSWZEUkE0S2t5Tmw4OWc2b1JJZk9SMVFiemMxeWhKcDRrWVNrbUp5SVk0bzJFYW0zdVRNY2J4R2VuV21PbWx5VUYydnZIazAwNkZ5MENHdkNhY1cyaUplQTZoaXhpc1F2cjQycGJnSXd2T0VJWlUwcmY2Zk5RTmc?oc=5",
+      "summary": "Trump set to expand power cost pledge on data centers Reuters",
+      "source": "Reuters（Google ニュース経由）",
+      "publishedAt": "2026-07-22T16:11:54.000Z"
+    },
+    {
+      "title": "SpaceX plans Texas data center expansion, The Information reports - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRFNwbE9MYnp6VkwwR3lNdTVrbFo3bkNhdFBCN3pJN1NRdmVsZ2IyMHJ5eFJKRFBKaHFLOExMajR4dmktVmRkelVEUFkwY1dJV2VOZUpzSTQyWXdSNnNUMWtQVWNZVVh6d3pieXF5TkczakNjbDF6WksxQktrTmhOWUE5QWZvMVRLM3g4UFkzeGd4b2xSWE9WejFHdDdBd0o4NVFSbUNaVVZyeEJ3b3FpT2IyckliQVZrTnZV?oc=5",
+      "summary": "SpaceX plans Texas data center expansion, The Information reports Reuters",
+      "source": "Reuters（Google ニュース経由）",
+      "publishedAt": "2026-07-22T16:05:10.000Z"
+    },
+    {
+      "title": "Galaxy Digital Seeks $3.5 Billion Debt for Texas Data Center",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-22/coreweave-backed-data-center-plans-3-5-billion-junk-bond-sale",
+      "summary": "Galaxy Digital Inc. is planning to raise about $3.5 billion from a debut junk-bond sale to fund a data center tied to CoreWeave Inc., extending AI borrowing’s push into the riskier corners of the US credit market.",
+      "source": "Bloomberg Markets",
+      "publishedAt": "2026-07-22T14:06:49.000Z"
+    },
+    {
+      "title": "GE Vernova Falls as Outlook Clashes With ‘Too High’ AI Hopes",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-22/ge-vernova-falls-as-outlook-collides-with-too-high-ai-hopes",
+      "summary": "GE Vernova Inc.’s shares slumped after a higher revenue outlook failed to impress investors, a sign that it’s getting harder for companies that sell equipment to data centers to meet the market’s sky-high hopes.",
+      "source": "Bloomberg Markets",
+      "publishedAt": "2026-07-22T14:05:21.000Z"
+    },
+    {
+      "title": "日経平均株価終値116円安 急失速、半導体株買いの勢い続かず - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9RLVhMLU1ocllhYU9FS2h2YTB1aFp5bHJlQzFOcFhKTkdOa1kwVGFSLThsS0IxbTJoeUNvd1c5YzZjYnFFb3lzZzdFWXNZMDNlNWZDZlR4ZE5oc1RxdEV0OGEzNXgzS29PblhfVQ?oc=5",
+      "summary": "日経平均株価終値116円安 急失速、半導体株買いの勢い続かず 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-07-21T11:20:00.000Z"
+      "publishedAt": "2026-07-22T02:54:26.000Z"
+    },
+    {
+      "title": "国内データセンターの4割は東阪外へ、電力不足で地方分散 独自調査 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9iVjc5aEF0UFFsd0FfQmJIcUx0bnQ3RXF1Wm4tN2V3YS02UXVuOWtVX0g0bzlCbkpoR1lXckVaNGhvSWF3WEI1LUFLMGFxbE9zc2RhbUVlLS1pUW9FRUpHb09PZ0ZCdVFwNm9Ncg?oc=5",
+      "summary": "国内データセンターの4割は東阪外へ、電力不足で地方分散 独自調査 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-07-21T17:00:00.000Z"
     }
   ]
 }
