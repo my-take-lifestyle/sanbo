@@ -1,15 +1,22 @@
 {
-  "generatedAt": "2026-07-23T22:03:25.734Z",
+  "generatedAt": "2026-07-24T22:04:13.346Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
   "items": [
     {
-      "title": "TDKや出光の参入で活況、データセンターの冷却8兆円市場 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9tcDV2TjNPR0ZRSE5heTZCdFFFZnRya253TjZZTVNMX1BBVnBIN205WUl5bUFuRlJ0UHN4NmxDSWhCMUZtcEtya0piTGpwNjV5Vm9nRkJSVWR1Ykdsa1dKdlFNZHlzd0VJM1NWYQ?oc=5",
-      "summary": "TDKや出光の参入で活況、データセンターの冷却8兆円市場 日本経済新聞",
+      "title": "BlackRock Gets Soft Demand for Bond Sale After AI Debt Selloff",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-24/blackrock-kicks-off-12-3-billion-bond-sale-for-meta-data-center",
+      "summary": "BlackRock Inc. has seen weaker-than-usual demand for a corporate bond sale tied to a Meta Platforms Inc. data center project in Texas, as investors grapple with concerns about excessive AI infrastructure spending.",
+      "source": "Bloomberg Markets",
+      "publishedAt": "2026-07-24T13:09:57.000Z"
+    },
+    {
+      "title": "東証大引け 日経平均反落、1811円安 AI半導体株に売り - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8zV2NxNFdNdWMxVGpnVGlKSVZHaXphVExXYTRqQTBNRlY5b2FqbklwUjJXaEt5Ql9KYkUya2hhZy1wTUNQR1lZMlFuVkdmZUlCVkpRc3E0c0U3ZGxobWVLdkZpc3F1dnVCOGNVYw?oc=5",
+      "summary": "東証大引け 日経平均反落、1811円安 AI半導体株に売り 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-07-22T20:00:00.000Z"
+      "publishedAt": "2026-07-24T06:48:02.000Z"
     }
   ]
 }
