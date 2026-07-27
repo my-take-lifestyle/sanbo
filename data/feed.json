@@ -1,15 +1,57 @@
 {
-  "generatedAt": "2026-07-26T21:59:32.506Z",
+  "generatedAt": "2026-07-27T22:07:14.612Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
   "items": [
     {
-      "title": "中国半導体のCXMT、27日上場へ 世界3位の米マイクロンを猛追 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4xcmpzWmRKMUdBWFZETnYzOUpYbUhWRlVYdVZJWGkxMl9ua2cxRnl4cXlqYTIzaTQ3ODc1MFFhai1rc09BR3BwYWgxT054bEdjR3VyU3VWUVJaQWV6ajNZdHhnNWk5NkNhWWc5aQ?oc=5",
-      "summary": "中国半導体のCXMT、27日上場へ 世界3位の米マイクロンを猛追 日本経済新聞",
+      "title": "BlackRock Raises $12.5 Billion of Debt for Meta Data Center",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-27/blackrock-raises-12-5-billion-of-debt-for-meta-data-center",
+      "summary": "BlackRock Inc. wrapped up a $12.5 billion bond sale tied to a Meta Platforms Inc. data center project in Texas after a nearly week-long marketing process and a selloff in big tech debt.",
+      "source": "Bloomberg Markets",
+      "publishedAt": "2026-07-27T21:47:14.000Z"
+    },
+    {
+      "title": "BlackRock Dodges AI Bond Flop as $12.3 Billion Debt Deal Rallies",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-27/blackrock-dodges-ai-bond-flop-as-12-3-billion-debt-deal-rallies",
+      "summary": "Bonds that BlackRock Inc. is selling, tied to a Meta Platforms Inc. data center project in Texas, rallied in early trading on Monday before the notes were formally priced, signaling demand for the securities may be stronger than it initially appeared.",
+      "source": "Bloomberg Markets",
+      "publishedAt": "2026-07-27T20:56:01.000Z"
+    },
+    {
+      "title": "NVIDIA、OpenAIのデータセンター利用に41兆円資金保証 WSJ報道 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBta3ZoV2ZiZFVUdmZOcTRCS0ZjQ0dvLU5VWlI3Tzg4dHdGLTVzT3pBYVZLRVpWcDJSSE1JRDRoMGVjbTdQRVBwSm1IbDF5eF84MndzekY2d2hqNWhnU3o2cmxiLVVXd3pKMUMtTQ?oc=5",
+      "summary": "NVIDIA、OpenAIのデータセンター利用に41兆円資金保証 WSJ報道 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-07-26T20:00:00.000Z"
+      "publishedAt": "2026-07-27T18:32:14.000Z"
+    },
+    {
+      "title": "TPG Is Said in Talks to Buy Netrality for Up to $3 Billion",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-27/tpg-said-in-talks-to-buy-netrality-for-up-to-3-billion",
+      "summary": "TPG Inc. is in exclusive talks to acquire Macquarie Group Ltd.-backed Netrality Data Centers, according to people familiar with the matter.",
+      "source": "Bloomberg Markets",
+      "publishedAt": "2026-07-27T16:26:49.000Z"
+    },
+    {
+      "title": "日東電工、半導体製造の溶剤を膜で回収 再利用促進でナフサ高に対抗 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5oeWM5NXBMYk1pbDFUd09hRGpvTzdXVnM5UWZObXRJZFpQNVNNMHFlS1ZUWktKRmJOZGVLcGVNRm4yREQzQ0FRWjluTXJfRjZMQlJTalNaajFISExWRFExTFVwdWduVVNhcGZ2aQ?oc=5",
+      "summary": "日東電工、半導体製造の溶剤を膜で回収 再利用促進でナフサ高に対抗 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-07-27T09:00:00.000Z"
+    },
+    {
+      "title": "キオクシア株価一時10%安、2カ月ぶり安値 米半導体メモリー株安 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1LdldjM1NvM29ZanlVREZvbURLTEx4dlhodWM4WFR0UmVBSHQwM3p4c0dtWGhFVnlzdjBZV095ZTE0UzBaU2hmYUZKS1Y4RWo2Wm5kbllUT21aZ0ZPaUNGcUhrWV9TaVJRZmdjYQ?oc=5",
+      "summary": "キオクシア株価一時10%安、2カ月ぶり安値 米半導体メモリー株安 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-07-27T02:32:51.000Z"
+    },
+    {
+      "title": "三井不動産、熊本にフィジカルAI開発拠点 日台で次世代半導体技術 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1zVVRjdmNUV3lOM3I3ODgwLVAyZXo2WUZyR1pIUnRMaGlodThncG5rVWZweEdaS1BpWWF2OG1FVExWQUk0Q0doWWxHLXBCVU5xdUEtaEk1a25OOFd0ZjhzLTZXWTRXWG1sZ2h1Zw?oc=5",
+      "summary": "三井不動産、熊本にフィジカルAI開発拠点 日台で次世代半導体技術 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-07-26T17:00:00.000Z"
     }
   ]
 }
