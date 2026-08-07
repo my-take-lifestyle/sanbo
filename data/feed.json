@@ -1,15 +1,22 @@
 {
-  "generatedAt": "2026-08-05T22:12:36.900Z",
+  "generatedAt": "2026-08-07T01:00:40.515Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
   "items": [
     {
-      "title": "Celestica’s $3 Billion Deal Joins Data Center Funding Rush",
-      "url": "https://www.bloomberg.com/news/articles/2026-08-05/celestica-joins-data-center-funding-rush-with-3-billion-deal",
-      "summary": "Celestica Inc. is looking to raise $3 billion from selling new shares, joining a flurry of companies raising funds for data centers to power the artificial intelligence buildout.",
-      "source": "Bloomberg Markets",
-      "publishedAt": "2026-08-05T21:05:38.000Z"
+      "title": "秋田に日本最大級AIデータセンター 建設費2兆円、UAEが投資へ - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0yYktoY3ZkRG9tWXZLVmV4cjV4TTRWN2o1VUdpLUpNWE93NlppWkFUaUFzQmk4eXl0VmQ4elFGX3U2cVY3Sll0V0xPdjg2U1JaWVlNemhVWkliVlBsYlJuZnhwZ05Xa3YxWXBmWg?oc=5",
+      "summary": "秋田に日本最大級AIデータセンター 建設費2兆円、UAEが投資へ 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-08-06T02:00:00.000Z"
+    },
+    {
+      "title": "アンソロピック、独自AI半導体開発へ 「Claude」に最適化 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5UdHpDRTFkSlBON2l2dDNmWEhuWmNHbm96WEhkaWUtbE1jUHFRcE9IeXVEaXBoSnRFVk5CRmtmWlEyVWhFa0tMUDhLSWtIVzNjRmZyQmVNdTdZSVR0RW9tbUVhRkxvUjk1djcyaQ?oc=5",
+      "summary": "アンソロピック、独自AI半導体開発へ 「Claude」に最適化 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-08-05T20:38:24.000Z"
     }
   ]
 }
