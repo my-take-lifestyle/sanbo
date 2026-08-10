@@ -1,15 +1,36 @@
 {
-  "generatedAt": "2026-08-09T21:31:33.679Z",
+  "generatedAt": "2026-08-10T21:40:40.048Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
   "items": [
     {
-      "title": "関西電力、大飯原発3号機に異常 原子炉を自動停止 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB5ckFOWWtJMTYteF9LVzZkWEZPdTBtZ04zUWpTSVRiRmJrU1U3blFFMzZtVUYxblczdWxuakdRbzlBc2ctX09MeVlQUE1idUVtUERZdWdETVlDSHNyVjNETVpWMFR5MUpTOE8yeg?oc=5",
-      "summary": "関西電力、大飯原発3号機に異常 原子炉を自動停止 日本経済新聞",
+      "title": "TSMC、7月は44.7%増収 最先端2ナノ半導体も収益貢献 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5CRzFGdG5PYTRYcW1WTktLZHp3UmVIdnlyS1RCTTdNS0dWTEpONTc4TzNiRXctdm1BREIxbHRrRnJ4LWpuaFVQMkYzLVcwcmdmR0I5OXQ2Qk9vV0trQlJXdEJpakF3QnVtZ2JPcw?oc=5",
+      "summary": "TSMC、7月は44.7%増収 最先端2ナノ半導体も収益貢献 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-08-08T18:56:31.000Z"
+      "publishedAt": "2026-08-10T08:00:00.000Z"
+    },
+    {
+      "title": "小型AIスパコン、NVIDIA製25%高 データセンター並みを手のひらに - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9vTGFlN2ZPV1Fmcy1oRHFlOE9BLV9EaldqV1pFcXlEd2hnWVV3R0tia0ZDUERJVVFxenphb296MHEteE1TZHA4cktaRUVrbWlZWmxZZjJLazVSYkdReUZVVE1iZGhLU25lbGxNdw?oc=5",
+      "summary": "小型AIスパコン、NVIDIA製25%高 データセンター並みを手のひらに 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-08-10T05:30:00.000Z"
+    },
+    {
+      "title": "決算:DICが上方修正、半導体向け樹脂好調 26年12月期純利益9年ぶり最高 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1zSENKUFdIbW43MEVVczQyQnpFMWEtSzNwVllqWi1TY3VaVTdkOUZ1N2VlTlJuTW9CRWFlNnFPVEt0OW5qSlNYSEdNdmF3UmNjdFlwMW5iWk92VnBYZ3dKeE9SdnE1dl9tdlBsUg?oc=5",
+      "summary": "決算:DICが上方修正、半導体向け樹脂好調 26年12月期純利益9年ぶり最高 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-08-10T05:15:21.000Z"
+    },
+    {
+      "title": "NVIDIA半導体の次は「光」か 米中AIサプライチェーン攻防、新局面へ - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9hY1dEd1BJYkdlZTV3bFFscVZmLXZDU2daY2RQZldkSHVfZ0lKRU52YzhlTEExdElvai1lc2ozMHZMb1dLSFQyQlBOWmltQlFydzdLeG5FUExfM3ZoTWZxQ0F4bkhPUFFHZS00LQ?oc=5",
+      "summary": "NVIDIA半導体の次は「光」か 米中AIサプライチェーン攻防、新局面へ 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-08-09T19:30:00.000Z"
     }
   ]
 }
