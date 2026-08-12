@@ -1,43 +1,16 @@
 {
-  "generatedAt": "2026-08-11T21:46:35.539Z",
+  "generatedAt": "2026-08-12T21:44:36.460Z",
   "sourceCount": 3,
   "keywordCount": 11,
-  "errors": [],
-  "items": [
+  "errors": [
     {
-      "title": "Nvidia’s Show of Financial Force Soothes Jittery Credit Markets",
-      "url": "https://www.bloomberg.com/news/articles/2026-08-11/nvidia-s-show-of-financial-force-soothes-jittery-credit-markets",
-      "summary": "Nvidia Corp.’s commitments to backstop the artificial intelligence boom seemed to be swelling by the day. There was the reported $250 billion to help kickstart a massive data center for OpenAI in Ohio, the latest in a string of big financings it was involved with.",
-      "source": "Bloomberg Markets",
-      "publishedAt": "2026-08-11T20:38:08.000Z"
+      "source": "日本経済新聞（Google ニュース経由）",
+      "message": "HTTP 503"
     },
     {
-      "title": "Texas Power Demand Forecast Trimmed After Data Center Pause",
-      "url": "https://www.bloomberg.com/news/articles/2026-08-11/texas-power-demand-forecast-trimmed-after-data-center-pause",
-      "summary": "Demand for electricity in Texas is expected to grow at a far slower pace after the state imposed a pause on new data center projects.",
-      "source": "Bloomberg Markets",
-      "publishedAt": "2026-08-11T17:29:07.000Z"
-    },
-    {
-      "title": "EXCLUSIVE: Alpha Compute to buy Pennsylvania land, gas rights for $55 million data center campus, company says - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQSDFDV3hxdDluWW51QTdVX3daS0JEcVNtV0x2b2hMMDhQQUtrMEktMkNQcmVMTi12OWt4Zm1mNnlkZDlwYzNZcDZIU29TZGVORFZVaEZxbmF3TS01Y3ktbUo2TzRlcURoaWQ2cC1oazhRdmhGYVg3eF9lQ2RwU0ROVFY1UHJteFVNS1hqaUhmZVpQc1lDcU0zeS1tMl9ZSTRtUDF4LXo1UVdEMmdHUUR2ZTc2Z2NqajJLVEY2aEU0WTNHOTg4MzFQQw?oc=5",
-      "summary": "EXCLUSIVE: Alpha Compute to buy Pennsylvania land, gas rights for $55 million data center campus, company says Reuters",
       "source": "Reuters（Google ニュース経由）",
-      "publishedAt": "2026-08-11T17:03:55.000Z"
-    },
-    {
-      "title": "パワー半導体原料の酸化ガリウム結晶、貴金属使わず生成 東北大 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0wZWhmQjlpWnpLSWwyZW41S1FpRDRPWnhWRWF2bGhDaFZpTTVFOHhfWkNzUWRRWFhfeWNsY2FkQnpSdnpXMGt0UXowRjd3a1VvS2l1QnNYVDh3TmU5LWMxYVM2eU1JVmNpcVcxTg?oc=5",
-      "summary": "パワー半導体原料の酸化ガリウム結晶、貴金属使わず生成 東北大 日本経済新聞",
-      "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-08-10T05:25:50.000Z"
-    },
-    {
-      "title": "Apple、中国CXMTの半導体メモリー採用へ試験 WSJ報道 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBvd0tzLU1pM3NqdEJaTktJLXdjOWI2STlWbTVPbERyY2RaT0dHQWY5ZHgzTTF5TGVmNmcyY0QwZ05pMWprdDJXRWpuYzlJYjBLcnVha2dpUkYyUGVaX2puenZNNmJBSGRDd2pOOA?oc=5",
-      "summary": "Apple、中国CXMTの半導体メモリー採用へ試験 WSJ報道 日本経済新聞",
-      "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-08-09T20:28:00.000Z"
+      "message": "HTTP 503"
     }
-  ]
+  ],
+  "items": []
 }
