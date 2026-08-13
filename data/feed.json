@@ -1,16 +1,22 @@
 {
-  "generatedAt": "2026-08-12T21:44:36.460Z",
+  "generatedAt": "2026-08-13T21:44:16.049Z",
   "sourceCount": 3,
   "keywordCount": 11,
-  "errors": [
+  "errors": [],
+  "items": [
     {
+      "title": "ティアフォー、自動運転のAI半導体を自前で開発 国産体制に道筋 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ybl9sazNGVlFhaDBnYkpmNV9tU3VwUlRyVXZDRUFwWWs4UzkzSmU1cTVRZlN1Z3BzVTl1dUtaTHUtWk9tUUJTa2U0MHVUS2wwd25HZHRDU0xRbU02RjZybzJVX3QxaVAwTUtpNA?oc=5",
+      "summary": "ティアフォー、自動運転のAI半導体を自前で開発 国産体制に道筋 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "message": "HTTP 503"
+      "publishedAt": "2026-08-13T20:00:00.000Z"
     },
     {
-      "source": "Reuters（Google ニュース経由）",
-      "message": "HTTP 503"
+      "title": "Chicago Mayor Demands Data Center Moratorium",
+      "url": "https://www.bloomberg.com/news/videos/2026-08-13/chicago-mayor-demands-data-center-moratorium-video",
+      "summary": "Bloomberg's Miranda Davis joins Emily Graffeo on \"Real Yield.\" Chicago Mayor Brandon Johnson is pushing for a temporary moratorium on data centers, and signed an executive order on Tuesday to create new rules for any future developments. (Source: Bloomberg)",
+      "source": "Bloomberg Markets",
+      "publishedAt": "2026-08-13T19:27:08.000Z"
     }
-  ],
-  "items": []
+  ]
 }
