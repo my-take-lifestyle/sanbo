@@ -1,22 +1,50 @@
 {
-  "generatedAt": "2026-08-21T21:23:39.075Z",
+  "generatedAt": "2026-08-22T21:21:02.265Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
   "items": [
     {
-      "title": "京セラ、AIサーバー向けコンデンサー 基板に埋め込み電力ロス削減 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1WVXM4U3hkRWlFdlBnWmY2WTN5dHVCZ084OUNRRGgwZmJ1clFwSWZ2OFJSVGRMQXY0bTJwUm5jWW1MMzk1Z3V3RDNtekw4dkVfaDNRWkJaQUlZNllsQmFKd2tQeF9DNFJYMWx6Mw?oc=5",
-      "summary": "京セラ、AIサーバー向けコンデンサー 基板に埋め込み電力ロス削減 日本経済新聞",
-      "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-08-21T07:53:22.000Z"
+      "title": "Juicy Yields Draw Junk Bond Buyers to Investment-Grade AI Debt",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-22/juicy-yields-draw-junk-bond-buyers-to-investment-grade-ai-debt",
+      "summary": "Companies looking to finance data center projects are increasingly turning to junk bond investors to help them raise billions of dollars, even for debt that is investment-grade.",
+      "source": "Bloomberg Markets",
+      "publishedAt": "2026-08-22T19:00:00.000Z"
     },
     {
-      "title": "日東電工の赤木達哉社長、半導体「技術変化を好機に」 関連投資6倍 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1Qc3VFSjVBal9hTmRMNkpjZExjWHF0ZEFEdkxjaUxOX2R2SFNVdUR0YWlHYTBYQzZIZkszU3FyQjdlUDZJdjFkM3MxRjAxcHBrbzdJeUM2SlcwQWlLemktQ3FlOUkyQkNQZ0pEbg?oc=5",
-      "summary": "日東電工の赤木達哉社長、半導体「技術変化を好機に」 関連投資6倍 日本経済新聞",
+      "title": "BTW: Headlines You May Have Missed",
+      "url": "https://www.bloomberg.com/news/videos/2026-08-22/btw-headlines-you-may-have-missed-video",
+      "summary": "LinkedIn becoming a dating site, ghost jobs, fun at home, and farmers saying no to data centers: Alexis Christoforous joins David Gura and Christina Ruffini on Bloomberg This Weekend to share headlines from this week that may have gone under the radar. (Source: Bloomberg)",
+      "source": "Bloomberg Markets",
+      "publishedAt": "2026-08-22T12:48:13.000Z"
+    },
+    {
+      "title": "The AI Spending Spree Comes With a Catch",
+      "url": "https://www.bloomberg.com/news/videos/2026-08-22/the-ai-spending-spree-comes-with-a-catch-video",
+      "summary": "Sam Palmisano says the AI boom is built on long-cycle bets in data centers, chips and energy, even as AI software changes at breakneck speed. If adoption slows or cheaper Chinese open-source models gain traction, Big Tech may have to rethink the spending plans behind today’s AI race. (Source: Bloomberg)",
+      "source": "Bloomberg Markets",
+      "publishedAt": "2026-08-22T12:03:21.000Z"
+    },
+    {
+      "title": "無人タクシーのウェイモ、半導体を自前で開発 NVIDIA依存脱却へ - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9PVDlnbXRhdHRmd09WNTRtXzMyWnIwUUJuektjQ0ZuNllTZGlHUmlOX0ZfWW5hTUxzR2JEel91NkNFczdBWjRlOUM2QUJzV3gwR1h0bldqcHExRUFfVkdka09mdXRwQjNYblJOSQ?oc=5",
+      "summary": "無人タクシーのウェイモ、半導体を自前で開発 NVIDIA依存脱却へ 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-08-20T20:00:00.000Z"
+      "publishedAt": "2026-08-21T20:33:15.000Z"
+    },
+    {
+      "title": "常温・常圧で水素輸送 東京大学やアイシンなどが実証実験に成功 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBEM05XdzRGT21oVnNqVUpfV296dVBpMm9rLWp4UlYwTzhoSEFNdl9tYUswdlQ5a0pyT0tNTUFiLVF4MDdpSVkzbmplTWh4bW1SWlluRUZ4YXpYb1BjNjhRZU1pc0FIVXVIMWtBQQ?oc=5",
+      "summary": "常温・常圧で水素輸送 東京大学やアイシンなどが実証実験に成功 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-08-21T20:00:00.000Z"
+    },
+    {
+      "title": "富士フイルム、次の稼ぎ頭は「半導体の磨き役」 大分で素材3倍増産 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ZNHVkbURaaXh1NVFudGNJZ1lfS2tubEM3amhRNEdfRmR0WXNvT2I2X21ud2FtSVdqdERLeXdsLTE4WTl6cW5Kb1BQZFFTeTQtdl8tX0Q4ZmFUc0JJUXFqeGlnaUcyN1NUZ2FnOQ?oc=5",
+      "summary": "富士フイルム、次の稼ぎ頭は「半導体の磨き役」 大分で素材3倍増産 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-08-21T08:12:08.000Z"
     }
   ]
 }
