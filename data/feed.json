@@ -1,50 +1,36 @@
 {
-  "generatedAt": "2026-08-22T21:21:02.265Z",
+  "generatedAt": "2026-08-23T21:21:01.605Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
   "items": [
     {
-      "title": "Juicy Yields Draw Junk Bond Buyers to Investment-Grade AI Debt",
-      "url": "https://www.bloomberg.com/news/articles/2026-08-22/juicy-yields-draw-junk-bond-buyers-to-investment-grade-ai-debt",
-      "summary": "Companies looking to finance data center projects are increasingly turning to junk bond investors to help them raise billions of dollars, even for debt that is investment-grade.",
+      "title": "Rep. McCormick Warns Against Slowing AI Buildout",
+      "url": "https://www.bloomberg.com/news/videos/2026-08-23/rep-mccormick-warns-against-slowing-ai-buildout-video",
+      "summary": "Representative Rich McCormick is on Bloomberg This Weekend with David Gura and Christina Ruffini and says the US should continue expanding data centers to support its leadership in artificial intelligence, arguing they can be built responsibly while benefiting local economies. (Source: Bloomberg)",
       "source": "Bloomberg Markets",
-      "publishedAt": "2026-08-22T19:00:00.000Z"
+      "publishedAt": "2026-08-23T14:29:34.000Z"
     },
     {
-      "title": "BTW: Headlines You May Have Missed",
-      "url": "https://www.bloomberg.com/news/videos/2026-08-22/btw-headlines-you-may-have-missed-video",
-      "summary": "LinkedIn becoming a dating site, ghost jobs, fun at home, and farmers saying no to data centers: Alexis Christoforous joins David Gura and Christina Ruffini on Bloomberg This Weekend to share headlines from this week that may have gone under the radar. (Source: Bloomberg)",
+      "title": "Data Center Expansion Tests Voter Patience",
+      "url": "https://www.bloomberg.com/news/videos/2026-08-23/data-center-expansion-tests-voter-patience-video",
+      "summary": "The rapid expansion of AI data centers is becoming a political issue in Ohio as residents raise concerns about higher electricity bills, tax incentives and secrecy around local development deals. Representative Greg Landsman joins Bloomberg This Weekend to discuss the issue with hosts David Gura and Christina Ruffini. (Source: Bloomberg)",
       "source": "Bloomberg Markets",
-      "publishedAt": "2026-08-22T12:48:13.000Z"
+      "publishedAt": "2026-08-23T14:14:06.000Z"
     },
     {
-      "title": "The AI Spending Spree Comes With a Catch",
-      "url": "https://www.bloomberg.com/news/videos/2026-08-22/the-ai-spending-spree-comes-with-a-catch-video",
-      "summary": "Sam Palmisano says the AI boom is built on long-cycle bets in data centers, chips and energy, even as AI software changes at breakneck speed. If adoption slows or cheaper Chinese open-source models gain traction, Big Tech may have to rethink the spending plans behind today’s AI race. (Source: Bloomberg)",
-      "source": "Bloomberg Markets",
-      "publishedAt": "2026-08-22T12:03:21.000Z"
-    },
-    {
-      "title": "無人タクシーのウェイモ、半導体を自前で開発 NVIDIA依存脱却へ - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9PVDlnbXRhdHRmd09WNTRtXzMyWnIwUUJuektjQ0ZuNllTZGlHUmlOX0ZfWW5hTUxzR2JEel91NkNFczdBWjRlOUM2QUJzV3gwR1h0bldqcHExRUFfVkdka09mdXRwQjNYblJOSQ?oc=5",
-      "summary": "無人タクシーのウェイモ、半導体を自前で開発 NVIDIA依存脱却へ 日本経済新聞",
+      "title": "サムスン半導体部門の賞与6000万円 DX部門は60万円、組織不和生む - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBsRXg4ZDgxQmVIc1ppdkRwSHItNWxMSkMweG5VdUdRQk82QzN1UnFMSXhjWUxkYXgyd1VyV2xKME9pZ0o1Tm54dVZaaFE0cExiQ1V5LVVJSjc2d2kyVzBEY2JtZVNsdE56OVNIWA?oc=5",
+      "summary": "サムスン半導体部門の賞与6000万円 DX部門は60万円、組織不和生む 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-08-21T20:33:15.000Z"
+      "publishedAt": "2026-08-21T17:00:00.000Z"
     },
     {
-      "title": "常温・常圧で水素輸送 東京大学やアイシンなどが実証実験に成功 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBEM05XdzRGT21oVnNqVUpfV296dVBpMm9rLWp4UlYwTzhoSEFNdl9tYUswdlQ5a0pyT0tNTUFiLVF4MDdpSVkzbmplTWh4bW1SWlluRUZ4YXpYb1BjNjhRZU1pc0FIVXVIMWtBQQ?oc=5",
-      "summary": "常温・常圧で水素輸送 東京大学やアイシンなどが実証実験に成功 日本経済新聞",
+      "title": "メモリー・ロジック・パワー… 半導体って63種類もあるの？ - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1iaUl0TUw3blJTWXVJczhwV2hndC1lMHJ5Wkg0TTY4cHpzNXEwNUkzRHZvaGZhajNsWHU3ZFhyMUxuQmhnc1VMZ3BpOWhUMzF5X2hiWmtOSDE1SDhCN2lobDdxYmpjSWxNaFVCYw?oc=5",
+      "summary": "メモリー・ロジック・パワー… 半導体って63種類もあるの？ 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-08-21T20:00:00.000Z"
-    },
-    {
-      "title": "富士フイルム、次の稼ぎ頭は「半導体の磨き役」 大分で素材3倍増産 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ZNHVkbURaaXh1NVFudGNJZ1lfS2tubEM3amhRNEdfRmR0WXNvT2I2X21ud2FtSVdqdERLeXdsLTE4WTl6cW5Kb1BQZFFTeTQtdl8tX0Q4ZmFUc0JJUXFqeGlnaUcyN1NUZ2FnOQ?oc=5",
-      "summary": "富士フイルム、次の稼ぎ頭は「半導体の磨き役」 大分で素材3倍増産 日本経済新聞",
-      "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-08-21T08:12:08.000Z"
+      "publishedAt": "2026-08-21T14:00:00.000Z"
     }
   ]
 }
