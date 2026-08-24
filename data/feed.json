@@ -1,36 +1,22 @@
 {
-  "generatedAt": "2026-08-23T21:21:01.605Z",
+  "generatedAt": "2026-08-24T21:28:34.413Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
   "items": [
     {
-      "title": "Rep. McCormick Warns Against Slowing AI Buildout",
-      "url": "https://www.bloomberg.com/news/videos/2026-08-23/rep-mccormick-warns-against-slowing-ai-buildout-video",
-      "summary": "Representative Rich McCormick is on Bloomberg This Weekend with David Gura and Christina Ruffini and says the US should continue expanding data centers to support its leadership in artificial intelligence, arguing they can be built responsibly while benefiting local economies. (Source: Bloomberg)",
-      "source": "Bloomberg Markets",
-      "publishedAt": "2026-08-23T14:29:34.000Z"
-    },
-    {
-      "title": "Data Center Expansion Tests Voter Patience",
-      "url": "https://www.bloomberg.com/news/videos/2026-08-23/data-center-expansion-tests-voter-patience-video",
-      "summary": "The rapid expansion of AI data centers is becoming a political issue in Ohio as residents raise concerns about higher electricity bills, tax incentives and secrecy around local development deals. Representative Greg Landsman joins Bloomberg This Weekend to discuss the issue with hosts David Gura and Christina Ruffini. (Source: Bloomberg)",
-      "source": "Bloomberg Markets",
-      "publishedAt": "2026-08-23T14:14:06.000Z"
-    },
-    {
-      "title": "サムスン半導体部門の賞与6000万円 DX部門は60万円、組織不和生む - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBsRXg4ZDgxQmVIc1ppdkRwSHItNWxMSkMweG5VdUdRQk82QzN1UnFMSXhjWUxkYXgyd1VyV2xKME9pZ0o1Tm54dVZaaFE0cExiQ1V5LVVJSjc2d2kyVzBEY2JtZVNsdE56OVNIWA?oc=5",
-      "summary": "サムスン半導体部門の賞与6000万円 DX部門は60万円、組織不和生む 日本経済新聞",
+      "title": "NVIDIA、スペースXの宇宙データ衛星にAI半導体 27年打ち上げ - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4ySkVzSHM4WTdlZUt5NnV0ZTZ6TVd1UlRXTnpPRVJfRGNZckRIblY2c3dWWTlsYUpITEIzQVZkZmNJV01OelBYYlFxR08tTEdlM2tzbVA5MkFwWVIzNE1mM1VFVTUwZTVPOVRoag?oc=5",
+      "summary": "NVIDIA、スペースXの宇宙データ衛星にAI半導体 27年打ち上げ 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-08-21T17:00:00.000Z"
+      "publishedAt": "2026-08-24T18:06:18.000Z"
     },
     {
-      "title": "メモリー・ロジック・パワー… 半導体って63種類もあるの？ - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1iaUl0TUw3blJTWXVJczhwV2hndC1lMHJ5Wkg0TTY4cHpzNXEwNUkzRHZvaGZhajNsWHU3ZFhyMUxuQmhnc1VMZ3BpOWhUMzF5X2hiWmtOSDE1SDhCN2lobDdxYmpjSWxNaFVCYw?oc=5",
-      "summary": "メモリー・ロジック・パワー… 半導体って63種類もあるの？ 日本経済新聞",
+      "title": "台湾企業の九州進出、IT最大手と伊藤忠系が支援 合弁で半導体集積促す - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBQaWV0Q3lmNG93NElGcndmRTJ5OUtvaGhTSDhwWlpVVUpqVThmZHdBd04zY0JWaVVxcW9nWC10ZGx5MzFrU1VTbmxaNTZZRWFYSzE3NDVPSTkxU3JySHBaOWFwTm1CeDE3RExnaA?oc=5",
+      "summary": "台湾企業の九州進出、IT最大手と伊藤忠系が支援 合弁で半導体集積促す 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-08-21T14:00:00.000Z"
+      "publishedAt": "2026-08-23T20:00:00.000Z"
     }
   ]
 }
