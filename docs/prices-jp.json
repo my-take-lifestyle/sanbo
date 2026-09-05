@@ -1,10 +1,40 @@
 {
   "asOf": "2026-09-04",
   "source": "yahoo-unofficial",
-  "generatedAt": "2026-09-05T12:36:33.200Z",
+  "generatedAt": "2026-09-05T13:05:14.675Z",
   "prices": {
     "1306": {
       "close": 427.5,
+      "currency": "JPY",
+      "asOf": "2026-09-04"
+    },
+    "3350": {
+      "close": 293,
+      "currency": "JPY",
+      "asOf": "2026-09-04"
+    },
+    "5802": {
+      "close": 2133,
+      "currency": "JPY",
+      "asOf": "2026-09-04"
+    },
+    "6273": {
+      "close": 67140,
+      "currency": "JPY",
+      "asOf": "2026-09-04"
+    },
+    "6954": {
+      "close": 5931,
+      "currency": "JPY",
+      "asOf": "2026-09-04"
+    },
+    "8750": {
+      "close": 1877.5,
+      "currency": "JPY",
+      "asOf": "2026-09-04"
+    },
+    "9697": {
+      "close": 4248,
       "currency": "JPY",
       "asOf": "2026-09-04"
     }
