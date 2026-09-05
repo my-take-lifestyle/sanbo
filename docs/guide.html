@@ -475,7 +475,7 @@
         </div>
         <div class="p-row" style="margin-top:8px">
           <span class="p-btn">為替を更新<i class="co">1</i></span>
-          <span class="p-btn">米国株価を一括更新<i class="co">2</i></span>
+          <span class="p-btn">価格を一括更新<i class="co">2</i></span>
         </div>
       </div>
       <div class="p-card">
@@ -483,14 +483,15 @@
         <div class="p-item"><span class="grow"><b>NVIDIA</b> <span class="p-tag">NVDA</span><br><span class="p-muted p-small">米国株 · SBI証券 · 20 × $172.3 <span class="p-warn">（2026-07-10 · manual）</span><i class="co">4</i></span></span><span class="p-val p-small">¥557,804<br><span class="p-pos">+16.3%</span></span></div>
         <div class="p-item"><span class="grow"><b>円普通預金</b><br><span class="p-muted p-small">現金 · 三菱UFJ銀行</span></span><span class="p-val p-small">¥3,500,000</span></div>
         <span class="p-btn primary block">＋ 保有を追加<i class="co">5</i></span>
-        <div class="p-muted p-small" style="margin-top:6px">価格の asOf が90日を超えた保有は 黄色 で表示されます（鮮度の見える化）。</div>
+        <div class="p-muted p-small" style="margin-top:6px">米国株: Finnhub ／ 日本株: 自動取得 12 件（最終 2026-09-04）</div>
+        <div class="p-muted p-small">価格の asOf が90日を超えた保有は 黄色 で表示されます（鮮度の見える化）。</div>
       </div>
     </div>
     <div class="p-tabs"><span><span class="ico">🏠</span>司令部</span><span class="on"><span class="ico">📊</span>資産</span><span><span class="ico">🧭</span>テーマ</span><span><span class="ico">📥</span>インテル</span><span><span class="ico">📓</span>ジャーナル</span></div>
   </figure>
   <ol class="legend">
     <li><i class="co">1</i><span><span class="ui">為替を更新</span> — Frankfurter（無料・キー不要）から USD/JPY を取得。失敗しても前回値のまま動きます。</span></li>
-    <li><i class="co">2</i><span><span class="ui">米国株価を一括更新</span> — Finnhub キー設定時のみ有効。保有・ウォッチ銘柄・モデルのピックの価格と SPY をまとめて更新し、価格トリガーも自動判定します。</span></li>
+    <li><i class="co">2</i><span><span class="ui">価格を一括更新</span> — 米国株（Finnhub。キー設定時のみ）と日本株（GitHub Actions が毎営業日取得した終値）をまとめて更新します。保有・ウォッチ・モデルのピックとベンチマーク（SPY / 1306）も同時に更新し、価格トリガーも自動判定します。</span></li>
     <li><i class="co">3</i><span><span class="ui">口座管理</span> — 銀行・証券などの口座の追加・編集。保有は必ずどれかの口座に紐付きます。</span></li>
     <li><i class="co">4</i><span><b>価格の鮮度表示。</b>各行に「いつ・どの経路の価格か」（manual / finnhub）を表示。90日超は黄色で警告。行タップで編集画面が開きます。</span></li>
     <li><i class="co">5</i><span><span class="ui">＋ 保有を追加</span> — 現金は「数量 = 金額、価格 = 1」で登録。投信は「数量 = 万口、価格 = 1万口あたり基準価額」のような単位でも OK（評価額 = 数量 × 価格 × 為替、で計算されるため）。</span></li>
@@ -649,7 +650,7 @@
     <li><i class="co">1</i><span><b>モデルとは</b>「選定ロジックの言語化（logicPrompt）+ 仮想ポートフォリオ + 成績記録」。実際の売買は一切しません。初期3本（テーマ・モメンタム型 / コントラリアン型 / クオリティ・バリュエーション型）が入っています。カードをタップすると詳細（<span class="ui">出典・由来（origin）</span>・<span class="ui">選定ロジック（logicPrompt）</span>・ピック履歴・<span class="ui">retire</span>）。</span></li>
     <li><i class="co">2</i><span><b>成績。</b>累積相対リターン = ベンチマーク（米国株→S&amp;P500（SPY）、日本株→TOPIX（1306））に対する超過分の weight 加重平均。ヒット率 = ベンチマークに勝ったピックの割合。</span></li>
     <li><i class="co">3</i><span><b>月次実行。</b>各モデルの 📋 ボタンで実行プロンプトをコピー → AI の回答を貼り戻し →<span class="ui">ピックを取り込む</span>。仮想エントリー価格は自動設定されます。</span></li>
-    <li><i class="co">4</i><span><b>ベンチマーク。</b>SPY は<span class="ui">米国株価を一括更新</span>で自動記録。1306 は<span class="ui">今日の値として記録</span>で手動入力。記録が無い期間は「欠損」として計算からスキップされます（壊れません）。</span></li>
+    <li><i class="co">4</i><span><b>ベンチマーク。</b><span class="ui">価格を一括更新</span>で SPY（Finnhub）と 1306（日本株の自動取得）が記録されます。手で入れたいときは<span class="ui">今日の値として記録</span>。記録が無い期間は「欠損」として計算からスキップされます（壊れません）。</span></li>
   </ol>
   </div>
 
@@ -663,6 +664,7 @@
     <tr><td><span class="ui">API・為替</span></td><td><span class="ui">Finnhub API キー</span>の保存（任意）、為替の<span class="ui">手動設定</span> / <span class="ui">今すぐ取得（Frankfurter）</span></td></tr>
     <tr><td><span class="ui">AI 連携</span></td><td><span class="ui">コンテキストパックに資産の絶対額を含める（オフ = 比率のみ）</span>のスイッチと、プロンプト冒頭に入る<span class="ui">固定プロフィール</span></td></tr>
     <tr><td><span class="ui">制限リスト（取引自粛銘柄）</span></td><td>自社・協業先・NDA 対象などを登録。保有・ウォッチ・モデルピック追加時に照合して警告（インサイダー取引規制への防波堤）</td></tr>
+    <tr><td><span class="ui">日本株の自動取得</span></td><td>配信状況の確認、<span class="ui">🔄 今すぐ再取得を試す</span>、対象コードの登録案内（<span class="ui">📋 追記用のコード一覧をコピー</span>）</td></tr>
     <tr><td><span class="ui">自動収集フィード</span></td><td>配信状況の確認。取得元・キーワードはリポジトリの <code>config/feed-sources.json</code> / <code>config/feed-keywords.json</code> を編集</td></tr>
     <tr><td><span class="ui">データ</span></td><td><span class="ui">JSON エクスポート</span> / <span class="ui">JSON インポート</span> / <span class="ui">サンプルデータを読み込む</span> / <span class="ui">当月スナップショットを再記録</span> / <span class="ui">自動バックアップ（ワンタップ上書き）</span> / <span class="ui">全データ消去</span></td></tr>
   </table></div>
@@ -691,6 +693,23 @@
     <li><b>定額積立</b>（新NISA・金銀積立など）は保有の<span class="ui">定額積立（円/月）</span>に金額を入れると、投資可能余力の計算に反映されます。</li>
     <li><b>月次スナップショット</b>は、月が変わって最初にアプリを開いたとき自動記録されます。手動でやり直すなら ⚙️ 設定 →<span class="ui">当月スナップショットを再記録</span>。</li>
   </ul>
+
+  <h3 id="sec-jp">3-2b. 価格の自動取得（どこまで自動か）</h3>
+  <div class="table-wrap"><table>
+    <tr><th>資産</th><th>更新方法</th><th>表示される source</th></tr>
+    <tr><td>為替（USD/JPY）</td><td>起動時に自動 + <span class="ui">為替を更新</span></td><td>frankfurter / manual</td></tr>
+    <tr><td>米国株・ETF</td><td><span class="ui">価格を一括更新</span>（Finnhub キー設定時）</td><td>finnhub / manual</td></tr>
+    <tr><td>日本株</td><td>起動時と<span class="ui">価格を一括更新</span>（毎営業日 16:15 に自動取得された終値）</td><td>yahoo_jp_static / manual</td></tr>
+    <tr><td>投信・金銀</td><td>手動（月1回、スナップショット前に）</td><td>manual</td></tr>
+  </table></div>
+  <p><b>日本株を自動取得の対象にするには</b>、銘柄コードをリポジトリの <code>docs/jp-tickers.json</code> に登録します。
+  ⚙️ 設定 →<span class="ui">日本株の自動取得</span>に、保有・ウォッチにあって未登録のコードが一覧表示されるので、
+  <span class="ui">📋 追記用のコード一覧をコピー</span>して <code>docs/jp-tickers.json</code> の <code>tickers</code> を貼り替え、push すれば翌営業日から反映されます。</p>
+  <div class="note"><b>手動更新はいつでも優先されます。</b>手で入れた価格の方が新しい場合、自動取得は上書きしません。
+  また自動取得は非公式 API を使っているため止まることがあります。3営業日以上更新が無いと司令部に「日本株の自動取得が止まっている可能性」と出ますが、
+  <b>その間も手動更新で通常どおり運用できます</b>（機能は止まりません）。</div>
+  <div class="note blue"><b>制限リストの銘柄は登録しないでください。</b>対象コードは公開リポジトリに載るため、
+  取引自粛銘柄を書くと投資関心が外部に見えてしまいます。設定画面の案内一覧からも自動的に除外しています。</div>
 
   <h3>3-3. インテルの投入とトリアージ</h3>
   <ul>
@@ -722,7 +741,7 @@
     <li>月初、司令部に「モデル実行（月次）: 今月のピック未記録」が出ます → 📈 を開く</li>
     <li>各モデルの 📋 ボタンで実行プロンプトをコピー → AI に貼る</li>
     <li>回答を貼り戻して<span class="ui">ピックを取り込む</span>。エントリー価格は保有/ウォッチの既知価格や Finnhub から自動設定（日本株は手動）</li>
-    <li>あとは<span class="ui">米国株価を一括更新</span>のたびに仮想成績が自動追跡されます</li>
+    <li>あとは<span class="ui">価格を一括更新</span>のたびに仮想成績が自動追跡されます</li>
     <li>四半期ごとにスコアボードを見て、成績下位モデルを<span class="ui">retire</span>（履歴は消えません）、新しい視点のモデルを<span class="ui">＋ モデル追加</span></li>
   </ol>
   <div class="note"><b>ピックは参考シグナルであり推奨ではありません。</b>目的は「複数の直交する視点に仮説を出させ、実績で選別する」実験です。上位モデルのピックはウォッチリストに 📈 バッジで表示されますが、あくまで一視点です。</div>
@@ -757,7 +776,7 @@
       <span class="freq">週次 — 15分（週末推奨）</span>
       <div class="t">週次ブリーフィング — このアプリの心臓部</div>
       <ol>
-        <li><b>3分:</b> 📊 資産 →<span class="ui">為替を更新</span>→<span class="ui">米国株価を一括更新</span>。気になる手動銘柄だけ価格を書き換え</li>
+        <li><b>3分:</b> 📊 資産 →<span class="ui">為替を更新</span>→<span class="ui">価格を一括更新</span>。自動取得の対象外（投信・金銀など）で気になるものだけ手で書き換え</li>
         <li><b>5分:</b> 📥 インテルの<span class="ui">未トリアージ</span>を捌く（テーマ紐付け + so-what 一言）。<span class="ui">自動収集</span>も一瞥して気になるものだけ<span class="ui">取り込む</span></li>
         <li><b>5分:</b> <span class="ui">📋 コンテキストパックを生成してコピー</span>→ AI →<span class="ui">回答を取り込む</span></li>
         <li><b>2分:</b> 🏠 司令部で<span class="ui">要アクション</span>を確認。トリガー成立を<span class="ui">確認済み</span>にし、動く/見送るを決めたら 📓 で<span class="ui">＋ 起票</span></li>
@@ -813,6 +832,18 @@
   <h2>困ったとき（FAQ）</h2>
 
   <details>
+    <summary>日本株の価格が自動で入らない</summary>
+    <div class="a">まず ⚙️ 設定 →<span class="ui">日本株の自動取得</span>を開いてください。①<b>対象コードが未登録</b>なら「無いコードが n 件あります」と一覧が出るので、
+    <span class="ui">📋 追記用のコード一覧をコピー</span>→ <code>docs/jp-tickers.json</code> に貼り替えて push。②<b>未配信</b>と出る場合は、GitHub の Actions タブで
+    「Update prices-jp.json」を Run workflow して初回配信を作ってください。③<b>手動で入れた価格の方が新しい</b>場合は意図的に上書きしません（手動優先）。</div>
+  </details>
+  <details>
+    <summary>司令部に「日本株の自動取得が止まっている可能性」と出た</summary>
+    <div class="a">3営業日以上 <code>docs/prices-jp.json</code> が更新されていないときに出ます。Actions タブでワークフローのログを確認してください
+    （非公式 API のため、先方の仕様変更で止まることがあります）。<b>復旧までは手動更新でそのまま運用できます</b> — 価格は前回値が保持され、他の機能は一切止まりません。
+    なお祝日は考慮していないため、連休明けに一時的に出ることがあります。</div>
+  </details>
+  <details>
     <summary>為替や株価が取得できない / オフラインで開いた</summary>
     <div class="a">そのまま使えます。アプリは常に「前回値 + いつの値か（asOf）」で動き続ける設計です。為替は ⚙️ 設定 →<span class="ui">API・為替</span>の<span class="ui">手動設定</span>でいつでも上書きできます。オフラインでも全画面が開きます（PWA キャッシュ）。</div>
   </details>
@@ -830,7 +861,7 @@
   </details>
   <details>
     <summary>スコアボードの相対リターンが「—」や「欠損」になる</summary>
-    <div class="a">ピック日周辺のベンチマーク価格（S&amp;P500（SPY）または TOPIX（1306））が記録されていないためです。SPY は<span class="ui">米国株価を一括更新</span>で自動記録されます。1306 は 📈 画面で<span class="ui">今日の値として記録</span>から手動入力してください。欠損期間のピックは計算から除外されるだけで、他は正常に集計されます。</div>
+    <div class="a">ピック日周辺のベンチマーク価格（S&amp;P500（SPY）または TOPIX（1306））が記録されていないためです。SPY と 1306 は<span class="ui">価格を一括更新</span>で自動記録されます（1306 が <code>docs/jp-tickers.json</code> に登録されている場合）。手で入れる場合は 📈 画面の<span class="ui">今日の値として記録</span>から。欠損期間のピックは計算から除外されるだけで、他は正常に集計されます。</div>
   </details>
   <details>
     <summary>スマホの共有メニューに「参謀」が出てこない</summary>
@@ -858,7 +889,7 @@
   </details>
 
   <div class="footer">
-    <p><b>参謀</b> Phase 1-4 ／ 本書の文言はアプリ実画面（schemaVersion 4 時点）の表記と一致させています。アプリ更新時は本書も併せて改訂してください。</p>
+    <p><b>参謀</b> Phase 1-4 + 日本株の自動取得 ／ 本書の文言はアプリ実画面（schemaVersion 5 時点）の表記と一致させています。アプリ更新時は本書も併せて改訂してください。</p>
     <p>データはお使いの端末のブラウザ内にのみ保存されます。本アプリおよび本書は投資助言ではありません — 判断はあなた自身で。</p>
   </div>
 </section>

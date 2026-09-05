@@ -4,7 +4,7 @@ import { ulid } from './ulid.js';
 
 const KEY = 'sanbo.appState';
 const PRE_IMPORT_BACKUP_KEY = 'sanbo.appState.preImportBackup';
-export const SCHEMA_VERSION = 4;
+export const SCHEMA_VERSION = 5;
 
 const DEFAULT_PROFILE =
   '素材メーカー事業開発。専門: フィルム/多孔質材料/テープ、DC市場、半導体スタートアップM&A、グリーン水素電解、AI駆動素材探索。\n' +
@@ -111,6 +111,8 @@ export function defaultState() {
     models: seedModels(),
     modelPicks: [],
     benchmarks: { SPY: [], '1306': [] }, // key → [{date, value}]（相対リターン計算用の価格系列）
+    // 日本株の自動取得（docs/prices-jp.json）の受信状況。価格そのものは holdings 側に入る
+    jpAuto: { asOf: null, fetchedAt: null, count: 0, tickers: [] },
   };
 }
 
@@ -172,6 +174,10 @@ export function migrate(s) {
   if (fromVersion < 4 && out.models.length === 0) {
     out.models = seedModels();
   }
+
+  // v5（日本株の自動取得）: 受信状況の記録欄を補完
+  out.jpAuto = { ...d.jpAuto, ...(s.jpAuto || {}) };
+  if (!Array.isArray(out.jpAuto.tickers)) out.jpAuto.tickers = [];
 
   out.schemaVersion = SCHEMA_VERSION;
   return out;

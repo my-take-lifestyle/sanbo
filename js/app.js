@@ -1,7 +1,7 @@
 // エントリポイント: ルーティング・起動時処理（月次スナップショット / 為替取得 / トリガー評価 / Share Target）・SW 登録
 import { state, save, todayStr } from './state.js';
 import { makeSnapshot, evaluateTriggers } from './derive.js';
-import { fetchFx } from './api.js';
+import { fetchFx, updateJpPrices, refreshJpTickerList } from './api.js';
 import { toast } from './ui.js';
 import * as dashboard from './views/dashboard.js';
 import * as portfolio from './views/portfolio.js';
@@ -105,6 +105,18 @@ async function refreshFxInBackground() {
   }
 }
 
+// 起動時: 日本株の自動取得（同一オリジンの静的 JSON）。未配信・オフラインなら黙って何もしない
+async function refreshJpPricesInBackground() {
+  const r = await updateJpPrices(state);
+  await refreshJpTickerList(state);
+  if (!r.ok) return;
+  save();
+  render();
+  if (r.fired > 0) {
+    setTimeout(() => toast('価格トリガーが成立しています（司令部の要アクション参照）'), 1400);
+  }
+}
+
 function registerServiceWorker() {
   if (!('serviceWorker' in navigator)) return;
   if (!['https:', 'http:'].includes(location.protocol)) return;
@@ -125,4 +137,5 @@ if (evaluateTriggers(state) > 0) {
 save();
 render();
 refreshFxInBackground();
+refreshJpPricesInBackground();
 registerServiceWorker();

@@ -2,10 +2,10 @@
 import { state, save, newEntity, touch, todayStr } from '../state.js';
 import {
   totals, holdingValueJpy, holdingCostJpy, ASSET_CLASSES, isPriceStale,
-  accountById, findRestricted, evaluateTriggers,
+  accountById, findRestricted, evaluateTriggers, jpAutoStatus,
 } from '../derive.js';
 import { esc, fmtJpy, fmtNum, toast, openModal, closeModal } from '../ui.js';
-import { fetchFx, updateUsPrices } from '../api.js';
+import { fetchFx, updateUsPrices, updateJpPrices } from '../api.js';
 import { render as rerender } from '../app.js';
 
 const ACCOUNT_TYPES = { bank: '銀行', securities: '証券', points: 'ポイント', other: 'その他' };
@@ -31,9 +31,12 @@ export function render(root) {
       </div>
       <div class="btn-row">
         <button class="btn" id="btn-fx">為替を更新</button>
-        <button class="btn" id="btn-prices" ${state.settings.api.finnhubKey ? '' : 'disabled'}>米国株価を一括更新</button>
+        <button class="btn" id="btn-prices">価格を一括更新</button>
       </div>
-      ${state.settings.api.finnhubKey ? '' : '<div class="muted small">Finnhub キー未設定のため一括更新は無効です（各銘柄の手動更新は可能）。設定画面から登録できます。</div>'}
+      <div class="muted small">
+        米国株: ${state.settings.api.finnhubKey ? 'Finnhub' : '<span class="warn-text">Finnhub キー未設定</span>（設定画面から登録。未設定でも手動更新は可能）'}
+        ／ 日本株: ${jpNote()}
+      </div>
     </section>
 
     <section class="card">
@@ -58,6 +61,14 @@ export function render(root) {
       if (h) openHoldingForm(h);
     });
   });
+}
+
+// 日本株の自動取得の状況（設計書 §4.2 v1.1）
+function jpNote() {
+  const jp = jpAutoStatus(state);
+  if (!jp.configured) return '自動取得は未設定（設定画面で対象コードを確認できます）';
+  if (jp.stale) return `<span class="warn-text">自動取得が止まっている可能性（最終 ${esc(jp.asOf || '-')}）</span>`;
+  return `自動取得 ${jp.count} 件（最終 ${esc(jp.asOf || '-')}）`;
 }
 
 function holdingRow(h) {
@@ -100,20 +111,35 @@ async function onFxUpdate(e) {
   }
 }
 
+// 米国株（Finnhub）と日本株（Actions 生成の静的 JSON）をまとめて更新する。
+// どちらか一方が使えなくても、使える方だけ更新して機能は止めない。
 async function onBulkPrices(e) {
   e.target.disabled = true;
-  toast('株価を更新中…');
-  const r = await updateUsPrices(state);
+  toast('価格を更新中…');
+  const us = await updateUsPrices(state);
+  const jp = await updateJpPrices(state);
   e.target.disabled = false;
-  if (!r.ok) {
-    toast('Finnhub キーが未設定です（設定画面から登録）');
-    return;
+
+  const parts = [];
+  let fired = 0;
+  if (us.ok) {
+    parts.push(`米国株 ${us.updated + (us.updatedWatch || 0) + (us.updatedPicks || 0)}/${us.total} 件`);
+    fired += us.fired || 0;
+    if (us.failed.length) parts.push(`失敗: ${us.failed.join(', ')} — 前回値のまま`);
+  } else {
+    parts.push('米国株はキー未設定のためスキップ');
   }
+  if (jp.ok) {
+    parts.push(`日本株 ${jp.updated + jp.updatedWatch + jp.updatedPicks} 件（自動取得 ${esc(jp.asOf || '-')}）`);
+    fired += jp.fired || 0;
+    if (jp.keptManual) parts.push(`手動値が新しい ${jp.keptManual} 件は据え置き`);
+  } else {
+    parts.push('日本株の自動取得は未配信/オフライン');
+  }
+  if (fired > 0) parts.push(`トリガー成立 ${fired} 件（司令部参照）`);
+
   save();
   rerender();
-  const parts = [`株価更新: ${r.updated + (r.updatedWatch || 0)}/${r.total} 件成功`];
-  if (r.fired > 0) parts.push(`トリガー成立 ${r.fired} 件（司令部参照）`);
-  if (r.failed.length) parts.push(`失敗: ${r.failed.join(', ')} — 前回値のまま`);
   toast(parts.join(' ／ '));
 }
 

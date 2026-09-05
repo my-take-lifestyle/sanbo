@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 4,
+  "schemaVersion": 5,
   "settings": {
     "baseCurrency": "JPY",
     "targets": { "idleCashRatioMax": 0.25, "emergencyMonths": 6 },
@@ -67,6 +67,22 @@
       "themeIds": ["01K0SAMPLETHM0000000DC0001"],
       "recurring": null,
       "note": ""
+    },
+    {
+      "id": "01K0SAMPLEHLD00000006920JP",
+      "createdAt": "2026-07-01T00:00:00.000Z",
+      "updatedAt": "2026-07-01T00:00:00.000Z",
+      "accountId": "01K0SAMPLEACC0000000SBI001",
+      "assetClass": "jp_equity",
+      "ticker": "6920",
+      "name": "レーザーテック",
+      "quantity": 100,
+      "avgCostLocal": 14800,
+      "currency": "JPY",
+      "price": { "value": 16250, "currency": "JPY", "asOf": "2026-07-10", "source": "manual" },
+      "themeIds": ["01K0SAMPLETHM0000000DC0001"],
+      "recurring": null,
+      "note": "（例）日本株。docs/jp-tickers.json に 6920 を追記すると自動取得の対象になります"
     },
     {
       "id": "01K0SAMPLEHLD0000000FUND01",
@@ -318,8 +334,9 @@
       { "date": "2026-07-10", "value": 652.8 }
     ],
     "1306": [
-      { "date": "2026-06-30", "value": 2841 },
-      { "date": "2026-07-04", "value": 2865 }
+      { "date": "2026-06-30", "value": 419.8 },
+      { "date": "2026-07-04", "value": 423.1 }
     ]
-  }
+  },
+  "jpAuto": { "asOf": null, "fetchedAt": null, "count": 0, "tickers": [] }
 }

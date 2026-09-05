@@ -2,9 +2,11 @@
   "name": "sanbo-feed-builder",
   "private": true,
   "type": "module",
-  "description": "GitHub Actions 用: 公開RSSを取得しテーマ/tickerキーワードでフィルタして data/feed.json を生成する（設計書 §4.5）",
+  "description": "GitHub Actions 用: 公開RSSを取得して data/feed.json を、日本株終値を取得して docs/prices-jp.json を生成する（設計書 §4.5, §4.2）",
   "scripts": {
-    "build-feed": "node scripts/build-feed.mjs"
+    "build-feed": "node scripts/build-feed.mjs",
+    "fetch-jp": "node scripts/fetch-jp-prices.mjs",
+    "test-jp": "node scripts/test-fetch-jp-prices.mjs"
   },
   "dependencies": {
     "fast-xml-parser": "^4.5.0"

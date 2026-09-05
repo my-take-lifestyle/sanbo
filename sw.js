@@ -1,6 +1,6 @@
 // Service Worker — オフラインキャッシュ（cache-first）
 // バージョンを上げると旧キャッシュは activate 時に削除される
-const CACHE = 'sanbo-v5';
+const CACHE = 'sanbo-v6';
 
 const ASSETS = [
   './',
@@ -10,6 +10,8 @@ const ASSETS = [
   './sample-data.json',
   './css/style.css',
   './docs/guide.html',
+  './docs/jp-tickers.json',
+  './docs/prices-jp.json',
   './js/app.js',
   './js/state.js',
   './js/ulid.js',
@@ -52,9 +54,28 @@ self.addEventListener('fetch', (event) => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
 
-  // 価格・為替 API・自動収集フィードはキャッシュしない（常にネットワーク。失敗はアプリ側でフォールバック）
+  // 価格・為替 API はキャッシュしない（常にネットワーク。失敗はアプリ側でフォールバック）
   if (url.hostname.includes('frankfurter') || url.hostname.includes('finnhub')) return;
-  if (url.origin === location.origin && url.pathname.endsWith('/data/feed.json')) return;
+
+  // Actions が日次で更新するデータ類はネットワーク優先（キャッシュに固定されると新着が届かない）。
+  // オフライン時のみ最後に取得できた内容へフォールバックする。
+  const isFreshData = url.origin === location.origin && [
+    '/data/feed.json', '/docs/prices-jp.json', '/docs/jp-tickers.json',
+  ].some((p) => url.pathname.endsWith(p));
+  if (isFreshData) {
+    event.respondWith(
+      fetch(req)
+        .then((res) => {
+          if (res.ok) {
+            const copy = res.clone();
+            caches.open(CACHE).then((cache) => cache.put(req, copy));
+          }
+          return res;
+        })
+        .catch(() => caches.match(req).then((hit) => hit || Response.error()))
+    );
+    return;
+  }
 
   event.respondWith(
     caches.match(req).then((hit) => {

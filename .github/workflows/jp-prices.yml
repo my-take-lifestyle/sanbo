@@ -1,0 +1,40 @@
+name: Update prices-jp.json
+
+on:
+  schedule:
+    # 07:15 UTC = 16:15 JST（東証の取引終了後）。平日のみ
+    - cron: "15 7 * * 1-5"
+  workflow_dispatch: {} # 手動実行（動作確認用）。Actions タブから "Run workflow"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jp-prices
+  cancel-in-progress: false
+
+jobs:
+  fetch-prices:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # 依存なし（Node 組み込みの fetch のみ）。npm ci は不要
+      - name: Fetch JP closing prices
+        run: npm run fetch-jp
+
+      - name: Commit updated prices
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/prices-jp.json
+          if git diff --cached --quiet; then
+            echo "No price changes."
+          else
+            git commit -m "chore: update prices-jp.json"
+            git push
+          fi

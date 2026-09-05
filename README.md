@@ -1,9 +1,9 @@
 # 参謀 — 資産運用 意思決定支援アプリ（Phase 1〜4）
 
-`資産運用参謀アプリ_設計書.md` v1.0 の Phase 1〜4 実装。
+`資産運用参謀アプリ_設計書.md` v1.1 の Phase 1〜4 + 日本株の自動取得。
 Vanilla JS + ES Modules の静的 PWA（ビルド不要）。**このフォルダ（`sanbo/`）自体が GitHub リポジトリのルートになる想定**です
 （リポジトリ: `github.com/my-take-lifestyle/sanbo`、Public）。
-schemaVersion は **4**（v1〜v3 のエクスポート JSON もインポート時に自動マイグレーション）。
+schemaVersion は **5**（v1〜v4 のエクスポート JSON もインポート時に自動マイグレーション）。
 
 ## 構成
 
@@ -14,7 +14,10 @@ sanbo/                          ← このフォルダがリポジトリルー�
 ├── .nojekyll                   GitHub Pages の Jekyll 処理を無効化
 ├── icon.svg
 ├── sample-data.json            テストデータ（設定 → サンプルデータを読み込む）
-├── docs/guide.html              取扱説明書・ビジュアルガイド（設定画面フッターから開ける。オフライン閲覧可）
+├── docs/
+│   ├── guide.html              取扱説明書・ビジュアルガイド（設定画面フッターから開ける。オフライン閲覧可）
+│   ├── jp-tickers.json         日本株の自動取得の対象コード（手で編集。制限リスト銘柄は書かない）
+│   └── prices-jp.json          Actions が生成する日本株の終値（アプリが fetch する）
 ├── css/style.css                モバイルファースト（375px 基準）
 ├── js/
 │   ├── app.js                  ルーティング・起動時処理（スナップショット / 為替 / トリガー評価 / Share Target 受け口）
@@ -31,12 +34,16 @@ sanbo/                          ← このフォルダがリポジトリルー�
 │   ├── feed-sources.json       自動収集の取得元 RSS（自由に編集可）
 │   └── feed-keywords.json      自動収集のフィルタキーワード（テーマ名・ticker。自由に編集可）
 ├── scripts/
-│   └── build-feed.mjs          Actions が実行する取得・フィルタスクリプト（Node、fast-xml-parser 使用）
+│   ├── build-feed.mjs          Actions が実行する取得・フィルタスクリプト（Node、fast-xml-parser 使用）
+│   ├── fetch-jp-prices.mjs     日本株の終値取得（Node 標準のみ・依存なし）
+│   └── test-fetch-jp-prices.mjs  上記のモックテスト（`npm run test-jp`）
 ├── data/
 │   ├── feed.json               Actions が生成。アプリが fetch するのはここだけ
 │   └── feed-seen.json          重複配信防止用キャッシュ（アプリからは参照しない）
 ├── package.json / package-lock.json   scripts/ 用の依存（fast-xml-parser のみ）
-└── .github/workflows/feed.yml  日次 cron + 手動実行のワークフロー
+└── .github/workflows/
+    ├── feed.yml                自動収集フィード（日次 cron + 手動実行）
+    └── jp-prices.yml           日本株の終値取得（平日 16:15 JST + 手動実行）
 ```
 
 タブは設計書 §2.1 どおり5つ（司令部・資産・テーマ・インテル・ジャーナル）。設定はヘッダー右上の ⚙️ から開きます。
@@ -44,6 +51,47 @@ sanbo/                          ← このフォルダがリポジトリルー�
 ### `docs/feed.json` ではなく `data/feed.json` にした理由
 
 設計書 §4.5 の例は「Pages が `/docs` を配信する」構成を前提にしていますが、今回は `sanbo/` フォルダ自体（`index.html` が直下にある）がリポジトリルートで、GitHub Pages は **main ブランチのルート（`/`）** から配信します。この場合 `index.html` と `data/feed.json` は同一オリジンの通常のファイルとして共存でき、`docs/` という特別な階層は不要なため `data/` としました。挙動は設計書の意図（Actions が公開情報だけを静的 JSON として配信し、アプリが起動時に fetch する）と同一です。
+
+## 日本株の自動取得（設計書 §4.2 v1.1）
+
+Yahoo Finance 非公式 API は CORS 非対応でブラウザから直接叩けないため、**GitHub Actions が平日夕方に終値を取得 →
+`docs/prices-jp.json` として Pages 配信 → アプリが同一オリジンで fetch** します（自動収集フィードと同型）。
+
+- 対象コード: `docs/jp-tickers.json` を手で編集して push（アプリの appState からは書き出しません）
+- ワークフロー: `.github/workflows/jp-prices.yml`（平日 16:15 JST / `workflow_dispatch` で手動実行）
+- アプリ側: 起動時と「価格を一括更新」時に読み込み、`source: yahoo_jp_static` として保存。価格トリガーも同時に判定
+- `1306`（TOPIX 連動 ETF）を対象に入れておくと、モデル・スコアボードのベンチマークが自動記録されます
+
+### 前提と制約（重要）
+
+- **非公式 API です。** 仕様変更・停止が予告なく起こり得ます。利用規約上もグレーなため、個人利用の範囲で
+  低頻度（日次1回・数十銘柄）に留めています（リクエスト間隔1秒以上を実装で保証）。
+- **止まっても壊れません。** 取得失敗時は前回値を維持し、全滅時はファイルを書き換えません。
+  アプリ側も未配信（404）・オフラインでは黙ってスキップし、**従来どおり手動更新で運用を継続**できます。
+- **手動更新が優先です。** 手動で入れた価格の方が新しい（asOf が後）場合、自動取得は上書きしません。
+- 銘柄コード（と 1306）はリポジトリに載るため公開されます（残論点4の決定により許容）。
+  数量・金額・取得単価・口座名などの個人データは従来どおり一切置きません。
+
+### 銘柄の追加・削除
+
+1. アプリの ⚙️ 設定 →「日本株の自動取得」→「📋 追記用のコード一覧をコピー」
+   （保有・ウォッチにあってリスト未登録のコードが一覧表示されます。**制限リスト銘柄は自動的に除外**されます）
+2. `docs/jp-tickers.json` の `tickers` を貼り替えて push
+3. 翌営業日の cron から反映（すぐ試すなら下記の手動実行）
+
+### 動作確認の手順
+
+- **手動実行**: [Actions タブ](https://github.com/my-take-lifestyle/sanbo/actions) → 「Update prices-jp.json」→ Run workflow
+  → `docs/prices-jp.json` が更新され、アプリを開くと該当銘柄の価格・asOf・source が変わります
+- **ローカル実行**: `npm run fetch-jp`（`JP_TICKERS_FILE` / `JP_PRICES_FILE` 環境変数でファイルを差し替え可能）
+- **モックテスト**: `npm run test-jp` — 全滅時の前回値維持、部分失敗、リクエスト間隔1秒以上などを検証します
+
+### 取得が止まったら
+
+1. Actions のログを確認（銘柄ごとに `ok` / `keep` / `miss` が出ます）
+2. 全銘柄で失敗している場合は Yahoo 側の仕様変更を疑い、`scripts/fetch-jp-prices.mjs` の
+   `ENDPOINT` と `extractQuote()` を見直す
+3. 復旧までは手動更新で運用を継続できます（3営業日以上更新が無いと司令部に警告が出ます）
 
 ## Phase 2 の機能とテスト手順
 

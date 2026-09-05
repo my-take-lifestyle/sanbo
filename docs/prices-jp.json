@@ -1,0 +1,12 @@
+{
+  "asOf": "2026-09-04",
+  "source": "yahoo-unofficial",
+  "generatedAt": "2026-09-05T12:36:33.200Z",
+  "prices": {
+    "1306": {
+      "close": 427.5,
+      "currency": "JPY",
+      "asOf": "2026-09-04"
+    }
+  }
+}

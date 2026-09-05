@@ -118,10 +118,80 @@ export function priceAgeDays(h) {
 }
 
 // 価格鮮度: asOf が90日超で警告（設計書 §2.3）
+// 自動取得（yahoo_jp_static）の銘柄は3営業日で止まったとみなす方を優先する
 export function isPriceStale(h) {
   if (h.assetClass === 'cash') return false;
+  if (h.price?.source === JP_AUTO_SOURCE) return isJpAutoAsOfStale(h.price.asOf);
   const age = priceAgeDays(h);
   return age === null || age > 90;
+}
+
+// ---- 日本株の自動取得（設計書 §4.2 v1.1） ----
+
+export const JP_AUTO_SOURCE = 'yahoo_jp_static';
+export const JP_AUTO_STALE_BUSINESS_DAYS = 3;
+
+// "7203" / "7203.T" → "7203"。日本株コードでなければ null
+export function jpCodeOf(ticker) {
+  const m = String(ticker || '').trim().toUpperCase().match(/^(\d{4})(?:\.T)?$/);
+  return m ? m[1] : null;
+}
+
+// from の翌日から to までの平日数（祝日は考慮しない簡易版）
+export function businessDaysBetween(fromStr, toStr) {
+  if (!fromStr || !toStr) return null;
+  const from = new Date(fromStr + 'T00:00:00');
+  const to = new Date(toStr + 'T00:00:00');
+  if (isNaN(from) || isNaN(to) || to <= from) return 0;
+  let count = 0;
+  const cur = new Date(from);
+  while (cur < to) {
+    cur.setDate(cur.getDate() + 1);
+    const d = cur.getDay();
+    if (d !== 0 && d !== 6) count++;
+  }
+  return count;
+}
+
+export function isJpAutoAsOfStale(asOf) {
+  if (!asOf) return false; // 未取得はここでは警告しない（未導入と区別できないため）
+  return businessDaysBetween(asOf, todayStr()) > JP_AUTO_STALE_BUSINESS_DAYS;
+}
+
+// 自動取得の状況（設定画面・要アクション用）
+export function jpAutoStatus(state) {
+  const a = state.jpAuto || {};
+  const configured = (a.count || 0) > 0 || (a.tickers || []).length > 0;
+  return {
+    configured,
+    asOf: a.asOf || null,
+    count: a.count || 0,
+    fetchedAt: a.fetchedAt || null,
+    tickers: a.tickers || [],
+    staleDays: a.asOf ? businessDaysBetween(a.asOf, todayStr()) : null,
+    stale: configured && isJpAutoAsOfStale(a.asOf),
+  };
+}
+
+// アプリにあるのに docs/jp-tickers.json に無い日本株コード（設定画面で追記を案内する）
+// 制限リスト銘柄はリポジトリに書かない規則のため、案内からも除外する
+export function missingJpTickers(state) {
+  const listed = new Set((state.jpAuto?.tickers || []).map((t) => jpCodeOf(t)).filter(Boolean));
+  const found = new Map(); // code → 用途ラベル
+  const add = (ticker, label) => {
+    const code = jpCodeOf(ticker);
+    if (!code || listed.has(code) || findRestricted(state, code)) return;
+    const prev = found.get(code);
+    found.set(code, prev && prev !== label ? `${prev}・${label}` : label);
+  };
+  for (const h of state.holdings) add(h.ticker, '保有');
+  for (const w of state.watchlist) {
+    if (w.status !== 'passed') add(w.ticker, 'ウォッチ');
+  }
+  for (const p of state.modelPicks) {
+    if (!p.exitDate) add(p.ticker, 'モデルピック');
+  }
+  return [...found.entries()].map(([code, usage]) => ({ code, usage }));
 }
 
 export function themeById(state, id) {
@@ -412,6 +482,16 @@ export function buildActions(state) {
       kind: 'warn',
       view: 'journal',
       label: `判断レビュー期限: ${d.date} ${DECISION_ACTIONS[d.action] || d.action} ${d.ticker || ''} — 判断の質と結果を分けて振り返る`,
+    });
+  }
+
+  // 日本株の自動取得が止まっている可能性（設計書 §4.2 v1.1）
+  const jp = jpAutoStatus(state);
+  if (jp.stale) {
+    actions.push({
+      kind: 'warn',
+      view: 'settings',
+      label: `日本株の自動取得が ${jp.staleDays} 営業日止まっている可能性（最終 ${jp.asOf}）— 手動更新でも運用は継続できます`,
     });
   }
 

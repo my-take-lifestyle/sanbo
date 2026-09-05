@@ -2,9 +2,12 @@
 import {
   state, save, replaceState, clearAll, newEntity, touch, todayStr, nowIso, SCHEMA_VERSION,
 } from '../state.js';
-import { monthlyRecurringInvest, investableCapacity, makeSnapshot, findRestricted, latestBackupAt } from '../derive.js';
-import { esc, fmtJpy, toast } from '../ui.js';
-import { fetchFx } from '../api.js';
+import {
+  monthlyRecurringInvest, investableCapacity, makeSnapshot, findRestricted, latestBackupAt,
+  jpAutoStatus, missingJpTickers,
+} from '../derive.js';
+import { esc, fmtJpy, toast, copyText } from '../ui.js';
+import { fetchFx, updateJpPrices, refreshJpTickerList } from '../api.js';
 import { loadAutoFeed } from '../feed.js';
 import {
   isFileSystemAccessSupported, getSavedHandle, chooseBackupFile, forgetBackupFile, writeBackup,
@@ -26,6 +29,8 @@ export function render(root) {
   const overallLast = latestBackupAt(state);
   const overallDays = overallLast ? Math.floor((Date.now() - new Date(overallLast).getTime()) / 86400000) : null;
   const fsSupported = isFileSystemAccessSupported();
+  const jp = jpAutoStatus(state);
+  const jpMissing = missingJpTickers(state);
 
   root.innerHTML = `
     <section class="card">
@@ -114,6 +119,38 @@ export function render(root) {
         </div>
         <button type="submit" class="btn primary">追加</button>
       </form>
+    </section>
+
+    <section class="card">
+      <h2>日本株の自動取得</h2>
+      <p class="muted small">GitHub Actions が平日夕方に終値を取得し、<code>docs/prices-jp.json</code> として配信します。
+      アプリは起動時と「価格を一括更新」時に読み込みます。非公式 API のため停止することがありますが、
+      その場合は前回値のまま手動更新で運用を継続できます。</p>
+      <div class="small">
+        ${jp.configured
+          ? `最終取得: <b>${esc(jp.asOf || '-')}</b> ／ 配信 ${jp.count} 銘柄
+             ${jp.stale ? `<br><span class="warn-text">⚠ ${jp.staleDays} 営業日更新されていません — 自動取得が止まっている可能性があります</span>` : ''}`
+          : '<span class="muted">未配信、またはオフライン（対象コードを追加して Actions を実行すると配信されます）</span>'}
+      </div>
+      <div class="btn-row">
+        <button class="btn" id="btn-jp-refresh">🔄 今すぐ再取得を試す</button>
+      </div>
+
+      <h3 class="sub-h">対象コードの登録</h3>
+      ${jpMissing.length ? `
+        <div class="notice small">保有・ウォッチにあって <code>docs/jp-tickers.json</code> に無いコードが ${jpMissing.length} 件あります。
+        リストに追記すると翌営業日から自動取得されます。</div>
+        <div class="list">${jpMissing.map((m) => `
+          <div class="item static">
+            <span class="item-main">
+              <span class="item-title">${esc(m.code)}</span>
+              <span class="item-sub muted small">${esc(m.usage)}</span>
+            </span>
+          </div>`).join('')}</div>
+        <button class="btn block" id="btn-jp-copy">📋 追記用のコード一覧をコピー</button>
+      ` : `<div class="muted small">保有・ウォッチの日本株はすべて対象リストに含まれています${jp.tickers.length ? `（登録 ${jp.tickers.length} 件）` : ''}。</div>`}
+      <div class="muted small">対象コードはリポジトリの <code>docs/jp-tickers.json</code> を編集して push します（アプリからは書き出しません）。
+      <b>制限リストの銘柄は書かないでください</b> — 上の一覧からも自動的に除外しています。</div>
     </section>
 
     <section class="card">
@@ -336,6 +373,32 @@ export function render(root) {
     toast('消去しました。再読み込みします…');
     setTimeout(() => location.reload(), 700);
   });
+
+  // 日本株の自動取得（設計書 §4.2 v1.1）
+  root.querySelector('#btn-jp-refresh').addEventListener('click', async (e) => {
+    e.target.disabled = true;
+    const r = await updateJpPrices(state);
+    await refreshJpTickerList(state);
+    e.target.disabled = false;
+    save();
+    rerender();
+    if (!r.ok) {
+      toast('まだ配信されていないか、オフラインです（手動更新で運用を継続できます）');
+    } else {
+      toast(`日本株の自動取得を読み込みました: ${r.updated + r.updatedWatch + r.updatedPicks} 件更新（配信 ${r.count} 銘柄・${r.asOf || '-'}）`);
+    }
+  });
+  const jpCopyBtn = root.querySelector('#btn-jp-copy');
+  if (jpCopyBtn) {
+    jpCopyBtn.addEventListener('click', async () => {
+      // jp-tickers.json にそのまま貼れる形（既存の登録分と合わせた完全な配列）
+      const merged = [...new Set([...jp.tickers, ...jpMissing.map((m) => m.code)])];
+      const text = JSON.stringify({ tickers: merged }, null, 2);
+      const ok = await copyText(text);
+      if (ok) toast('コピーしました。docs/jp-tickers.json の tickers を置き換えて push してください。');
+      else alert(text);
+    });
+  }
 
   // 自動収集フィードの状況表示（設計書 §4.5）
   async function refreshFeedStatus(force) {
