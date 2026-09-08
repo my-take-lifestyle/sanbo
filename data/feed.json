@@ -1,29 +1,22 @@
 {
-  "generatedAt": "2026-09-07T23:17:36.500Z",
+  "generatedAt": "2026-09-08T23:12:44.144Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
   "items": [
     {
-      "title": "Tech explores Argentina's Patagonia for mega data centers - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQRkVISjNZRzJIQ2xhRks4c21WN0ZvNE1LSHBjMDhldFdwN0ExVjcxem9JLVJkSUk1ODdYQ0RhT1hrMDctX19HSXFXUW40c1hINDh0VDh6cjdMNHMyWFFsYmFIU0NrRzFSNzBPekRGX3lHYkNKMDRCRHE2MkEyalBoekw1cXU3aWxuZTY3Q2dudWFKc0trTnJVOTFSd2hKZVFOLVZwWnRSOUFXRHlfaHRObExwN3Z6dDNyME9RekRnZFhYMFAyOTVveA?oc=5",
-      "summary": "Tech explores Argentina's Patagonia for mega data centers Reuters",
-      "source": "Reuters（Google ニュース経由）",
-      "publishedAt": "2026-09-07T18:30:57.000Z"
+      "title": "Massachusetts Will Require New Data Centers to Use Clean Energy",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-08/massachusetts-will-require-new-data-centers-to-use-clean-energy",
+      "summary": "Massachusetts Governor Maura Healey announced major restrictions on data center development, including a requirement that companies procure their own renewable energy supply.",
+      "source": "Bloomberg Markets",
+      "publishedAt": "2026-09-08T20:01:46.000Z"
     },
     {
-      "title": "ファーウェイ、新型半導体を6年ぶり発表 折り畳みスマホに搭載 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9NREpqN0VHRnJuUUstRmxKVXA5X0RDbkpyaVJGRGE2MzE0djJ6T2lTdjBLdTVUQkVtN19TNkRPN3ltU0M0THpPTnhCWmI4bExCMzdXYl83OVZMYU1fS3NWb205VkRZUjNWNGROWA?oc=5",
-      "summary": "ファーウェイ、新型半導体を6年ぶり発表 折り畳みスマホに搭載 日本経済新聞",
+      "title": "サムスンがAI半導体で日韓連合、横浜に拠点 後工程「先端国」で研究開発 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE16WXJxTVJuY1NqSC1xSUd4Y3B5My10OWNmT0RHTVh5cUwzc1YzY3lWcUJRSGRqejVGY0FBNkV3Tk1rcUlYTm54N3lnclJIc29LaDRWcEo0OTl3Q19HOWVMbWE1Y3AyN2k3ZWNINw?oc=5",
+      "summary": "サムスンがAI半導体で日韓連合、横浜に拠点 後工程「先端国」で研究開発 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-09-07T13:15:54.000Z"
-    },
-    {
-      "title": "中国、日本産の半導体用ガスに反ダンピング措置 信越化学など対象 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9YNElNWG1WUTVPSlptSnQ4M0UzTnlsdmMwX1NrX0V4ajI0N2tMa3FfbWtYTWU3R3ZZa2w2djhLNHltTTNINjlUVXhxY1FqbzlNeS1QVzl4cExPOFdWZXpHcHpLY1FlMHpJaTVUTA?oc=5",
-      "summary": "中国、日本産の半導体用ガスに反ダンピング措置 信越化学など対象 日本経済新聞",
-      "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-09-07T12:27:51.000Z"
+      "publishedAt": "2026-09-08T08:06:47.000Z"
     }
   ]
 }
