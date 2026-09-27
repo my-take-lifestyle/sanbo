@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-09-26T23:23:15.902Z",
+  "generatedAt": "2026-09-27T23:40:33.078Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
-  "items": []
+  "items": [
+    {
+      "title": "Data Center Boom Faces Wall Street Skepticism",
+      "url": "https://www.bloomberg.com/news/videos/2026-09-27/data-center-boom-faces-wall-street-skepticism-video",
+      "summary": "New York Times finance reporter Maureen Farrell tells Bloomberg This Weekend that Wall Street is growing more skeptical of the AI data center boom as rising interest rates, local opposition and permitting delays add uncertainty and costs to projects. Speaking with hosts David Gura and Christina Ruffini, Farrell says trillions of dollars in financing may require tapping public markets, but investor",
+      "source": "Bloomberg Markets",
+      "publishedAt": "2026-09-27T13:14:53.000Z"
+    }
+  ]
 }
