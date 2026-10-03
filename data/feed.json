@@ -1,29 +1,15 @@
 {
-  "generatedAt": "2026-10-02T00:33:22.168Z",
+  "generatedAt": "2026-10-03T00:10:42.991Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
   "items": [
     {
-      "title": "Nvidia-Backed Firmus Eyes $30 Billion Valuation in Australia IPO",
-      "url": "https://www.bloomberg.com/news/articles/2026-10-01/firmus-eyes-30-billion-valuation-in-australian-ipo-afr-reports",
-      "summary": "Data center operator Firmus Grid Ltd. is seeking a A$43.7 billion ($30.3 billion) valuation in its Australian initial public offering this month, according to terms of the deal seen by Bloomberg.",
-      "source": "Bloomberg Markets",
-      "publishedAt": "2026-10-01T22:30:03.000Z"
-    },
-    {
-      "title": "東電など、送電網「空押さえ」に対策 データセンター向けルール厳しく - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5lUTdFeDVYMUxwWXZRYy1uQnhycmgwU0lyWHFFTTF1cXVYdWFFclY5U1hGUVVTX2dmdHpSaWkweWo5aHlvc1Jab2ZkbTNVTnZBR3FJQ1NGYWszLVBJV2xkYlpmdERNbDR4WmhLOQ?oc=5",
-      "summary": "東電など、送電網「空押さえ」に対策 データセンター向けルール厳しく 日本経済新聞",
+      "title": "米AIデータセンター融資に暗雲 オラクル認可遅れ、金融市場が警戒 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE82M0NRcGRCdnNwS0M5WFZJeEo0TUlUaU5Yc19fUV9LU21HcXRHUkFkZ0FPSEUteHdXTFYzVjdvMlBCZW5YWXFOS2Vkc2pVa3ZHNEhKWmxGN2ZwOFA4N2NZcmFjOFV0QjhocjhDXw?oc=5",
+      "summary": "米AIデータセンター融資に暗雲 オラクル認可遅れ、金融市場が警戒 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-10-01T20:00:00.000Z"
-    },
-    {
-      "title": "JERAが首都圏で「発電所一体型」データセンター 米デルと2兆円投資 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB3bkRiT0ppY3E5elJ1dExhOExuUklQS0VCVERqRS1YOTloaW5RUFo3RFN0aXExcDBacHJla0FjcmRrVVlmVTBLNnNlenJDQW9RZEJGZWthM19xLWQwSWw4bmg5QTY2MXdhMEpUag?oc=5",
-      "summary": "JERAが首都圏で「発電所一体型」データセンター 米デルと2兆円投資 日本経済新聞",
-      "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-10-01T06:30:00.000Z"
+      "publishedAt": "2026-10-02T20:00:00.000Z"
     }
   ]
 }
