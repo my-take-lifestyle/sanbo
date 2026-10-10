@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-10-09T01:00:03.344Z",
+  "generatedAt": "2026-10-10T00:30:03.543Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
-  "items": []
+  "items": [
+    {
+      "title": "Wall Street Week | Michigan Manufacturing, AI Debt Investments, Baby Bonds, Canadian Coal Fight",
+      "url": "https://www.bloomberg.com/news/videos/2026-10-09/wall-street-week-baby-bonds-canadian-coal-fight-video",
+      "summary": "This week, Ford, JPMorgan and the state of Michigan team up to help domestic manufacturers turn new technology into factories and supply chains. And, hyperscalers and data centers are borrowing hundreds of billions of dollars to finance AI infrastructure, transforming the corporate bond market. Plus, can baby bonds actually narrow America’s wealth gap? Later, Alberta’s Grassy Mountain project has ",
+      "source": "Bloomberg Markets",
+      "publishedAt": "2026-10-09T23:13:28.000Z"
+    }
+  ]
 }
