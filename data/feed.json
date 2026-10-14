@@ -1,50 +1,15 @@
 {
-  "generatedAt": "2026-10-13T02:25:25.357Z",
+  "generatedAt": "2026-10-14T00:09:20.380Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
   "items": [
     {
-      "title": "NTTがアンソロピック向けデータセンター 日本初、大阪で開設へ - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9PS3hBVUZyVmlIbnpTMlI0MGlLUHJaS2Q5eEo2NDdwX2hZQVlYWVM2Vm9WTXFDYjgxX1E1TU1hUmxuMVhuUS1LMEVjVnMzc2lhbXlWR29pQ0VHeF9uT2tLcTVSYXZIeWNKLXJTQw?oc=5",
-      "summary": "NTTがアンソロピック向けデータセンター 日本初、大阪で開設へ 日本経済新聞",
+      "title": "「パレスホテル箱根」29年秋開業 九州電力やクラフティアと新会社 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBvcjhWSVk5Wk0yVFpfNko0dnlLbFYwcGlyWjk5SUV4OVNwMDRNMUxCOFppRWhKWDM4a3RxWmJrbXdSWHBCZ3JwcjF5RVhackFLakxGREpRbU81emFnTEFXSjdOUmp2M05RRHN1WQ?oc=5",
+      "summary": "「パレスホテル箱根」29年秋開業 九州電力やクラフティアと新会社 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-10-13T02:00:00.000Z"
-    },
-    {
-      "title": "韓国株13日 大幅続落で始まる、一時4.7%安 米半導体株安が波及 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1jakJydVF1RnpsQTZFaHFIMy1OZkY1SXRpSHRjczlfRktoUFhhS2d4c3NrVk1lVmVMbjVLLUgyNHhXMF9RekR2STdKeXQ0NmwxT1NvWkQyYlEwR2QyZFhPbDRFdXd4cUtRNXd1SA?oc=5",
-      "summary": "韓国株13日 大幅続落で始まる、一時4.7%安 米半導体株安が波及 日本経済新聞",
-      "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-10-13T00:29:32.000Z"
-    },
-    {
-      "title": "東証寄り付き 日経平均は続落で始まる 一時1500円安 米半導体株安が波及 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAxRElJVUlKY051SlhwVzBwRVg5dmQ5SnFxR2R0emhDYVpHUGJTbFFxQ0lvV21yejJiRjhWcmcxYURIa3ktRFhjaDV6allZMTRaMnlxSFEybVdXZlJ3R2hzTmdXeWVJUlp0MjV2bA?oc=5",
-      "summary": "東証寄り付き 日経平均は続落で始まる 一時1500円安 米半導体株安が波及 日本経済新聞",
-      "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-10-13T00:25:51.000Z"
-    },
-    {
-      "title": "日経平均株価、米半導体株安が重荷（先読み株式相場） - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxYXM2UnB5dVh3NkFwd0tPMlJ0RzRUQWE1MzllZUlCbXlmUDZlUVdXdXdQbE0xQ2UxbnRlZUJXM0dNY0c2bFNSeGVUYTVUTFI5V244Yk5ObElhMlF5clFKVTZpcE9mQ2sxU2hDag?oc=5",
-      "summary": "日経平均株価、米半導体株安が重荷（先読み株式相場） 日本経済新聞",
-      "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-10-12T22:30:00.000Z"
-    },
-    {
-      "title": "NYダウ続伸し195ドル高 高収益期待が支え、半導体関連には売り - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBlclBKMkU1U2hmamk2RFlZelpCR0JoYUNuM2daeVFNUU5jdFJlMUcwVXBDaHBlSWNBdWJSbmJNY2RadHVrOGMwVlo3QkplX1pNdjJldzM2WmNyb2RjeS11SkVXRDVocV9Ja2ZsOQ?oc=5",
-      "summary": "NYダウ続伸し195ドル高 高収益期待が支え、半導体関連には売り 日本経済新聞",
-      "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-10-12T20:33:39.000Z"
-    },
-    {
-      "title": "NYダウ続伸で始まる 業績期待の買いが支え、半導体関連は下落 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE02QUROWkhsaHAyRUxCelY2aVNMRFB1NFR1NjhFNlE4U09LaFlXVEZNRlFhakZtNWd6YWx4aV9lMjctVktLeTk3ZHI1b0gyd3ZtQjlvaHlPNDF5aDhDV0FnekdXbUVIYXYyb0UtRQ?oc=5",
-      "summary": "NYダウ続伸で始まる 業績期待の買いが支え、半導体関連は下落 日本経済新聞",
-      "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-10-12T15:32:36.000Z"
+      "publishedAt": "2026-10-13T17:00:00.000Z"
     }
   ]
 }
