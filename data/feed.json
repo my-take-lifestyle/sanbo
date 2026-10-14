@@ -1,15 +1,24 @@
 {
-  "generatedAt": "2026-10-14T00:09:20.380Z",
+  "generatedAt": "2026-10-14T23:43:29.577Z",
   "sourceCount": 3,
   "keywordCount": 11,
-  "errors": [],
+  "errors": [
+    {
+      "source": "日本経済新聞（Google ニュース経由）",
+      "message": "HTTP 503"
+    },
+    {
+      "source": "Reuters（Google ニュース経由）",
+      "message": "HTTP 503"
+    }
+  ],
   "items": [
     {
-      "title": "「パレスホテル箱根」29年秋開業 九州電力やクラフティアと新会社 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBvcjhWSVk5Wk0yVFpfNko0dnlLbFYwcGlyWjk5SUV4OVNwMDRNMUxCOFppRWhKWDM4a3RxWmJrbXdSWHBCZ3JwcjF5RVhackFLakxGREpRbU81emFnTEFXSjdOUmp2M05RRHN1WQ?oc=5",
-      "summary": "「パレスホテル箱根」29年秋開業 九州電力やクラフティアと新会社 日本経済新聞",
-      "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-10-13T17:00:00.000Z"
+      "title": "India's NIIF Eyes $800M Data Center Investment",
+      "url": "https://www.bloomberg.com/news/videos/2026-10-14/india-s-niif-eyes-800m-data-center-investment-video",
+      "summary": "The National Investment and Infrastructure Fund (NIIF) is likely to draw as much as $3.2 billion in investments for one of its entities and between $700 million to $800 million of that will go to data centers, Chief Executive Officer Sanjiv Aggarwal told Bloomberg's Yvonne Man in an interview on the sidelines of the Bloomberg New Economy Forum in New Delhi. (Source: Bloomberg)",
+      "source": "Bloomberg Markets",
+      "publishedAt": "2026-10-14T23:30:43.000Z"
     }
   ]
 }
