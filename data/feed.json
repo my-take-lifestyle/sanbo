@@ -1,24 +1,57 @@
 {
-  "generatedAt": "2026-10-14T23:43:29.577Z",
+  "generatedAt": "2026-10-15T23:33:03.156Z",
   "sourceCount": 3,
   "keywordCount": 11,
-  "errors": [
-    {
-      "source": "日本経済新聞（Google ニュース経由）",
-      "message": "HTTP 503"
-    },
-    {
-      "source": "Reuters（Google ニュース経由）",
-      "message": "HTTP 503"
-    }
-  ],
+  "errors": [],
   "items": [
     {
-      "title": "India's NIIF Eyes $800M Data Center Investment",
-      "url": "https://www.bloomberg.com/news/videos/2026-10-14/india-s-niif-eyes-800m-data-center-investment-video",
-      "summary": "The National Investment and Infrastructure Fund (NIIF) is likely to draw as much as $3.2 billion in investments for one of its entities and between $700 million to $800 million of that will go to data centers, Chief Executive Officer Sanjiv Aggarwal told Bloomberg's Yvonne Man in an interview on the sidelines of the Bloomberg New Economy Forum in New Delhi. (Source: Bloomberg)",
-      "source": "Bloomberg Markets",
-      "publishedAt": "2026-10-14T23:30:43.000Z"
+      "title": "データセンター誘致へ総力戦、大阪は官民組織 NTT新設の許認可支援 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9aX2MwSEJJMzd3RXQtYm4yZG9qcDV1Y3NXMFVWNExud0VOS0t6d0JLd1ZRNTVfTWtVU0pmYnplYmI5dWlXQmlreXNlcmV4MEpxQjRqZmdRUW9vaFdEYjIxZ1F1eWxRd3NGRjRMUA?oc=5",
+      "summary": "データセンター誘致へ総力戦、大阪は官民組織 NTT新設の許認可支援 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-10-15T20:00:00.000Z"
+    },
+    {
+      "title": "サイバー攻撃、日本の電力網の急所1億カ所 蓄電池やEV普及でリスク増 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE85TG0xeVgtS3BRWU1VX0lLUFBuWVQxUnF1bjNnNGtNX3Uwbi0zMzA1S2ZLQ1QzY2tZUmVxNzhPZEdpOEI2UkJ2dmwtRkhpMEVJc1ZraGpMSU5OY2JDMVhybUxDQ1dMQUZUSHVjbg?oc=5",
+      "summary": "サイバー攻撃、日本の電力網の急所1億カ所 蓄電池やEV普及でリスク増 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-10-15T20:00:00.000Z"
+    },
+    {
+      "title": "決算:TSMC、AI半導体供給増へ「20の建設計画進行」 7〜9月最高益 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9EQUwzZTVwbnBNWEItRTFYRHRSTW1aa3lYVldtWGlvY3BTQTdFMFFDTjVVU2JhSUJnS0JvY2EyVWZpbGFjWXpHbE0wTnlsT1E0OG5rVUFkYjJQblpyUjN5ZW4xQXo1aDlxd01kLQ?oc=5",
+      "summary": "決算:TSMC、AI半導体供給増へ「20の建設計画進行」 7〜9月最高益 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-10-15T09:35:44.000Z"
+    },
+    {
+      "title": "データセンター設備の米バーティブ、都内拠点開設 日本のAI需要開拓 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBSc1I4Um1QVmdJaEpWYTk1ekYtQ3pJSV95ZUVNOUVlWXBvYkpSOC1uSnVPWTNXVThvVzl3c19NWmYycmhqQ0FaTVBzWDI5UXVYckVsUG9MZ01PbEQ4em0zd0V6R1dlRlB1OUpNUQ?oc=5",
+      "summary": "データセンター設備の米バーティブ、都内拠点開設 日本のAI需要開拓 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-10-15T09:15:00.000Z"
+    },
+    {
+      "title": "ニコン、半導体の後工程向け新型露光装置 処理速度44%向上 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9hQ2NfSlZLcnN4LWdfR1ZlZjlUSEdHb3Q3SGdpSVJMN0VsRjJackN3WGR0ZjlDTUtnUWx1VmpzSHdjNzZVdnRudjlZZWQ0alZpR3hWdmFfeXNQRzhZdW4tZXhnV25NVG9hRlZsVw?oc=5",
+      "summary": "ニコン、半導体の後工程向け新型露光装置 処理速度44%向上 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-10-15T08:31:27.000Z"
+    },
+    {
+      "title": "半導体工場に1.6兆円、対米投融資の第3弾 東エレクや東京応化が参画 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5Zb0paeFhFSFVXcm5oanNKbURIbXh5VFVTdUtMRnp0THVKaEhXYjlkZERGYmxUaGlGVkUyc0tUNkFDcTBEOFVpTUUyNTFOZkxCdzNnSTBjYWxfNXJGeFBWX1o4WDhxVE9VdTlqSg?oc=5",
+      "summary": "半導体工場に1.6兆円、対米投融資の第3弾 東エレクや東京応化が参画 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-10-15T06:49:34.000Z"
+    },
+    {
+      "title": "カプコン株価1年ぶり高値 半導体株安でゲーム株に資金流入 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1td3FHU3A0V3JUb19Fc0FNVldFd0tLbzVHdjZwdHRzS3dVRHNCejl0S3R5RHVVMWdCYllDUG51UDFWbURlZGViX1ZkLWZ3MzVFQ05MMVZ1b3RYbWRIcnc0ZkdLWGk5UktWQ08ySQ?oc=5",
+      "summary": "カプコン株価1年ぶり高値 半導体株安でゲーム株に資金流入 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-10-15T06:10:10.000Z"
     }
   ]
 }
