@@ -1,7 +1,22 @@
 {
-  "generatedAt": "2026-10-20T00:06:51.141Z",
+  "generatedAt": "2026-10-20T23:38:23.068Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
-  "items": []
+  "items": [
+    {
+      "title": "Trump administration loses bid to block NAACP lawsuit against Musk's xAI over data center - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNY1kxeC1DeDNreGdqNWs2NVZraThJQUhKZ0VHMXRudXFVcmNrYVRaYXlCeHo1ZjlyNHV2WS0zZTREak5ZQnhlTUw3bUQyY2oyTHRBTHlPdzdnQl8zLXpBdmdTdy10dFlfRV94elZCTmRjLUZzRnV3bDg0VzFYa0FWUnJRTzNXMmYtb29UYVc4bGthTGJQMEhmMnlmWGdVTzNhWGNiYUF5ejVwVnRaQkNMWWxRY0RjczA2OEVfQ3loUk9ZOUdLQWpiTzI5cng?oc=5",
+      "summary": "Trump administration loses bid to block NAACP lawsuit against Musk's xAI over data center Reuters",
+      "source": "Reuters（Google ニュース経由）",
+      "publishedAt": "2026-10-20T20:10:55.000Z"
+    },
+    {
+      "title": "ニコン、半導体製造装置で回路線幅を半減 先端向け開発 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB3cEJyajNITlpmNm9tT1I4d3N3NHBjWVg5aDV0UlNKVWQ0MU4yRHBILXRXS2J3dnZnc1FXeC1XRHpiNVJlTDBYOTUwVlhPR0RjQ0J0c0JuZ0p4R1hCZF9CS0hFVll0WnBxSWdsOA?oc=5",
+      "summary": "ニコン、半導体製造装置で回路線幅を半減 先端向け開発 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-10-20T10:17:45.000Z"
+    }
+  ]
 }
