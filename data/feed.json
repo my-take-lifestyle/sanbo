@@ -1,22 +1,15 @@
 {
-  "generatedAt": "2026-10-21T23:54:21.694Z",
+  "generatedAt": "2026-10-22T23:53:15.041Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
   "items": [
     {
-      "title": "Nextdc Investor UniSuper Says ‘Not That Keen’ on Data Centers",
-      "url": "https://www.bloomberg.com/news/articles/2026-10-21/nextdc-investor-unisuper-says-not-that-keen-on-data-centers",
-      "summary": "One of Australia’s top pension funds is steering clear of direct investments in data centers, arguing the biggest winners from the artificial intelligence boom will ultimately be the companies that harness the technology rather than those building the infrastructure behind it.",
+      "title": "Jane Street, HRT Are Spending Billions to Win in AI Era",
+      "url": "https://www.bloomberg.com/news/features/2026-10-22/jane-street-hrt-are-spending-billions-to-win-in-ai-era",
+      "summary": "High-frequency trading firms are even building their own data centers as they compete for an edge in the AI era.",
       "source": "Bloomberg Markets",
-      "publishedAt": "2026-10-21T21:55:42.000Z"
-    },
-    {
-      "title": "NVIDIAが「運べるAIデータセンター」 最短2週間、インフラ整備速く - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBqbTFuVThsblcyTGN0Y0JEaE82S2MzdGQ5QlpfeUFkNWNiMXZfdVFUdHdkdHI0RE5lWmxIYlFPV09UekVBMXZHOFIzS2E0ZkZuTF90SUNTTk5lYkFTaDQzSTk0Z1gycXc3djl1eA?oc=5",
-      "summary": "NVIDIAが「運べるAIデータセンター」 最短2週間、インフラ整備速く 日本経済新聞",
-      "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-10-21T16:04:47.000Z"
+      "publishedAt": "2026-10-22T21:00:13.000Z"
     }
   ]
 }
