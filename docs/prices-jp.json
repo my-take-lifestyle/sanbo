@@ -1,42 +1,42 @@
 {
-  "asOf": "2026-10-21",
+  "asOf": "2026-10-22",
   "source": "yahoo-unofficial",
-  "generatedAt": "2026-10-21T12:58:20.500Z",
+  "generatedAt": "2026-10-22T13:00:12.925Z",
   "prices": {
     "1306": {
-      "close": 425.6,
+      "close": 420.6,
       "currency": "JPY",
-      "asOf": "2026-10-21"
+      "asOf": "2026-10-22"
     },
     "3350": {
-      "close": 275,
+      "close": 269,
       "currency": "JPY",
-      "asOf": "2026-10-21"
+      "asOf": "2026-10-22"
     },
     "5802": {
-      "close": 1983,
+      "close": 1878,
       "currency": "JPY",
-      "asOf": "2026-10-21"
+      "asOf": "2026-10-22"
     },
     "6273": {
-      "close": 66360,
+      "close": 63570,
       "currency": "JPY",
-      "asOf": "2026-10-21"
+      "asOf": "2026-10-22"
     },
     "6954": {
-      "close": 5823,
+      "close": 5624,
       "currency": "JPY",
-      "asOf": "2026-10-21"
+      "asOf": "2026-10-22"
     },
     "8750": {
-      "close": 1821,
+      "close": 1824.5,
       "currency": "JPY",
-      "asOf": "2026-10-21"
+      "asOf": "2026-10-22"
     },
     "9697": {
-      "close": 4511,
+      "close": 4413,
       "currency": "JPY",
-      "asOf": "2026-10-21"
+      "asOf": "2026-10-22"
     }
   }
 }
