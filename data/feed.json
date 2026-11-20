@@ -1,22 +1,34 @@
 {
-  "generatedAt": "2026-11-19T02:17:30.815Z",
+  "generatedAt": "2026-11-20T02:01:20.769Z",
   "sourceCount": 3,
   "keywordCount": 11,
-  "errors": [],
+  "errors": [
+    {
+      "source": "Reuters（Google ニュース経由）",
+      "message": "HTTP 429"
+    }
+  ],
   "items": [
     {
-      "title": "Blue Owl Plans $513 Million CMBS for Amazon-Leased Data Center",
-      "url": "https://www.bloomberg.com/news/articles/2026-11-19/blue-owl-plans-513-million-cmbs-for-amazon-leased-data-center",
-      "summary": "Blue Owl Capital Inc. is preparing to sell $513 million of commercial mortgage backed securities to fund the acquisition of a Northern Virginia data center that’s fully leased to Amazon.com Inc., according to people with knowledge of the matter.",
-      "source": "Bloomberg Markets",
-      "publishedAt": "2026-11-19T00:54:52.000Z"
+      "title": "日経平均株価、一時2500円超下げ 米半導体株安が波及 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5XMWNxMzQzVmpZVVBmdnlQUmlPVFU2Ul96RDR1enBsT2h2bndyMGM5Zko3b3pIeEtlUWtpQktvNjZ6eTlMNkZjeWdub1VnRW1ZZGItVXNQd2hKc1U1cGx1cXk3N21rRWdwMGZBeA?oc=5",
+      "summary": "日経平均株価、一時2500円超下げ 米半導体株安が波及 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-11-20T00:27:35.000Z"
     },
     {
-      "title": "データセンター誘致で街は潤うか 千葉県印西市と北海道石狩市が直面する恩恵と課題【ポッドキャスト】 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9kamhvd00xUk02aWhCaURDczJoc2lZSlVEeUNfbGNRQVlCYXJYXzhteTVLc0J1aHZDS3RtdE5ZZm1BcUNxMTM3YnZ0dXhCbHpmd3hDWUlmSHhOTHdZXzBKdm9wYzdsVkh1Vmk2Nw?oc=5",
-      "summary": "データセンター誘致で街は潤うか 千葉県印西市と北海道石狩市が直面する恩恵と課題【ポッドキャスト】 日本経済新聞",
+      "title": "米がAI半導体88万個の対中輸出承認 NVIDIA製など、5月までの実績開示 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5JeEtaSWlWUm1aRnF1ZkNwV19PeWlCZTJiQVlORlkxRXZpRHFobld6MTc3QWJJZGxPVXJkT1ZxRGtWZnNFQm82YVZYX3RwbEhVdDBFTWs2c0JpMXdzN1pfZmJHVW1oOHFQUDlfbw?oc=5",
+      "summary": "米がAI半導体88万個の対中輸出承認 NVIDIA製など、5月までの実績開示 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-11-18T20:00:00.000Z"
+      "publishedAt": "2026-11-19T23:15:39.000Z"
+    },
+    {
+      "title": "Anthropic IPO is About Capital, Says Kathryn Thompson",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/anthropic-ipo-is-about-capital-says-kathryn-thompson-video",
+      "summary": "Anthropic’s long-awaited debut marks the first ever by a frontier AI lab, a cohort of firms building the most advanced models to tackle difficult problems and assist users in complex tasks. While enthusiasm over AI’s business potential have spurred massive investments in infrastructure such as chips and data centers, Anthropic and its competitors now need to grow revenue fast enough to outpace tho",
+      "source": "Bloomberg Markets",
+      "publishedAt": "2026-11-19T22:17:51.000Z"
     }
   ]
 }
