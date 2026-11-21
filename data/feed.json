@@ -1,34 +1,43 @@
 {
-  "generatedAt": "2026-11-20T02:01:20.769Z",
+  "generatedAt": "2026-11-21T01:58:40.701Z",
   "sourceCount": 3,
   "keywordCount": 11,
-  "errors": [
-    {
-      "source": "Reuters（Google ニュース経由）",
-      "message": "HTTP 429"
-    }
-  ],
+  "errors": [],
   "items": [
     {
-      "title": "日経平均株価、一時2500円超下げ 米半導体株安が波及 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5XMWNxMzQzVmpZVVBmdnlQUmlPVFU2Ul96RDR1enBsT2h2bndyMGM5Zko3b3pIeEtlUWtpQktvNjZ6eTlMNkZjeWdub1VnRW1ZZGItVXNQd2hKc1U1cGx1cXk3N21rRWdwMGZBeA?oc=5",
-      "summary": "日経平均株価、一時2500円超下げ 米半導体株安が波及 日本経済新聞",
-      "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-11-20T00:27:35.000Z"
-    },
-    {
-      "title": "米がAI半導体88万個の対中輸出承認 NVIDIA製など、5月までの実績開示 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5JeEtaSWlWUm1aRnF1ZkNwV19PeWlCZTJiQVlORlkxRXZpRHFobld6MTc3QWJJZGxPVXJkT1ZxRGtWZnNFQm82YVZYX3RwbEhVdDBFTWs2c0JpMXdzN1pfZmJHVW1oOHFQUDlfbw?oc=5",
-      "summary": "米がAI半導体88万個の対中輸出承認 NVIDIA製など、5月までの実績開示 日本経済新聞",
-      "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-11-19T23:15:39.000Z"
-    },
-    {
-      "title": "Anthropic IPO is About Capital, Says Kathryn Thompson",
-      "url": "https://www.bloomberg.com/news/videos/2026-11-19/anthropic-ipo-is-about-capital-says-kathryn-thompson-video",
-      "summary": "Anthropic’s long-awaited debut marks the first ever by a frontier AI lab, a cohort of firms building the most advanced models to tackle difficult problems and assist users in complex tasks. While enthusiasm over AI’s business potential have spurred massive investments in infrastructure such as chips and data centers, Anthropic and its competitors now need to grow revenue fast enough to outpace tho",
+      "title": "AI Euphoria Gives Way to Fear And ‘Face-Ripping Volatility’",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/wall-street-nears-breaking-point-as-fear-grips-global-markets",
+      "summary": "All year, investors have gorged themselves on whatever the AI trade served up. Hundreds of billions of dollars of stock sold to build out infrastructure. Near-daily bond offerings to pay for chips and data centers. History’s two largest IPOs.",
       "source": "Bloomberg Markets",
-      "publishedAt": "2026-11-19T22:17:51.000Z"
+      "publishedAt": "2026-11-20T21:52:00.000Z"
+    },
+    {
+      "title": "Trump says US to penalize firms building data centers abroad - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOT3hEcEp0SWhZNmU0eXhJUEU3ekVWWkQ3SVp1ZWlQeUZPRVBKUkx6R08yMkVGSWo5S3JWelR4STNQN2pCanZjaTE2ZWl0anlHQjJjWExCVFBVaVF4Uy1HNEZrRWZoNnVhVmx0WFBQNUg5cTA2UEpxZHpHcTRZSXctTU9jMHhPclFTdUQ3NktmbkJNS203N0dVeHA4R1pTRFRieHY3NnZWNA?oc=5",
+      "summary": "Trump says US to penalize firms building data centers abroad Reuters",
+      "source": "Reuters（Google ニュース経由）",
+      "publishedAt": "2026-11-20T21:29:46.000Z"
+    },
+    {
+      "title": "「AI半導体を打ち上げないで」 投資家、スペースXに要求？ - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1FVF9MdE1Zc3FvUlpHN1BUZXZMcUhmQ3cxOGFMMjd3WW5sQ2RmcU9uQVptNmcyV0ZKb0xreG52TFBoMUhSczdyZi02bENGTHJyVDF6Q2liYmdMa3AzeEhQRXcxaVRhaHZONHVsTg?oc=5",
+      "summary": "「AI半導体を打ち上げないで」 投資家、スペースXに要求？ 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-11-20T20:22:51.000Z"
+    },
+    {
+      "title": "数学「四色問題」で東大などが新解法 計算量激減、半導体にも応用可能 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBZOW05ZlFFbW92MXBld25FX0VUTkdfT2U2T2FQbG9SNm9ZTE5DNmhleEtGR2xRblB4aVFvdEJHZ19CeHhkYkdLSDVtemJFZ21tMzB6OG5XbTExaHl5b1h0ZGNFMVJLQm42TnZuYQ?oc=5",
+      "summary": "数学「四色問題」で東大などが新解法 計算量激減、半導体にも応用可能 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-11-20T20:00:00.000Z"
+    },
+    {
+      "title": "世界株安、半導体発のリスク回避加速 日経平均3007円下げ - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAxQngwYXBmY2dEMldpejBuRDV4bUczbVJrVW5yQm0wSV9xZnQ3WHREUGphV0tUam5ZVGN6QThDQ0t2Qy1nMUFYNUc5dXlkM0ZXVndXR3FxOUtRa1o4MHpKWVI3UE9XMlJHLVRCaA?oc=5",
+      "summary": "世界株安、半導体発のリスク回避加速 日経平均3007円下げ 日本経済新聞",
+      "source": "日本経済新聞（Google ニュース経由）",
+      "publishedAt": "2026-11-20T13:35:20.000Z"
     }
   ]
 }
