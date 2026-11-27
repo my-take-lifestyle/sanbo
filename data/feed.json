@@ -1,36 +1,22 @@
 {
-  "generatedAt": "2026-11-26T03:22:32.279Z",
+  "generatedAt": "2026-11-27T03:29:56.892Z",
   "sourceCount": 3,
   "keywordCount": 11,
   "errors": [],
   "items": [
     {
-      "title": "Australia Capex Surges by Most Since Mining Boom on Data Centers",
-      "url": "https://www.bloomberg.com/news/articles/2026-11-26/australia-capex-surges-by-most-since-mining-boom-on-data-centers",
-      "summary": "Australian business investment surged by the most since the peak of the mining boom in the three months through September, driven by data center-related spending in a bright spot for an otherwise cooling economy.",
-      "source": "Bloomberg Markets",
-      "publishedAt": "2026-11-26T01:01:57.000Z"
-    },
-    {
-      "title": "US authorizes SpaceX to deploy 1 million satellites for data centers in space - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNVk5uRnprd285MEw5V2prcHR6bXljVGN4cUZuOHA4eHJUZkFzOVFnS1QtYnZaal8yYUYxa0t1cW84WjVzQWpub0czSGxUblh3STB6WnZxcThWZUxNRDk2emliZ0tfTmk5U3YxY3FZRXdEYWNyb2VMTmlkZE5RNWZHOS12OWdjSkpNdzhGU0Z4NWo3VmpSZHNXWGNJZUFpZjl2T2xuUkRKRXBpOTFqVFdFLXFvV0xHd1czWDFKbFU3OWFGU21B?oc=5",
-      "summary": "US authorizes SpaceX to deploy 1 million satellites for data centers in space Reuters",
-      "source": "Reuters（Google ニュース経由）",
-      "publishedAt": "2026-11-25T20:44:01.000Z"
-    },
-    {
-      "title": "スペースXの宇宙データセンター、米当局が配備認可 衛星100万基 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1IdE0wYmlIRGtmVTdZVS1NdmdfZC1Jdk4xc1pHczVmazZ1LUpCaWRaaFBlT2xyNXFvZzJxaFZiTVFfYW9MekFsbUtEUGNrd1l2ZExoWW5EQUY2bGtuRmx3ejhlQV93X3h3Y0loUQ?oc=5",
-      "summary": "スペースXの宇宙データセンター、米当局が配備認可 衛星100万基 日本経済新聞",
+      "title": "サムスンやSK、半導体メモリー製造で中国新興の技術採用 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE92SkpIX3hVeTBhVFJONkVRLXFWNzlHeTVhNW5MdmxpdWJUZUdYU3p0dkJiS1lmSkp4QTkwck9NUjFrMTNGUG9BaVBYZU1sTHpoS25ITUZCbFp5RF9CMWptOWE5cThpSklETlRVYg?oc=5",
+      "summary": "サムスンやSK、半導体メモリー製造で中国新興の技術採用 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-11-25T20:42:09.000Z"
+      "publishedAt": "2026-11-26T20:00:00.000Z"
     },
     {
-      "title": "半導体や先端部品、企業に安定調達の計画義務づけ 経済安保で政府検討 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1hU21hZkg5YkNrOWd2QmZVOTV4UVI1ejlDVW9lSk1qaHZpRWdUeXk0bU1yM2wwOGZXQVFJREJiYWlsRnlaN3dXM0FQN2NCeDhMbndCYW9OX0RNSkRkNWtFaXFETXF1OTRydk5LVA?oc=5",
-      "summary": "半導体や先端部品、企業に安定調達の計画義務づけ 経済安保で政府検討 日本経済新聞",
+      "title": "データセンター補助金、住民配慮で優遇 騒音・排熱トラブル増加 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxZHFaaFdsRVA2ZWJ6bzFTNkNEd1hSOG56bjAtMElvdFVScTBGYkoyZnJvUUt6LTRHb0FQRFhwYTVJMHdwbVFVVTNwUWhkVEl5R0lwY3lyUW9UcWlyRUtoQkdva1hTTVd5UkctdQ?oc=5",
+      "summary": "データセンター補助金、住民配慮で優遇 騒音・排熱トラブル増加 日本経済新聞",
       "source": "日本経済新聞（Google ニュース経由）",
-      "publishedAt": "2026-11-25T09:10:00.000Z"
+      "publishedAt": "2026-11-26T20:00:00.000Z"
     }
   ]
 }
